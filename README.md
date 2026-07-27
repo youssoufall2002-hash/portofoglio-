@@ -27,9 +27,9 @@ Cerca e sostituisci nel file `index.html`:
 
 | Segnaposto attuale | Sostituire con |
 |---|---|
-| `035000000` / `035 000000` | Numero di telefono reale (senza spazi nei link `tel:` e `wa.me`) |
-| `Via da inserire` | Indirizzo esatto del salone |
-| `24100` | CAP corretto |
+| ~~telefono~~ | ✅ Inserito: **388 258 9071** |
+| ~~indirizzo~~ | ✅ Inserito: **Via Casalino 2c, Bergamo** |
+| `24100` | CAP corretto (verificare) |
 | Prezzi del listino | Prezzi reali (o togliere i numeri se preferisce) |
 | Orari (sezione Contatti + schema.org) | Orari reali di apertura |
 | Riquadri **Galleria** | 6–9 foto vere da Instagram (`img/hermann-barbershop-bergamo-taglio-01.jpg`, ecc.) |
