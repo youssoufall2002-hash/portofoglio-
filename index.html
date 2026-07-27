@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parrucchiere Bergamo | Hermann Barbershop — Taglio, Barba, Styling</title>
+  <meta name="description" content="Barbershop a Bergamo. Taglio uomo, barba, styling e trattamenti. L'arte del taglio, su appuntamento — chiama Hermann Barbershop." />
+  <meta name="theme-color" content="#0d0d0f" />
+  <link rel="icon" type="image/jpeg" href="img/hermann-barbershop-logo.jpg" />
+  <link rel="apple-touch-icon" href="img/hermann-barbershop-logo.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hermann Barbershop — Parrucchiere a Bergamo" />
+  <meta property="og:description" content="L'arte del taglio. Taglio uomo, barba e styling a Bergamo. Su appuntamento." />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Dati strutturati schema.org HairSalon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Hermann Barbershop",
+    "description": "Barbershop a Bergamo specializzato nell'arte del taglio uomo, barba e styling.",
+    "image": "https://hermannbarbershop.it/img/hermann-barbershop-bergamo-insegna.jpg",
+    "url": "https://hermannbarbershop.it/",
+    "telephone": "+39 388 258 9071",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Casalino 2c",
+      "addressLocality": "Bergamo",
+      "addressRegion": "BG",
+      "postalCode": "24100",
+      "addressCountry": "IT"
+    },
+    "sameAs": [
+      "https://www.instagram.com/barberr_hermann/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "19:00" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --bg-soft: #16161a;
+      --card: #1c1c21;
+      --line: #2a2a31;
+      --text: #f2f0ec;
+      --muted: #a5a1a0;
+      --gold: #c9a24b;
+      --gold-soft: #e0c583;
+      --radius: 14px;
+      --maxw: 1120px;
+      --font: 'Helvetica Neue', Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 64px; /* spazio per la barra mobile */
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: .72rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { font-weight: 700; line-height: 1.15; letter-spacing: -.01em; }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+    section { padding: 84px 0; border-top: 1px solid var(--line); }
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+    .section-head p { color: var(--muted); margin-top: 12px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 26px; border-radius: 999px;
+      font-weight: 600; font-size: .98rem;
+      transition: transform .15s ease, background .2s ease, color .2s ease;
+      cursor: pointer; border: 1px solid transparent;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn-gold { background: var(--gold); color: #16130a; }
+    .btn-gold:hover { background: var(--gold-soft); }
+    .btn-ghost { border-color: rgba(255,255,255,.28); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(13,13,15,.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .04em; }
+    .brand .mark {
+      width: 38px; height: 38px; border-radius: 50%; overflow: hidden;
+      background: #fff; border: 1px solid var(--line);
+      display: grid; place-items: center;
+    }
+    .brand .mark img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); }
+    .nav-links { display: none; gap: 30px; font-size: .92rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav .btn { padding: 9px 18px; font-size: .86rem; }
+    @media (min-width: 860px) { .nav-links { display: flex; } }
+
+    /* Hero */
+    .hero {
+      position: relative; border-top: none;
+      min-height: 88vh; display: flex; align-items: center;
+      padding: 96px 0;
+      background:
+        linear-gradient(180deg, rgba(13,13,15,.62) 0%, rgba(13,13,15,.9) 100%),
+        url('img/hermann-barbershop-bergamo-insegna.jpg') center 30% / cover no-repeat;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(700px 340px at 50% 0%, rgba(201,162,75,.16), transparent 70%);
+      pointer-events: none;
+    }
+    .hero .wrap { position: relative; z-index: 2; }
+    .hero h1 { font-size: clamp(2.3rem, 7vw, 4.4rem); margin-bottom: 20px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p.sub { color: var(--muted); font-size: clamp(1rem, 2.4vw, 1.22rem); max-width: 560px; margin: 0 auto 34px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .hero-badges { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; color: var(--muted); font-size: .84rem; letter-spacing: .04em; }
+    .hero-badges b { color: var(--gold); font-size: 1.35rem; display: block; letter-spacing: 0; }
+
+    /* Services */
+    .price-list { max-width: 760px; margin: 0 auto; }
+    .price-row {
+      display: flex; align-items: baseline; gap: 14px;
+      padding: 17px 4px; border-bottom: 1px dashed var(--line);
+    }
+    .price-row .name { font-weight: 600; }
+    .price-row .desc { color: var(--muted); font-size: .84rem; font-weight: 400; }
+    .price-row .dots { flex: 1; border-bottom: 1px dotted #3a3a42; transform: translateY(-4px); }
+    .price-row .price { color: var(--gold); font-weight: 700; white-space: nowrap; }
+    .price-note { text-align: center; color: var(--muted); font-size: .84rem; margin-top: 26px; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 720px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+    .shot {
+      position: relative; aspect-ratio: 3/4; border-radius: var(--radius); overflow: hidden;
+      background: linear-gradient(145deg, #202027, #14141a);
+      border: 1px solid var(--line);
+      display: grid; place-items: center;
+    }
+    .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .shot:hover img { transform: scale(1.06); }
+    .shot svg { width: 46px; height: 46px; opacity: .55; }
+    .shot span { position: absolute; bottom: 10px; left: 12px; font-size: .7rem; color: var(--muted); letter-spacing: .08em; }
+    .shot-ig { flex-direction: column; text-align: center; padding: 16px; background: linear-gradient(145deg, #23201a, #14141a); }
+    .gallery-cta { text-align: center; margin-top: 34px; }
+    .gallery-cta a { color: var(--gold); font-weight: 600; }
+
+    /* About */
+    .about-grid { display: grid; gap: 46px; align-items: center; }
+    @media (min-width: 880px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+    .about-text p { color: var(--muted); margin-bottom: 18px; }
+    .features { display: grid; gap: 18px; margin-top: 26px; }
+    .feature { display: flex; gap: 15px; align-items: flex-start; }
+    .feature .ico { font-size: 1.5rem; line-height: 1; }
+    .feature b { display: block; margin-bottom: 2px; }
+    .feature p { color: var(--muted); font-size: .9rem; margin: 0; }
+    .about-visual {
+      aspect-ratio: 4/5; border-radius: var(--radius); border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .about-visual img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Reviews */
+    .reviews { display: grid; gap: 20px; }
+    @media (min-width: 780px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+    .review {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 26px 24px;
+    }
+    .stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 12px; }
+    .review p { color: var(--text); font-size: .96rem; margin-bottom: 16px; }
+    .review .who { color: var(--muted); font-size: .86rem; font-weight: 600; }
+    .review .via { color: #6f6c6b; font-size: .74rem; }
+
+    /* Contact */
+    .contact-grid { display: grid; gap: 40px; }
+    @media (min-width: 880px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+    .info-row { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+    .info-row .ico { color: var(--gold); font-size: 1.15rem; width: 26px; text-align: center; }
+    .info-row .label { font-size: .74rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
+    .info-row a, .info-row div > span { font-weight: 600; }
+    .hours { margin-top: 6px; }
+    .hours-row { display: flex; justify-content: space-between; padding: 7px 0; font-size: .92rem; border-bottom: 1px dashed var(--line); }
+    .hours-row .day { color: var(--muted); }
+    .hours-row.closed .val { color: #7a5555; }
+    .map-embed {
+      width: 100%; aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: var(--radius);
+      overflow: hidden; background: #14141a;
+    }
+    .map-embed iframe { width: 100%; height: 100%; border: 0; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 40px 0; text-align: center; color: var(--muted); font-size: .84rem; }
+    footer .socials { display: flex; gap: 20px; justify-content: center; margin-bottom: 18px; }
+    footer .socials a:hover { color: var(--gold); }
+    footer .legal { margin-top: 10px; font-size: .78rem; }
+    footer .legal a { color: var(--muted); text-decoration: underline; }
+
+    /* Sticky mobile bar */
+    .mobile-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--bg-soft); border-top: 1px solid var(--line);
+    }
+    .mobile-bar a {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 15px 8px; font-weight: 700; font-size: .95rem;
+    }
+    .mobile-bar .call { color: var(--text); }
+    .mobile-bar .wa { background: #25D366; color: #06331a; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } body { padding-bottom: 0; } }
+
+    /* Cookie banner */
+    .cookie {
+      position: fixed; left: 16px; right: 16px; bottom: 78px; z-index: 70;
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 16px 18px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,.5); font-size: .86rem; color: var(--muted);
+    }
+    .cookie.hidden { display: none; }
+    .cookie p { flex: 1; min-width: 220px; }
+    .cookie a { color: var(--gold); text-decoration: underline; }
+    @media (min-width: 860px) { .cookie { bottom: 16px; max-width: 440px; left: auto; right: 16px; } }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="mark"><img src="img/hermann-barbershop-logo.jpg" alt="Logo Hermann Barbershop Bergamo"></span> HERMANN <span style="color:var(--gold)">BARBERSHOP</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#servizi">Servizi</a>
+        <a href="#lavori">Lavori</a>
+        <a href="#salone">Il salone</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <a class="btn btn-gold" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">Prenota</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">L'arte del taglio · Bergamo</span>
+      <h1>Parrucchiere a Bergamo<br><span>Hermann Barbershop</span></h1>
+      <p class="sub">Taglio, barba e styling curati nei dettagli. Ogni cliente, il suo stile — senza compromessi.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">💬 Prenota su WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+393882589071">📞 Chiama ora</a>
+      </div>
+      <div class="hero-badges">
+        <div><b>5,0 ★</b> su Google</div>
+        <div><b>9.9k</b> follower su Instagram</div>
+        <div><b>6/7</b> giorni aperto</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section id="servizi">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cosa facciamo</span>
+        <h2>I nostri servizi</h2>
+        <p>Taglio, barba e trattamenti eseguiti da professionisti.</p>
+      </div>
+      <div class="price-list reveal">
+        <div class="price-row">
+          <span class="name">Taglio uomo <span class="desc">— shampoo + styling</span></span>
+        </div>
+        <div class="price-row">
+          <span class="name">Taglio + barba <span class="desc">— il completo</span></span>
+        </div>
+        <div class="price-row">
+          <span class="name">Barba modellata <span class="desc">— rasoio + panno caldo</span></span>
+        </div>
+        <div class="price-row">
+          <span class="name">Taglio bambino <span class="desc">— fino a 12 anni</span></span>
+        </div>
+        <div class="price-row">
+          <span class="name">Rasatura completa <span class="desc">— a mano libera</span></span>
+        </div>
+        <div class="price-row">
+          <span class="name">Trattamento capelli / cute</span>
+        </div>
+        <div class="price-row">
+          <span class="name">Styling &amp; consulenza look</span>
+        </div>
+      </div>
+      <p class="price-note">Per informazioni e prezzi chiamaci o scrivici su WhatsApp — ti diamo un preventivo su misura.</p>
+    </div>
+  </section>
+
+  <!-- GALLERIA -->
+  <section id="lavori">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>I nostri lavori</h2>
+        <p>Ogni taglio racconta uno stile. Una selezione dal nostro Instagram.</p>
+      </div>
+      <div class="gallery reveal">
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.jpg" alt="Taglio uomo bambino — Hermann Barbershop Bergamo" loading="lazy"></a>
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.jpg" alt="Taglio afro sfumato — barbiere a Bergamo" loading="lazy"></a>
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.jpg" alt="Contorni e lineup di precisione — Hermann Barbershop" loading="lazy"></a>
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.jpg" alt="Taglio mullet con sfumatura — barbershop Bergamo" loading="lazy"></a>
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.jpg" alt="Il team di Hermann Barbershop al lavoro" loading="lazy"></a>
+        <a class="shot shot-ig" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#c9a24b" stroke="none"/></svg>
+          <span style="position:static;color:var(--gold);font-weight:600;margin-top:10px">Vedi tutti su Instagram</span>
+        </a>
+      </div>
+      <div class="gallery-cta reveal">
+        <a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">Seguici su Instagram → @barberr_hermann</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SIAMO -->
+  <section id="salone">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="eyebrow">Chi siamo</span>
+          <h2>Il salone</h2>
+          <p>Hermann Barbershop è un barbershop nel cuore di Bergamo, dedicato all'arte del taglio maschile. Taglio, barba e styling con un'attenzione particolare al dettaglio e a un risultato che valorizzi ogni viso.</p>
+          <p>Ogni cliente riceve una consulenza prima del servizio: valutiamo insieme il taglio e lo stile più adatti al viso e al tipo di capello. Su appuntamento o passando direttamente in negozio, dal lunedì al sabato.</p>
+          <div class="features">
+            <div class="feature"><span class="ico">✂️</span><div><b>Consulenza personalizzata</b><p>Prima di ogni servizio, per un look su misura.</p></div></div>
+            <div class="feature"><span class="ico">🪒</span><div><b>Rasatura tradizionale</b><p>Rasoio, panno caldo e prodotti professionali.</p></div></div>
+            <div class="feature"><span class="ico">📅</span><div><b>Aperto 6 giorni su 7</b><p>Dal lunedì al sabato — su appuntamento o passa in negozio.</p></div></div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <img src="img/hermann-barbershop-bergamo-interno.jpg" alt="Interno di Hermann Barbershop a Bergamo, poltrone e maglie da calcio incorniciate" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI -->
+  <section id="recensioni">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonianze</span>
+        <h2>Cosa dicono i clienti</h2>
+        <p><strong style="color:var(--gold);font-size:1.15rem">5,0 ★</strong> su Google</p>
+      </div>
+      <div class="reviews reveal" style="max-width:560px;margin:0 auto;grid-template-columns:1fr">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>«Solo applausi per questo ragazzo, se cercate un barbiere che capisce davvero cosa…»</p>
+          <span class="who">Denis R.</span> <span class="via">· Google · 1 mese fa</span>
+        </div>
+      </div>
+      <p class="price-note reveal">Hai apprezzato il servizio? <a href="https://www.google.com/search?q=Hermann+Barbershop+Bergamo" target="_blank" rel="noopener" style="color:var(--gold)">Lascia una recensione su Google →</a></p>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dove siamo</span>
+        <h2>Contatti &amp; orari</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-row">
+            <span class="ico">📍</span>
+            <div><div class="label">Indirizzo</div><span>Via Casalino 2c, Bergamo (BG)</span></div>
+          </div>
+          <div class="info-row">
+            <span class="ico">📞</span>
+            <div><div class="label">Telefono</div><a href="tel:+393882589071">388 258 9071</a></div>
+          </div>
+          <div class="info-row">
+            <span class="ico">💬</span>
+            <div><div class="label">WhatsApp</div><a href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">Scrivici su WhatsApp</a></div>
+          </div>
+          <div class="info-row">
+            <span class="ico">📷</span>
+            <div><div class="label">Instagram</div><a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">@barberr_hermann</a></div>
+          </div>
+          <div class="hours">
+            <div class="hours-row"><span class="day">Lunedì</span><span class="val">09:30 – 19:00</span></div>
+            <div class="hours-row"><span class="day">Martedì</span><span class="val">09:30 – 19:00</span></div>
+            <div class="hours-row"><span class="day">Mercoledì</span><span class="val">09:30 – 19:00</span></div>
+            <div class="hours-row"><span class="day">Giovedì</span><span class="val">09:30 – 19:00</span></div>
+            <div class="hours-row"><span class="day">Venerdì</span><span class="val">09:30 – 19:00</span></div>
+            <div class="hours-row"><span class="day">Sabato</span><span class="val">08:30 – 19:00</span></div>
+            <div class="hours-row closed"><span class="day">Domenica</span><span class="val closed">Chiuso</span></div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-gold" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">💬 Prenota su WhatsApp</a>
+            <a class="btn btn-ghost" href="tel:+393882589071">📞 Chiama</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="map-embed">
+            <!-- SOSTITUIRE con l'iframe reale di Google Maps del salone -->
+            <iframe title="Mappa Hermann Barbershop Bergamo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Via%20Casalino%202c,%20Bergamo&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <img src="img/hermann-barbershop-logo.jpg" alt="Logo Hermann Barbershop Bergamo" style="width:74px;height:74px;border-radius:50%;object-fit:cover;transform:scale(1.12);margin:0 auto 20px;background:#fff">
+      <div class="socials">
+        <a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">Instagram</a>
+        <a href="tel:+393882589071">Telefono</a>
+        <a href="https://wa.me/393882589071" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div>© <span id="year"></span> Hermann Barbershop · Bergamo · L'arte del taglio</div>
+      <div class="legal">
+        <a href="#" onclick="alert('Inserire qui la Privacy &amp; Cookie Policy.');return false;">Privacy &amp; Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE BAR -->
+  <div class="mobile-bar">
+    <a class="call" href="tel:+393882589071">📞 Chiama</a>
+    <a class="wa" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie hidden" id="cookie">
+    <p>Questo sito usa cookie tecnici e, previo consenso, la mappa di Google. <a href="#" onclick="alert('Inserire la Cookie Policy completa.');return false;">Maggiori info</a></p>
+    <button class="btn btn-gold" style="padding:9px 20px" onclick="acceptCookie()">Ho capito</button>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Cookie banner
+    (function(){
+      var c = document.getElementById('cookie');
+      if (!localStorage.getItem('hb_cookie_ok')) c.classList.remove('hidden');
+    })();
+    function acceptCookie(){
+      localStorage.setItem('hb_cookie_ok', '1');
+      document.getElementById('cookie').classList.add('hidden');
+    }
+
+    // Reveal on scroll
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
