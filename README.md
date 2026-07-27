@@ -45,6 +45,25 @@ Per la galleria: esporta le foto in **WebP sotto i 200 KB**, formato verticale/q
 nomi file descrittivi tipo `hermann-barbershop-bergamo-taglio-01.webp`.
 Sostituisci ogni `<div class="shot">…</div>` con `<img src="img/…" alt="Taglio uomo — Hermann Barbershop Bergamo">`.
 
+## Come pubblicarlo online
+
+Il sito è statico (solo `index.html` + cartella `img/`): si pubblica ovunque in pochi minuti.
+
+### Opzione 1 — Netlify (consigliata, gratis anche con repo privato)
+1. Vai su [netlify.com](https://www.netlify.com) e accedi con GitHub
+2. *Add new site* → *Import an existing project* → scegli questo repo
+3. Build command: **(vuoto)** · Publish directory: **`.`** (la root)
+4. *Deploy* → il sito è online su un indirizzo tipo `hermann-barbershop.netlify.app`
+5. Per il dominio: *Domain settings* → collega `hermannbarbershop.it`
+
+### Opzione 2 — GitHub Pages (gratis se il repo è pubblico)
+1. **Settings → General →** rendi il repo **Public** (serve un piano Pro per Pages su repo privati)
+2. **Settings → Pages → Source: Deploy from a branch →** branch `main`, cartella `/ (root)`
+3. Il sito sarà online su `https://youssoufall2002-hash.github.io/portofoglio-/`
+
+> Nota: entrambe danno HTTPS automatico. Per un indirizzo professionale conviene
+> registrare un dominio `.it` (es. su Aruba/Register) e collegarlo (Opzione 1 o 2).
+
 ## Checklist di messa online
 
 - [ ] Sostituiti tutti i segnaposto qui sopra
