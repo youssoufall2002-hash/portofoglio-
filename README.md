@@ -31,10 +31,10 @@ Cerca e sostituisci nel file `index.html`:
 | ~~indirizzo~~ | ✅ Inserito: **Via Casalino 2c, Bergamo** |
 | `24100` | CAP corretto (verificare) |
 | Prezzi del listino | Prezzi reali (o togliere i numeri se preferisce) |
-| Orari (sezione Contatti + schema.org) | Orari reali di apertura |
+| ~~orari~~ | ✅ Inseriti da Google: Lun–Ven 09:30–19:00, Sab 08:30–19:00, Dom chiuso |
+| ~~recensioni~~ | ✅ Inserita l'unica recensione reale (Denis R., 5,0★). Aggiungerne altre quando ci saranno |
 | Riquadri **Galleria** | 6–9 foto vere da Instagram (`img/hermann-barbershop-bergamo-taglio-01.jpg`, ecc.) |
-| Riquadri **Recensioni** | 3 recensioni **reali** dalla scheda Google — **mai inventarle** |
-| `src` dell'iframe mappa | Iframe "Condividi → Incorpora una mappa" dalla scheda Google Maps reale |
+| `src` dell'iframe mappa | Punta già a "Via Casalino 2c, Bergamo"; per precisione al pin, incolla l'iframe reale da Google Maps |
 | Link Privacy/Cookie | Pagina o testo di privacy e cookie policy |
 
 Instagram già collegato: [@barber_hermann](https://www.instagram.com/barber_hermann/).
