@@ -30,7 +30,7 @@ Cerca e sostituisci nel file `index.html`:
 | ~~telefono~~ | ✅ Inserito: **388 258 9071** |
 | ~~indirizzo~~ | ✅ Inserito: **Via Casalino 2c, Bergamo** |
 | `24100` | CAP corretto (verificare) |
-| Prezzi del listino | Prezzi reali (o togliere i numeri se preferisce) |
+| ~~prezzi~~ | ✅ Rimossi su richiesta — mostrato solo l'elenco servizi, prezzi su preventivo |
 | ~~orari~~ | ✅ Inseriti da Google: Lun–Ven 09:30–19:00, Sab 08:30–19:00, Dom chiuso |
 | ~~recensioni~~ | ✅ Inserita l'unica recensione reale (Denis R., 5,0★). Aggiungerne altre quando ci saranno |
 | Riquadri **Galleria** | 6–9 foto vere da Instagram (`img/hermann-barbershop-bergamo-taglio-01.jpg`, ecc.) |
