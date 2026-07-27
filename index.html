@@ -6,6 +6,8 @@
   <title>Parrucchiere Bergamo | Hermann Barbershop — Taglio, Barba, Styling</title>
   <meta name="description" content="Barbershop a Bergamo. Taglio uomo, barba, styling e trattamenti. L'arte del taglio, su appuntamento — chiama Hermann Barbershop." />
   <meta name="theme-color" content="#0d0d0f" />
+  <link rel="icon" type="image/jpeg" href="img/hermann-barbershop-logo.jpg" />
+  <link rel="apple-touch-icon" href="img/hermann-barbershop-logo.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -113,10 +115,11 @@
     .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
     .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .04em; }
     .brand .mark {
-      width: 34px; height: 34px; border-radius: 50%;
-      border: 1.5px solid var(--gold); color: var(--gold);
-      display: grid; place-items: center; font-size: 1.05rem;
+      width: 38px; height: 38px; border-radius: 50%; overflow: hidden;
+      background: #fff; border: 1px solid var(--line);
+      display: grid; place-items: center;
     }
+    .brand .mark img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); }
     .nav-links { display: none; gap: 30px; font-size: .92rem; color: var(--muted); }
     .nav-links a:hover { color: var(--text); }
     .nav .btn { padding: 9px 18px; font-size: .86rem; }
@@ -264,7 +267,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top">
-        <span class="mark">H</span> HERMANN <span style="color:var(--gold)">BARBERSHOP</span>
+        <span class="mark"><img src="img/hermann-barbershop-logo.jpg" alt="Logo Hermann Barbershop Bergamo"></span> HERMANN <span style="color:var(--gold)">BARBERSHOP</span>
       </a>
       <nav class="nav-links">
         <a href="#servizi">Servizi</a>
@@ -449,6 +452,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="wrap">
+      <img src="img/hermann-barbershop-logo.jpg" alt="Logo Hermann Barbershop Bergamo" style="width:74px;height:74px;border-radius:50%;object-fit:cover;transform:scale(1.12);margin:0 auto 20px;background:#fff">
       <div class="socials">
         <a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">Instagram</a>
         <a href="tel:+393882589071">Telefono</a>
