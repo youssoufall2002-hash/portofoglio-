@@ -37,7 +37,7 @@ Cerca e sostituisci nel file `index.html`:
 | `src` dell'iframe mappa | Punta già a "Via Casalino 2c, Bergamo"; per precisione al pin, incolla l'iframe reale da Google Maps |
 | Link Privacy/Cookie | Pagina o testo di privacy e cookie policy |
 
-Instagram già collegato: [@barber_hermann](https://www.instagram.com/barber_hermann/).
+Instagram già collegato: [@barberr_hermann](https://www.instagram.com/barberr_hermann/).
 
 ## Immagini
 
