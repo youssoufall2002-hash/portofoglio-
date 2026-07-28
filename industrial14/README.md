@@ -29,6 +29,9 @@ In più: barra fissa in basso su mobile, banner cookie, dati strutturati
 |---|---|
 | Nome | **INDUSTRIAL 14** |
 | Indirizzo | **Via Mura 2, 24034 Cisano Bergamasco (BG)** |
+| Telefono | **035 039 0279** |
+| Orari | Mar–Dom 11:30–14:30 · 17:30–24:00 (Ven/Sab fino all'01:00); Lun solo pranzo |
+| Servizi | Happy hour · Sala da pranzo privata · Piatti vegani |
 | Instagram | [@industrial14_cisano](https://www.instagram.com/industrial14_cisano/) |
 | Facebook | [Industrial14 Cisano](https://www.facebook.com/p/Industrial14-Cisano-61581664965413/) |
 
@@ -38,12 +41,10 @@ Cerca i commenti `SEGNAPOSTO` / `SOSTITUIRE` in `index.html`:
 
 | Segnaposto | Sostituire con |
 |---|---|
-| `tel:+390000000000` | Numero di telefono reale del ristorante |
 | Voci e prezzi del **menu** | Menu reale con prezzi |
 | `.shot` in **Galleria** | Foto reali (`<img src="img/…">`) |
 | Foto in **Il locale** | Foto reale dell'interno |
 | **Recensioni** | Commenti reali da Google/Facebook/TripAdvisor |
-| **Orari** | Verificare giorni/orari reali su Google (ora indicativi 10:00–13:30 · 15:00–21:00; domenica da verificare) |
 | `src` iframe mappa | Per il pin preciso, incolla l'iframe reale da Google Maps |
 | Link Privacy/Cookie | Testo o pagina di privacy e cookie policy |
 

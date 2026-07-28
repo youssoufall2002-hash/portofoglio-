@@ -26,8 +26,9 @@
     "name": "INDUSTRIAL 14",
     "description": "Ristorante a Cisano Bergamasco con cucina, drink e atmosfera industrial.",
     "url": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/",
-    "servesCuisine": "Italiana",
+    "servesCuisine": ["Italiana", "Vegana"],
     "priceRange": "€€",
+    "telephone": "+39 035 039 0279",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Mura 2",
@@ -36,6 +37,13 @@
       "postalCode": "24034",
       "addressCountry": "IT"
     },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:30", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "11:30", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:30", "closes": "23:59" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:30", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "01:00" }
+    ],
     "sameAs": [
       "https://www.instagram.com/industrial14_cisano/",
       "https://www.facebook.com/p/Industrial14-Cisano-61581664965413/"
@@ -296,7 +304,7 @@
         <a href="#contatti">Contatti</a>
       </nav>
       <!-- SOSTITUIRE il numero con quello reale del ristorante -->
-      <a class="btn btn-accent" href="tel:+390000000000">Prenota</a>
+      <a class="btn btn-accent" href="tel:+390350390279">Prenota</a>
     </div>
   </header>
 
@@ -308,14 +316,13 @@
       <div class="rule"></div>
       <p class="sub">Cucina, drink e atmosfera industrial. Dove il buon cibo incontra il carattere del ferro e del mattone.</p>
       <div class="hero-cta">
-        <!-- SOSTITUIRE il numero con quello reale -->
-        <a class="btn btn-accent" href="tel:+390000000000">📞 Prenota un tavolo</a>
+        <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota un tavolo</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">📷 Instagram</a>
       </div>
       <div class="hero-badges">
-        <div><b>Via Mura 2</b> Cisano Bergamasco</div>
-        <div><b>Cucina &amp; Drink</b> atmosfera industrial</div>
-        <div><b>10:00 – 21:00</b> orario continuato*</div>
+        <div><b>Happy Hour</b> aperitivo &amp; drink</div>
+        <div><b>Sala privata</b> per i tuoi eventi</div>
+        <div><b>Piatti vegani</b> disponibili</div>
       </div>
     </div>
   </section>
@@ -387,9 +394,9 @@
           <p>INDUSTRIAL 14 è un ristorante a Cisano Bergamasco dove l'estetica industrial — ferro, mattone a vista e luci calde — incornicia una cucina genuina e una selezione di drink pensata per ogni momento della giornata.</p>
           <p>Un ambiente informale e accogliente, ideale per un pranzo veloce, una cena tra amici o un aperitivo. Ti aspettiamo in Via Mura 2.</p>
           <div class="features">
-            <div class="feature"><span class="ico">🍽️</span><div><b>Cucina genuina</b><p>Piatti curati con materie prime selezionate.</p></div></div>
-            <div class="feature"><span class="ico">🍸</span><div><b>Drink &amp; cocktail</b><p>Aperitivi e cocktail in un'atmosfera unica.</p></div></div>
-            <div class="feature"><span class="ico">🧱</span><div><b>Atmosfera industrial</b><p>Ferro, mattone e luci calde: carattere in ogni dettaglio.</p></div></div>
+            <div class="feature"><span class="ico">🍸</span><div><b>Happy Hour</b><p>Aperitivo e drink con cibo dedicato, in un'atmosfera unica.</p></div></div>
+            <div class="feature"><span class="ico">🌱</span><div><b>Piatti vegani</b><p>Proposte vegane sempre disponibili nel menu.</p></div></div>
+            <div class="feature"><span class="ico">🥂</span><div><b>Sala da pranzo privata</b><p>Spazio riservato per feste, cene di gruppo ed eventi.</p></div></div>
           </div>
         </div>
         <div class="about-visual reveal">
@@ -445,8 +452,7 @@
           </div>
           <div class="info-row">
             <span class="ico">📞</span>
-            <!-- SOSTITUIRE con il telefono reale del locale -->
-            <div><div class="label">Telefono</div><a href="tel:+390000000000">Da inserire</a></div>
+            <div><div class="label">Telefono</div><a href="tel:+390350390279">035 039 0279</a></div>
           </div>
           <div class="info-row">
             <span class="ico">📷</span>
@@ -457,17 +463,16 @@
             <div><div class="label">Facebook</div><a href="https://www.facebook.com/p/Industrial14-Cisano-61581664965413/" target="_blank" rel="noopener">Industrial14 Cisano</a></div>
           </div>
           <div class="hours">
-            <!-- SEGNAPOSTO ORARI: verificare i giorni/orari reali su Google. Orario continuato indicativo 10:00–21:00 -->
-            <div class="hours-row"><span class="day">Lunedì</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row"><span class="day">Martedì</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row"><span class="day">Mercoledì</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row"><span class="day">Giovedì</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row"><span class="day">Venerdì</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row"><span class="day">Sabato</span><span class="val">10:00 – 13:30 · 15:00 – 21:00</span></div>
-            <div class="hours-row closed"><span class="day">Domenica</span><span class="val closed">Da verificare</span></div>
+            <div class="hours-row"><span class="day">Lunedì</span><span class="val">11:30 – 14:30 · sera chiuso</span></div>
+            <div class="hours-row"><span class="day">Martedì</span><span class="val">11:30 – 14:30 · 17:30 – 24:00</span></div>
+            <div class="hours-row"><span class="day">Mercoledì</span><span class="val">11:30 – 14:30 · 17:30 – 24:00</span></div>
+            <div class="hours-row"><span class="day">Giovedì</span><span class="val">11:30 – 14:30 · 17:30 – 24:00</span></div>
+            <div class="hours-row"><span class="day">Venerdì</span><span class="val">11:30 – 14:30 · 17:30 – 01:00</span></div>
+            <div class="hours-row"><span class="day">Sabato</span><span class="val">11:30 – 14:30 · 17:30 – 01:00</span></div>
+            <div class="hours-row"><span class="day">Domenica</span><span class="val">11:30 – 14:30 · 17:30 – 24:00</span></div>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-accent" href="tel:+390000000000">📞 Prenota</a>
+            <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota</a>
             <a class="btn btn-ghost" href="https://maps.google.com/?q=INDUSTRIAL+14,+Via+Mura+2,+Cisano+Bergamasco" target="_blank" rel="noopener">🧭 Indicazioni</a>
           </div>
         </div>
@@ -500,7 +505,7 @@
   <!-- STICKY MOBILE BAR -->
   <div class="mobile-bar">
     <a class="call" href="https://maps.google.com/?q=INDUSTRIAL+14,+Via+Mura+2,+Cisano+Bergamasco" target="_blank" rel="noopener">🧭 Indicazioni</a>
-    <a class="book" href="tel:+390000000000">📞 Prenota</a>
+    <a class="book" href="tel:+390350390279">📞 Prenota</a>
   </div>
 
   <!-- COOKIE BANNER -->
