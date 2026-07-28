@@ -11,6 +11,7 @@
   <meta property="og:type" content="restaurant" />
   <meta property="og:title" content="INDUSTRIAL 14 — Ristorante a Cisano Bergamasco" />
   <meta property="og:description" content="Cucina, drink e atmosfera industrial a Cisano Bergamasco. Via Mura 2 (BG)." />
+  <meta property="og:image" content="img/industrial14-logo.jpg" />
   <meta property="og:locale" content="it_IT" />
 
   <!-- Google Fonts: Oswald (titoli) + Inter (testo) -->
@@ -164,7 +165,9 @@
       pointer-events: none;
     }
     .hero .wrap { position: relative; z-index: 2; }
-    .hero .tag { font-family: var(--font-titoli); letter-spacing: .4em; text-transform: uppercase; color: var(--steel); font-size: .8rem; margin-bottom: 18px; }
+    .hero .tag { font-family: var(--font-titoli); letter-spacing: .4em; text-transform: uppercase; color: var(--steel); font-size: .8rem; margin-bottom: 4px; }
+    .hero .hero-logo-wrap { margin: 0 0 14px; line-height: 0; }
+    .hero-logo { width: min(88%, 480px); height: auto; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 22px 55px rgba(0,0,0,.6); }
     .hero h1 { font-size: clamp(3rem, 12vw, 7rem); margin-bottom: 8px; line-height: .92; }
     .hero h1 .num { color: var(--accent); }
     .hero .rule { width: 64px; height: 3px; background: var(--accent); margin: 22px auto 24px; }
@@ -316,8 +319,8 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="wrap">
+      <h1 class="hero-logo-wrap"><img class="hero-logo" src="img/industrial14-logo.jpg" alt="INDUSTRIAL 14 — Cisano Bergamasco"></h1>
       <div class="tag">Cisano Bergamasco · BG</div>
-      <h1>INDUSTRIAL <span class="num">14</span></h1>
       <div class="rule"></div>
       <p class="sub">Pizza gourmet, taglieri, hamburger e birre artigianali. Dove il buon cibo incontra il carattere del ferro e del mattone.</p>
       <div class="hero-cta">
