@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INDUSTRIAL 14 — Ristorante a Cisano Bergamasco (BG)</title>
-  <meta name="description" content="INDUSTRIAL 14 — ristorante a Cisano Bergamasco. Cucina, drink e atmosfera industrial in Via Mura 2. Prenota il tuo tavolo." />
+  <meta name="description" content="INDUSTRIAL 14 — pizzeria e ristorante a Cisano Bergamasco. Pizza gourmet, taglieri, hamburger, carne e birre artigianali in Via Mura 2. Prenota il tuo tavolo." />
   <meta name="theme-color" content="#0e0e10" />
 
   <!-- Open Graph -->
@@ -26,9 +26,15 @@
     "name": "INDUSTRIAL 14",
     "description": "Ristorante a Cisano Bergamasco con cucina, drink e atmosfera industrial.",
     "url": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/",
-    "servesCuisine": ["Italiana", "Vegana"],
+    "servesCuisine": ["Pizza", "Italiana", "Hamburger", "Vegana"],
     "priceRange": "€€",
     "telephone": "+39 035 039 0279",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Accessibile in sedia a rotelle", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Sala da pranzo privata", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Happy hour", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Opzioni vegane", "value": true }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Mura 2",
@@ -314,7 +320,7 @@
       <div class="tag">Cisano Bergamasco · BG</div>
       <h1>INDUSTRIAL <span class="num">14</span></h1>
       <div class="rule"></div>
-      <p class="sub">Cucina, drink e atmosfera industrial. Dove il buon cibo incontra il carattere del ferro e del mattone.</p>
+      <p class="sub">Pizza gourmet, taglieri, hamburger e birre artigianali. Dove il buon cibo incontra il carattere del ferro e del mattone.</p>
       <div class="hero-cta">
         <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota un tavolo</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">📷 Instagram</a>
@@ -333,27 +339,34 @@
       <div class="section-head reveal">
         <span class="eyebrow">La cucina</span>
         <h2>Il menu</h2>
-        <p>Una selezione dai nostri piatti. <em>(Voci e prezzi da confermare con il menu reale del locale.)</em></p>
+        <p>Pizza gourmet dall'impasto leggero e digeribile, taglieri, hamburger e tanto altro. <em>(Prezzi da confermare con il menu reale del locale.)</em></p>
       </div>
       <div class="menu-list reveal">
-        <!-- SEGNAPOSTO: sostituire con le voci e i prezzi reali del menu -->
-        <div class="menu-cat">Antipasti</div>
-        <div class="menu-row"><span class="name">Tagliere Industrial <span class="desc">— salumi e formaggi selezionati</span></span><span class="dots"></span><span class="price">—</span></div>
-        <div class="menu-row"><span class="name">Fritto misto della casa</span><span class="dots"></span><span class="price">—</span></div>
+        <!-- Voci reali citate dalle recensioni Google. PREZZI DA INSERIRE (attualmente "—"). -->
+        <div class="menu-cat">Pizza &amp; Pizze Gourmet</div>
+        <div class="menu-row"><span class="name">Pizze gourmet <span class="desc">— abbinamenti particolari, ingredienti di qualità</span></span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-row"><span class="name">La Pota · Mia Mal · Indiavolata <span class="desc">— alcune delle nostre firme</span></span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-row"><span class="name">Pizza classica <span class="desc">— impasto leggero e digeribile</span></span><span class="dots"></span><span class="price">—</span></div>
 
-        <div class="menu-cat">Primi</div>
-        <div class="menu-row"><span class="name">Pasta fresca del giorno</span><span class="dots"></span><span class="price">—</span></div>
-        <div class="menu-row"><span class="name">Risotto mantecato</span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-cat">Taglieri</div>
+        <div class="menu-row"><span class="name">Taglieri di pizza <span class="desc">— anche di grandi dimensioni, da condividere</span></span><span class="dots"></span><span class="price">—</span></div>
 
-        <div class="menu-cat">Secondi &amp; Griglia</div>
-        <div class="menu-row"><span class="name">Tagliata di manzo <span class="desc">— rucola e grana</span></span><span class="dots"></span><span class="price">—</span></div>
-        <div class="menu-row"><span class="name">Hamburger Industrial 14</span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-cat">Panini &amp; Hamburger</div>
+        <div class="menu-row"><span class="name">Hamburger della casa <span class="desc">— tra i più apprezzati</span></span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-row"><span class="name">Panini gourmet</span><span class="dots"></span><span class="price">—</span></div>
 
-        <div class="menu-cat">Drink &amp; Cocktail</div>
-        <div class="menu-row"><span class="name">Cocktail della casa</span><span class="dots"></span><span class="price">—</span></div>
-        <div class="menu-row"><span class="name">Birre artigianali alla spina</span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-cat">Carne &amp; Fritti</div>
+        <div class="menu-row"><span class="name">Tagliata di carne</span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-row"><span class="name">Patatine &amp; orecchio di elefante</span><span class="dots"></span><span class="price">—</span></div>
+
+        <div class="menu-cat">Dolci</div>
+        <div class="menu-row"><span class="name">Tiramisù <span class="desc">— fatto in casa</span></span><span class="dots"></span><span class="price">—</span></div>
+
+        <div class="menu-cat">Birre &amp; Drink</div>
+        <div class="menu-row"><span class="name">Birre artigianali <span class="desc">— tra cui la nostra "Bocia"</span></span><span class="dots"></span><span class="price">—</span></div>
+        <div class="menu-row"><span class="name">Happy hour <span class="desc">— aperitivo con cibo dedicato</span></span><span class="dots"></span><span class="price">—</span></div>
       </div>
-      <p class="menu-note">Per il menu completo, allergeni e disponibilità del giorno chiamaci o passa a trovarci.</p>
+      <p class="menu-note">🌱 Disponibili anche opzioni vegane. Per il menu completo, gli allergeni e le proposte del giorno chiamaci o passa a trovarci.</p>
     </div>
   </section>
 
@@ -413,24 +426,38 @@
       <div class="section-head reveal">
         <span class="eyebrow">Testimonianze</span>
         <h2>Cosa dicono</h2>
-        <p><em>Inserire qui le recensioni reali (Google / TripAdvisor / Facebook).</em></p>
+        <p>Recensioni reali dei nostri clienti su Google.</p>
       </div>
       <div class="reviews reveal">
-        <!-- SEGNAPOSTO: sostituire con recensioni reali -->
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Recensione da inserire — copia qui un commento reale dei clienti da Google o Facebook.»</p>
-          <span class="who">Nome Cliente</span> <span class="via">· Google</span>
+          <p>«Carne spettacolare, ottima birra e servizio top: personale sorridente, gentile, cordiale e professionale!»</p>
+          <span class="who">Dina Stucchi</span> <span class="via">· Google</span>
         </div>
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Recensione da inserire — atmosfera, cucina, servizio.»</p>
-          <span class="who">Nome Cliente</span> <span class="via">· Facebook</span>
+          <p>«Locale nuovo e molto ben curato. Gli hamburger sono spettacolari e il tiramisù merita tantissimo. Consiglio assolutamente!»</p>
+          <span class="who">Simone S.</span> <span class="via">· Google</span>
         </div>
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Recensione da inserire — perché tornare a INDUSTRIAL 14.»</p>
-          <span class="who">Nome Cliente</span> <span class="via">· TripAdvisor</span>
+          <p>«Le pizze sono buonissime, non solo per le materie prime, ma anche per gli abbinamenti particolari delle pizze gourmet.»</p>
+          <span class="who">Raffaele</span> <span class="via">· Google</span>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>«Ottima pizza con buonissimo impasto, dolci buoni, servizio attento, qualità/prezzo eccezionale.»</p>
+          <span class="who">Paolo Ravasi</span> <span class="via">· Google</span>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>«Pizza buonissima, panini deliziosi, buona anche la loro birra "Bocia". Super consigliato.»</p>
+          <span class="who">Roby V.</span> <span class="via">· Google</span>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★☆</div>
+          <p>«Direi che è la migliore pizza della zona… Non vedo l'ora di tornarci!»</p>
+          <span class="who">Paolo</span> <span class="via">· Google</span>
         </div>
       </div>
       <p class="menu-note reveal">Sei stato da noi? <a href="https://www.google.com/search?q=INDUSTRIAL+14+Cisano+Bergamasco" target="_blank" rel="noopener" style="color:var(--accent)">Lascia una recensione su Google →</a></p>
@@ -461,6 +488,10 @@
           <div class="info-row">
             <span class="ico">👍</span>
             <div><div class="label">Facebook</div><a href="https://www.facebook.com/p/Industrial14-Cisano-61581664965413/" target="_blank" rel="noopener">Industrial14 Cisano</a></div>
+          </div>
+          <div class="info-row">
+            <span class="ico">♿</span>
+            <div><div class="label">Accessibilità</div><span>Locale accessibile in sedia a rotelle</span></div>
           </div>
           <div class="hours">
             <div class="hours-row"><span class="day">Lunedì</span><span class="val">11:30 – 14:30 · sera chiuso</span></div>
