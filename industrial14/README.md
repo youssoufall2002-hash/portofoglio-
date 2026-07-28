@@ -41,15 +41,15 @@ Cerca i commenti `SEGNAPOSTO` / `SOSTITUIRE` in `index.html`:
 
 | Segnaposto | Sostituire con |
 |---|---|
-| **Prezzi** del menu | Le voci sono reali (da recensioni); mancano solo i prezzi (ora `—`) |
 | `.shot` in **Galleria** | Foto reali (`<img src="img/…">`) |
 | Foto in **Il locale** | Foto reale dell'interno |
 | `src` iframe mappa | Per il pin preciso, incolla l'iframe reale da Google Maps |
 | Link Privacy/Cookie | Testo o pagina di privacy e cookie policy |
 
-**Menu** e **recensioni** ora contengono voci/commenti reali ricavati dalle
-recensioni Google (pizza gourmet, taglieri, hamburger, carne, fritti, tiramisù,
-birre artigianali incl. "Bocia"). Restano da inserire solo i **prezzi**.
+**Menu completo con prezzi** inserito (pizze classiche, rivisitate e Industrial,
+hamburger, carni, tegamini gourmet, fritture, menù veganø, menù bambini, birre
+di produzione propria e beverage). **Recensioni** reali da Google.
+Restano da inserire solo le **foto**.
 
 ## Immagini
 
