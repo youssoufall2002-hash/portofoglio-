@@ -41,15 +41,13 @@ Cerca i commenti `SEGNAPOSTO` / `SOSTITUIRE` in `index.html`:
 
 | Segnaposto | Sostituire con |
 |---|---|
-| `.shot` in **Galleria** | Foto reali (`<img src="img/…">`) |
-| Foto in **Il locale** | Foto reale dell'interno |
 | `src` iframe mappa | Per il pin preciso, incolla l'iframe reale da Google Maps |
 | Link Privacy/Cookie | Testo o pagina di privacy e cookie policy |
 
-**Menu completo con prezzi** inserito (pizze classiche, rivisitate e Industrial,
-hamburger, carni, tegamini gourmet, fritture, menù veganø, menù bambini, birre
-di produzione propria e beverage). **Recensioni** reali da Google.
-Restano da inserire solo le **foto**.
+**Menu completo con prezzi**, **recensioni** reali da Google e **foto reali**
+del locale sono già inseriti. Le immagini sono in `industrial14/img/`
+(ingresso/insegna, sala, esterno, bar e piatti: pizze, hamburger, filetto).
+Il sito è sostanzialmente completo.
 
 ## Immagini
 
