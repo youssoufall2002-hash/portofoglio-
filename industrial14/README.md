@@ -1,0 +1,54 @@
+# INDUSTRIAL 14 — Sito web
+
+Sito one-page per **INDUSTRIAL 14**, ristorante a **Cisano Bergamasco (BG)**, Via Mura 2.
+Stile **industrial** (nero/cemento, accento rame-arancio), font **Oswald + Inter**.
+Tutto in un unico file `index.html` (HTML + CSS + JS inline).
+
+## Come si apre
+
+Apri `industrial14/index.html` in un browser. Nessuna dipendenza esterna a parte
+i font di Google e l'iframe della mappa.
+
+Online (GitHub Pages): `https://youssoufall2002-hash.github.io/portofoglio-/industrial14/`
+
+## Sezioni
+
+1. **Hero** — nome, claim, pulsanti Prenota + Instagram
+2. **Menu** — categorie e voci (segnaposto, prezzi da inserire)
+3. **Galleria** — 6 riquadri (da sostituire con foto reali / Instagram)
+4. **Il locale** — chi siamo + 3 punti di forza
+5. **Recensioni** — 3 riquadri segnaposto
+6. **Contatti** — indirizzo, telefono, Instagram, Facebook, orari, mappa
+
+In più: barra fissa in basso su mobile, banner cookie, dati strutturati
+`Restaurant` (schema.org), meta SEO.
+
+## Dati reali già inseriti
+
+| Dato | Valore |
+|---|---|
+| Nome | **INDUSTRIAL 14** |
+| Indirizzo | **Via Mura 2, 24034 Cisano Bergamasco (BG)** |
+| Instagram | [@industrial14_cisano](https://www.instagram.com/industrial14_cisano/) |
+| Facebook | [Industrial14 Cisano](https://www.facebook.com/p/Industrial14-Cisano-61581664965413/) |
+
+## ⚠️ DA COMPLETARE (segnaposto nel file)
+
+Cerca i commenti `SEGNAPOSTO` / `SOSTITUIRE` in `index.html`:
+
+| Segnaposto | Sostituire con |
+|---|---|
+| `tel:+390000000000` | Numero di telefono reale del ristorante |
+| Voci e prezzi del **menu** | Menu reale con prezzi |
+| `.shot` in **Galleria** | Foto reali (`<img src="img/…">`) |
+| Foto in **Il locale** | Foto reale dell'interno |
+| **Recensioni** | Commenti reali da Google/Facebook/TripAdvisor |
+| **Orari** | Verificare giorni/orari reali su Google (ora indicativi 10:00–13:30 · 15:00–21:00; domenica da verificare) |
+| `src` iframe mappa | Per il pin preciso, incolla l'iframe reale da Google Maps |
+| Link Privacy/Cookie | Testo o pagina di privacy e cookie policy |
+
+## Immagini
+
+Crea una cartella `industrial14/img/` ed esporta le foto in **WebP/JPG sotto i 250 KB**.
+Sostituisci ogni `<div class="shot">…</div>` con
+`<img src="img/nome-foto.webp" alt="Descrizione — INDUSTRIAL 14 Cisano Bergamasco">`.
