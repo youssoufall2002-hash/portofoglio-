@@ -15,6 +15,26 @@
   };
 })();
 
+// Menu a schermo intero (hamburger)
+(function () {
+  var t = document.getElementById('navToggle');
+  var o = document.getElementById('navOverlay');
+  var c = document.getElementById('navClose');
+  if (!t || !o) return;
+  function open() {
+    o.classList.add('open'); o.setAttribute('aria-hidden', 'false');
+    t.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    o.classList.remove('open'); o.setAttribute('aria-hidden', 'true');
+    t.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+  }
+  t.addEventListener('click', open);
+  if (c) c.addEventListener('click', close);
+  o.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+
 // Comparsa allo scroll
 (function () {
   var els = document.querySelectorAll('.reveal');
