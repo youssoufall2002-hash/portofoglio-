@@ -391,7 +391,7 @@
         <h2>Il menu</h2>
         <p>Pizza gourmet dall'impasto leggero e digeribile, hamburger, carni e birre artigianali di produzione propria.</p>
       </div>
-      <div class="menu-list reveal">
+      <div class="menu-list">
 
         <div class="menu-cat">Antipasti &amp; Varie</div>
         <div class="menu-row"><span class="name">Tagliere di salumi e formaggi <span class="desc">— con gnocco fritto o focaccia</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
@@ -651,7 +651,7 @@
     // Reveal on scroll
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: .12 });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
   </script>
 </body>
