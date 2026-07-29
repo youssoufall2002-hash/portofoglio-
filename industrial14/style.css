@@ -202,6 +202,11 @@ header {
 @media (min-width: 880px) { .about-grid { grid-template-columns: 1fr 1fr; } }
 .about-text p { color: var(--muted); margin-bottom: 18px; }
 .features { display: grid; gap: 18px; margin-top: 26px; }
+.features-row { max-width: 900px; margin: 0 auto; }
+@media (min-width: 780px) { .features-row { grid-template-columns: repeat(3, 1fr); gap: 26px; } }
+/* Fascia foto a tutta larghezza */
+.band { padding: 0; }
+.band img { width: 100%; height: clamp(220px, 42vh, 440px); object-fit: cover; display: block; }
 .feature { display: flex; gap: 15px; align-items: flex-start; }
 .feature .ico { font-size: 1.5rem; line-height: 1; }
 .feature b { display: block; margin-bottom: 2px; font-family: var(--font-titoli); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
