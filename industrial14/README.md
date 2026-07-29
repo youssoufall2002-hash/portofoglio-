@@ -1,8 +1,8 @@
 # INDUSTRIAL 14 — Sito web
 
-Sito one-page per **INDUSTRIAL 14**, ristorante a **Cisano Bergamasco (BG)**, Via Mura 2.
+Sito **multi-pagina** per **INDUSTRIAL 14**, ristorante e pizzeria a
+**Cisano Bergamasco (BG)**, Via Mura 2.
 Stile **industrial** (nero/cemento, accento rame-arancio), font **Oswald + Inter**.
-Tutto in un unico file `index.html` (HTML + CSS + JS inline).
 
 ## Come si apre
 
@@ -11,16 +11,21 @@ i font di Google e l'iframe della mappa.
 
 Online (GitHub Pages): `https://youssoufall2002-hash.github.io/portofoglio-/industrial14/`
 
-## Sezioni
+## Struttura (multi-pagina)
 
-1. **Hero** — nome, claim, pulsanti Prenota + Instagram
-2. **Menu** — categorie e voci (segnaposto, prezzi da inserire)
-3. **Galleria** — 6 riquadri (da sostituire con foto reali / Instagram)
-4. **Il locale** — chi siamo + 3 punti di forza
-5. **Recensioni** — 3 riquadri segnaposto
-6. **Contatti** — indirizzo, telefono, Instagram, Facebook, orari, mappa
+Stile e script sono condivisi in `style.css` e `script.js`, così le pagine
+restano coerenti e leggere.
 
-In più: barra fissa in basso su mobile, banner cookie, dati strutturati
+- **`index.html` (Home)** — copertina con logo, "Il locale", anteprima galleria,
+  anteprima menù (categorie), recensioni, contatti rapidi
+- **`menu.html` (Menù)** — menù completo: 86 voci in 12 categorie con prezzi
+- **`galleria.html` (Galleria)** — 9 foto del locale e dei piatti
+- **`contatti.html` (Contatti)** — indirizzo, telefono, orari, accessibilità, mappa
+- **`style.css`** — foglio di stile condiviso
+- **`script.js`** — anno footer, banner cookie, animazioni allo scroll
+
+In più: menu di navigazione in alto (Home · Menù · Galleria · Contatti),
+barra fissa in basso su mobile, banner cookie, dati strutturati
 `Restaurant` (schema.org), meta SEO.
 
 ## Dati reali già inseriti
