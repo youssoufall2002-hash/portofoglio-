@@ -8,10 +8,18 @@
 (function () {
   var c = document.getElementById('cookie');
   if (!c) return;
-  if (!localStorage.getItem('i14_cookie_ok')) c.classList.remove('hidden');
+  function spazio() {
+    document.body.style.paddingBottom = c.classList.contains('hidden') ? '' : c.offsetHeight + 'px';
+  }
+  if (!localStorage.getItem('i14_cookie_ok')) {
+    c.classList.remove('hidden');
+    spazio();
+    window.addEventListener('resize', spazio);
+  }
   window.acceptCookie = function () {
     localStorage.setItem('i14_cookie_ok', '1');
     c.classList.add('hidden');
+    spazio();
   };
 })();
 

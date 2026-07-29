@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,6 +42,7 @@
       <a href="menu.html" class="active">Menù</a>
       <a href="galleria.html">Galleria</a>
       <a href="contatti.html">Contatti</a>
+      <a class="ov-book" href="tel:+390350390279">📞 Prenota</a>
     </nav>
   </div>
 
@@ -56,6 +59,14 @@
   <!-- MENU -->
   <section>
     <div class="wrap">
+      <div class="cat-chips" style="margin-bottom:40px">
+        <a href="#pizze">Pizze</a>
+        <a href="#hamburger">Hamburger</a>
+        <a href="#carni">Carni</a>
+        <a href="#fritture">Fritture</a>
+        <a href="#vegano">🌱 Veganø</a>
+        <a href="#birre">Birre</a>
+      </div>
       <div class="menu-list">
 
         <div class="menu-cat">Antipasti &amp; Varie</div>
@@ -67,7 +78,7 @@
         <div class="menu-row"><span class="name">Crudité <span class="desc">— rucola, stracciatella, tartare di gambero, zest di limone, fiori edibili</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
         <div class="menu-row"><span class="name">Fondue <span class="desc">— fonduta di quattro formaggi, petali di tartufo, battuta di fassona al coltello</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
 
-        <div class="menu-cat">Fritture</div>
+        <div class="menu-cat" id="fritture">Fritture</div>
         <div class="menu-row"><span class="name">Patatine fritte</span><span class="dots"></span><span class="price">3,50 €</span></div>
         <div class="menu-row"><span class="name">Crocchette di patate</span><span class="dots"></span><span class="price">4,00 €</span></div>
         <div class="menu-row"><span class="name">Olive ascolane</span><span class="dots"></span><span class="price">4,00 €</span></div>
@@ -78,7 +89,7 @@
         <div class="menu-row"><span class="name">Nuggets di pollo <span class="desc">— x5 / x10</span></span><span class="dots"></span><span class="price">5,00 €</span></div>
         <div class="menu-row"><span class="name">Mix frittura <span class="desc">— mix delle fritture sopra elencate</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
 
-        <div class="menu-cat">Pizze Classiche</div>
+        <div class="menu-cat" id="pizze">Pizze Classiche</div>
         <div class="menu-row"><span class="name">Marinara <span class="desc">— pomodoro, aglio, olio evo, origano</span></span><span class="dots"></span><span class="price">5,50 €</span></div>
         <div class="menu-row"><span class="name">Margherita <span class="desc">— pomodoro, fiordilatte</span></span><span class="dots"></span><span class="price">6,50 €</span></div>
         <div class="menu-row"><span class="name">Napoli <span class="desc">— pomodoro, fiordilatte, acciughe, origano</span></span><span class="dots"></span><span class="price">8,00 €</span></div>
@@ -121,7 +132,7 @@
         <div class="menu-row"><span class="name">L'è Buna <span class="desc">— fiordilatte, crudo di Parma, burrata affumicata, petali di tartufo nero</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
         <div class="menu-row"><span class="name">Industrial <span class="desc">— pomodoro, bufala DOP, crudo iberico, pecorino al pepe</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
 
-        <div class="menu-cat">Hamburger <span style="font-family:var(--font-testo);text-transform:none;letter-spacing:0;color:var(--muted);font-size:.8rem">· serviti con patatine</span></div>
+        <div class="menu-cat" id="hamburger">Hamburger <span style="font-family:var(--font-testo);text-transform:none;letter-spacing:0;color:var(--muted);font-size:.8rem">· serviti con patatine</span></div>
         <div class="menu-row"><span class="name">Ol Nurmal <span class="desc">— burger di fassona, cheddar, pomodoro, insalata</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
         <div class="menu-row"><span class="name">Ol Barbecue <span class="desc">— burger di fassona, cheddar, bacon, cipolla caramellata, salsa barbecue</span></span><span class="dots"></span><span class="price">10,00 €</span></div>
         <div class="menu-row"><span class="name">Ol Pulastrel <span class="desc">— petto di pollo alla piastra, bacon, pomodoro, insalata, maionese</span></span><span class="dots"></span><span class="price">10,50 €</span></div>
@@ -131,7 +142,7 @@
         <div class="menu-row"><span class="name">Stèrlöch <span class="desc">— burger di fassona, porcini, taleggio, crudo iberico, songino</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
         <div class="menu-row"><span class="name">Ol Norveges <span class="desc">— filetto di salmone, zucchine grigliate, stracciatella DOP, salsa agli agrumi, songino</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
 
-        <div class="menu-cat">Carni &amp; Griglia</div>
+        <div class="menu-cat" id="carni">Carni &amp; Griglia</div>
         <div class="menu-row"><span class="name">Ribs <span class="desc">— costine di maiale cotte a bassa temperatura</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
         <div class="menu-row"><span class="name">Tagliata di pollo <span class="desc">— rucola, scaglie di grana, pomodorini</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
         <div class="menu-row"><span class="name">Tagliata di manzo <span class="desc">— rucola, scaglie di grana, pomodorini</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
@@ -140,7 +151,7 @@
         <div class="menu-row"><span class="name">Costata di scottona</span><span class="dots"></span><span class="price">22,00 €</span></div>
         <div class="menu-row"><span class="name">Filetto al rosmarino</span><span class="dots"></span><span class="price">25,00 €</span></div>
 
-        <div class="menu-cat">🌱 Menù Veganø</div>
+        <div class="menu-cat" id="vegano">🌱 Menù Veganø</div>
         <div class="menu-row"><span class="name">Insalatona <span class="desc">— lattuga, pomodorini, olive, burger vegano, zucchine grigliate, noci</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
         <div class="menu-row"><span class="name">Spitinfia <span class="desc">— pomodoro, aglio, origano, olio evo, rucola, pomodorini, carciofi grigliati, glassa balsamica</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
         <div class="menu-row"><span class="name">Burger Ol Vegan <span class="desc">— burger vegano, songino, pomodori, patate crunchy, maionese vegana, cipolla caramellata</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
@@ -150,7 +161,7 @@
         <div class="menu-row"><span class="name">Scetin <span class="desc">— burger di fassona, cheddar, ketchup, con patatine</span></span><span class="dots"></span><span class="price">7,00 €</span></div>
         <div class="menu-row"><span class="name">Tiramat <span class="desc">— cotoletta e patatine</span></span><span class="dots"></span><span class="price">8,00 €</span></div>
 
-        <div class="menu-cat">Birre</div>
+        <div class="menu-cat" id="birre">Birre</div>
         <div class="menu-row"><span class="name">Bocia <span class="desc">— la nostra lager in lattina (0,33l)</span></span><span class="dots"></span><span class="price">5,00 €</span></div>
         <div class="menu-row"><span class="name">R-1p4 <span class="desc">— la nostra American IPA alla spina, note di agrumi e frutta tropicale (0,33l · 6,6%)</span></span><span class="dots"></span><span class="price">6,50 €</span></div>
         <div class="menu-row"><span class="name">Leffe Rouge <span class="desc">— rossa, avvolgente e dolce (piccola/media · 6,6%)</span></span><span class="dots"></span><span class="price">3,50 €</span></div>
@@ -197,8 +208,8 @@
 
   <!-- COOKIE BANNER -->
   <div class="cookie hidden" id="cookie">
-    <p>Questo sito usa cookie tecnici e, previo consenso, la mappa di Google. <a href="#" onclick="alert('Inserire la Cookie Policy completa.');return false;">Maggiori info</a></p>
-    <button class="btn btn-accent" style="padding:9px 20px" onclick="acceptCookie()">Ho capito</button>
+    <p>Usiamo cookie tecnici e la mappa di Google. <a href="#" onclick="alert('Inserire la Cookie Policy completa.');return false;">Maggiori info</a></p>
+    <button class="btn btn-accent" onclick="acceptCookie()">Ho capito</button>
   </div>
 
   <script src="script.js"></script>
