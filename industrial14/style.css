@@ -87,6 +87,38 @@ header {
 .nav .btn { padding: 9px 20px; font-size: .82rem; }
 @media (min-width: 880px) { .nav-links { display: flex; } }
 
+/* Azioni a destra + hamburger */
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-toggle {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; padding: 11px; background: none; border: 0; cursor: pointer;
+}
+.nav-toggle span { display: block; height: 2px; width: 100%; background: var(--text); border-radius: 2px; }
+@media (min-width: 880px) { .nav-toggle { display: none; } }
+
+/* Menu a schermo intero */
+.nav-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(14,14,16,.98); backdrop-filter: blur(6px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;
+  padding: 40px; opacity: 0; visibility: hidden; transition: opacity .28s ease;
+}
+.nav-overlay.open { opacity: 1; visibility: visible; }
+.nav-close {
+  position: absolute; top: 18px; right: 20px; width: 48px; height: 48px;
+  background: none; border: 0; color: var(--text); font-size: 2.6rem; line-height: 1; cursor: pointer;
+}
+.nav-overlay-links { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.nav-overlay-links a {
+  font-family: var(--font-titoli); text-transform: uppercase; letter-spacing: .1em;
+  font-size: clamp(1.5rem, 6vw, 2rem); color: var(--text);
+}
+.nav-overlay-links a:hover, .nav-overlay-links a.active { color: var(--accent); }
+.nav-overlay-links .ov-book {
+  margin-top: 8px; color: var(--accent); border: 1px solid var(--accent);
+  border-radius: 4px; padding: 12px 28px; font-size: 1.05rem;
+}
+
 /* Hero (home) */
 .hero {
   position: relative; border-top: none;
