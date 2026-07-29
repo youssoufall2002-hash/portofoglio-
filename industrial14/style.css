@@ -128,8 +128,8 @@ header {
   padding: 96px 0;
   text-align: center; overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(14,14,16,.80) 0%, rgba(14,14,16,.95) 100%),
-    url('img/industrial14-ingresso.jpg') center 40% / cover no-repeat;
+    linear-gradient(180deg, rgba(14,14,16,.55) 0%, rgba(14,14,16,.88) 100%),
+    url('img/industrial14-esterno-notte.jpg') center 45% / cover no-repeat;
 }
 .hero p.sub { color: #d7d4d0; }
 .hero::before {
