@@ -89,6 +89,10 @@ header {
 
 /* Azioni a destra + hamburger */
 .nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-book { display: none; }
+@media (min-width: 880px) { .nav-book { display: inline-flex; } }
+/* Galleria in anteprima (home): fila ordinata sempre a 3 */
+.gallery.teaser { grid-template-columns: repeat(3, 1fr); }
 .nav-toggle {
   display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
   width: 44px; height: 44px; padding: 11px; background: none; border: 0; cursor: pointer;

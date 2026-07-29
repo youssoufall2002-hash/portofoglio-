@@ -7,10 +7,9 @@
   <meta name="description" content="INDUSTRIAL 14 — pizzeria e ristorante a Cisano Bergamasco. Pizza gourmet, hamburger, carne e birre artigianali in Via Mura 2. Prenota il tuo tavolo." />
   <meta name="theme-color" content="#0e0e10" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="restaurant" />
   <meta property="og:title" content="INDUSTRIAL 14 — Ristorante a Cisano Bergamasco" />
-  <meta property="og:description" content="Cucina, drink e atmosfera industrial a Cisano Bergamasco. Via Mura 2 (BG)." />
+  <meta property="og:description" content="Pizzeria e griglia a Cisano Bergamasco. Via Mura 2 (BG)." />
   <meta property="og:image" content="img/industrial14-logo.jpg" />
   <meta property="og:locale" content="it_IT" />
 
@@ -29,12 +28,6 @@
     "servesCuisine": ["Pizza", "Italiana", "Hamburger", "Vegana"],
     "priceRange": "€€",
     "telephone": "+39 035 039 0279",
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Accessibile in sedia a rotelle", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Sala da pranzo privata", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Happy hour", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Opzioni vegane", "value": true }
-    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Mura 2",
@@ -62,7 +55,7 @@
   <!-- HEADER -->
   <header>
     <div class="wrap nav">
-      <a class="brand" href="index.html"><span class="mark">14</span> INDUSTRIAL <span style="color:var(--accent)">14</span></a>
+      <a class="brand" href="index.html">INDUSTRIAL <span style="color:var(--accent)">14</span></a>
       <nav class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="menu.html">Menù</a>
@@ -84,25 +77,16 @@
       <a href="menu.html">Menù</a>
       <a href="galleria.html">Galleria</a>
       <a href="contatti.html">Contatti</a>
-      <a class="ov-book" href="tel:+390350390279">📞 Prenota</a>
     </nav>
   </div>
 
   <!-- HERO -->
-  <section class="hero" id="top">
+  <section class="hero">
     <div class="wrap">
       <h1 class="hero-logo-wrap"><img class="hero-logo" src="img/industrial14-logo.jpg" alt="INDUSTRIAL 14 — Cisano Bergamasco"></h1>
-      <div class="tag">Cisano Bergamasco · BG</div>
-      <div class="rule"></div>
-      <p class="sub">Pizza gourmet, hamburger, carne alla griglia e birre artigianali. Dove il buon cibo incontra il carattere del ferro e del mattone.</p>
+      <p class="sub">Pizzeria &amp; griglia a Cisano Bergamasco.</p>
       <div class="hero-cta">
         <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota un tavolo</a>
-        <a class="btn btn-ghost" href="menu.html">🍕 Vedi il menù</a>
-      </div>
-      <div class="hero-badges">
-        <div><b>Happy Hour</b> aperitivo &amp; drink</div>
-        <div><b>Sala privata</b> per i tuoi eventi</div>
-        <div><b>Piatti vegani</b> disponibili</div>
       </div>
     </div>
   </section>
@@ -114,12 +98,12 @@
         <div class="about-text reveal">
           <span class="eyebrow">Chi siamo</span>
           <h2>Il locale</h2>
-          <p>INDUSTRIAL 14 è un ristorante e pizzeria a Cisano Bergamasco dove l'estetica industrial — ferro, mattone a vista e luci calde — incornicia una cucina genuina e una selezione di drink pensata per ogni momento della giornata.</p>
-          <p>Un ambiente informale e accogliente, ideale per un pranzo veloce, una cena tra amici o un aperitivo. Ti aspettiamo in Via Mura 2.</p>
+          <p>INDUSTRIAL 14 è un ristorante e pizzeria a Cisano Bergamasco: ferro, mattone a vista e luci calde, una cucina genuina e una bella selezione di birre e drink.</p>
+          <p>Un ambiente informale e accogliente, per un pranzo veloce, una cena tra amici o un aperitivo. Ti aspettiamo in Via Mura 2.</p>
           <div class="features">
-            <div class="feature"><span class="ico">🍸</span><div><b>Happy Hour</b><p>Aperitivo e drink con cibo dedicato, in un'atmosfera unica.</p></div></div>
-            <div class="feature"><span class="ico">🌱</span><div><b>Piatti vegani</b><p>Proposte vegane sempre disponibili nel menu.</p></div></div>
-            <div class="feature"><span class="ico">🥂</span><div><b>Sala da pranzo privata</b><p>Spazio riservato per feste, cene di gruppo ed eventi.</p></div></div>
+            <div class="feature"><span class="ico">🍸</span><div><b>Happy Hour</b><p>Aperitivo e drink con cibo dedicato.</p></div></div>
+            <div class="feature"><span class="ico">🌱</span><div><b>Piatti vegani</b><p>Sempre disponibili nel menù.</p></div></div>
+            <div class="feature"><span class="ico">🥂</span><div><b>Sala privata</b><p>Per feste, gruppi ed eventi.</p></div></div>
           </div>
         </div>
         <div class="about-visual reveal">
@@ -129,49 +113,34 @@
     </div>
   </section>
 
-  <!-- GALLERIA (anteprima) -->
+  <!-- MENU (richiamo unico) -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">La cucina</span>
+        <h2>Il menù</h2>
+        <p>Pizza gourmet, hamburger, carne alla griglia e birre artigianali di produzione propria.</p>
+      </div>
+      <div class="center-cta reveal">
+        <a class="btn btn-accent" href="menu.html">Guarda il menù →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA (anteprima ordinata) -->
   <section id="galleria">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Ambiente &amp; piatti</span>
         <h2>Galleria</h2>
-        <p>Uno sguardo al locale e ai nostri piatti.</p>
       </div>
-      <div class="gallery reveal">
+      <div class="gallery teaser reveal">
         <div class="shot"><img src="img/industrial14-pizza-burrata-fichi.jpg" alt="Pizza gourmet con burrata, crudo e fichi — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Pizza gourmet</span></div>
         <div class="shot"><img src="img/industrial14-hamburger.jpg" alt="Hamburger con uovo, bacon e patate — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Hamburger</span></div>
-        <div class="shot"><img src="img/industrial14-filetto.jpg" alt="Filetto al rosmarino con patate — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Carni alla griglia</span></div>
+        <div class="shot"><img src="img/industrial14-filetto.jpg" alt="Filetto al rosmarino con patate — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Griglia</span></div>
       </div>
       <div class="center-cta reveal">
         <a class="btn btn-ghost" href="galleria.html">Vedi tutte le foto →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MENU (anteprima) -->
-  <section id="menu">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">La cucina</span>
-        <h2>Il menu</h2>
-        <p>Pizza gourmet dall'impasto leggero e digeribile, hamburger, carni e birre artigianali di produzione propria.</p>
-      </div>
-      <div class="cat-chips reveal">
-        <span>Antipasti</span>
-        <span>Tegamini Gourmet</span>
-        <span>Fritture</span>
-        <span>Pizze Classiche</span>
-        <span>Pizze Rivisitate</span>
-        <span>Pizze Industrial</span>
-        <span>Hamburger</span>
-        <span>Carni &amp; Griglia</span>
-        <span>Menù Veganø</span>
-        <span>Menù Bambini</span>
-        <span>Birre</span>
-        <span>Beverage</span>
-      </div>
-      <div class="center-cta reveal">
-        <a class="btn btn-accent" href="menu.html">Guarda il menù completo →</a>
       </div>
     </div>
   </section>
@@ -187,35 +156,19 @@
       <div class="reviews reveal">
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Carne spettacolare, ottima birra e servizio top: personale sorridente, gentile, cordiale e professionale!»</p>
+          <p>«Carne spettacolare, ottima birra e servizio top: personale sorridente, gentile e professionale!»</p>
           <span class="who">Dina Stucchi</span> <span class="via">· Google</span>
         </div>
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Locale nuovo e molto ben curato. Gli hamburger sono spettacolari e il tiramisù merita tantissimo. Consiglio assolutamente!»</p>
+          <p>«Locale nuovo e molto ben curato. Gli hamburger sono spettacolari e il tiramisù merita tantissimo!»</p>
           <span class="who">Simone S.</span> <span class="via">· Google</span>
         </div>
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>«Le pizze sono buonissime, non solo per le materie prime, ma anche per gli abbinamenti particolari delle pizze gourmet.»</p>
+          <p>«Le pizze sono buonissime, per le materie prime e per gli abbinamenti particolari delle gourmet.»</p>
           <span class="who">Raffaele</span> <span class="via">· Google</span>
         </div>
-      </div>
-      <p class="menu-note reveal">Sei stato da noi? <a href="https://www.google.com/search?q=INDUSTRIAL+14+Cisano+Bergamasco" target="_blank" rel="noopener" style="color:var(--accent)">Lascia una recensione su Google →</a></p>
-    </div>
-  </section>
-
-  <!-- CONTATTI (rapidi) -->
-  <section id="contatti-home">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Dove siamo</span>
-        <h2>Vieni a trovarci</h2>
-        <p>Via Mura 2, 24034 Cisano Bergamasco (BG) · 📞 035 039 0279</p>
-      </div>
-      <div class="center-cta reveal">
-        <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota</a>
-        <a class="btn btn-ghost" href="contatti.html">🧭 Mappa &amp; orari →</a>
       </div>
     </div>
   </section>
@@ -225,16 +178,13 @@
     <div class="wrap">
       <div class="fbrand">INDUSTRIAL <span>14</span></div>
       <div class="socials">
-        <a href="index.html">Home</a>
         <a href="menu.html">Menù</a>
         <a href="galleria.html">Galleria</a>
         <a href="contatti.html">Contatti</a>
         <a href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">Instagram</a>
       </div>
-      <div>© <span id="year"></span> INDUSTRIAL 14 · Via Mura 2, Cisano Bergamasco (BG)</div>
-      <div class="legal">
-        <a href="#" onclick="alert('Inserire qui la Privacy &amp; Cookie Policy.');return false;">Privacy &amp; Cookie Policy</a>
-      </div>
+      <div>Via Mura 2, 24034 Cisano Bergamasco (BG) · 035 039 0279</div>
+      <div class="legal">© <span id="year"></span> INDUSTRIAL 14 · <a href="#" onclick="alert('Inserire qui la Privacy &amp; Cookie Policy.');return false;">Privacy &amp; Cookie</a></div>
     </div>
   </footer>
 
