@@ -20,9 +20,13 @@ Sito **single page** (una pagina, 5 sezioni) + **pagina menù separata**.
 
 - **`index.html`** — Hero · Il locale · Cosa mangi · Galleria (con lightbox) · Contatti
 - **`menu.html`** — menù completo per categorie con i prezzi
+- **`index-en.html` / `menu-en.html`** — versione **inglese** delle stesse pagine
 - **`style.css`** — foglio di stile unico con variabili CSS
 - **`script.js`** — navbar hamburger, reveal on scroll, lightbox, giorno corrente
 - **`img/`** — foto del locale e dei piatti · **`favicon.png`** — icona "14"
+
+Sito **bilingue (IT / EN)**: switch di lingua nella navbar e `hreflang`
+per la SEO. L'italiano è la lingua principale, l'inglese la versione per i turisti.
 
 In più: navbar hamburger mobile-first, barra "Chiama ora" fissa in basso su
 mobile, dati strutturati `Restaurant` (schema.org), meta SEO con

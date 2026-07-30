@@ -195,6 +195,20 @@ section {
 }
 .nav__cta:hover { transform: translateY(-2px); }
 
+/* Switch lingua IT / EN */
+.nav__lang {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.6rem;
+  margin-left: 0.75rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.nav__lang:hover { color: var(--accent); border-color: var(--accent); }
+
 /* Hamburger */
 .nav__toggle {
   display: none;
