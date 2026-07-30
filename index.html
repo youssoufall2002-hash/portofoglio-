@@ -132,7 +132,7 @@
     .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     @media (min-width: 720px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
     .shot { aspect-ratio: 3/4; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #eee; }
-    .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; filter: brightness(1.08) saturate(1.18) contrast(1.02); }
     .shot:hover img { transform: scale(1.05); }
     .gallery-cta { text-align: center; margin-top: 30px; }
 
@@ -204,12 +204,9 @@
   <section class="hero" id="top">
     <div class="wrap">
       <img class="logo-hero" src="img/hermann-barbershop-logo.jpg" alt="Barberr Hermann Bergamo" />
-      <span class="eyebrow">Bergamo</span>
       <h1>Barberr Hermann</h1>
-      <div class="tag">L'arte del taglio</div>
-      <p class="sub">Taglio, barba e styling curati nei dettagli.</p>
+      <p class="sub">Barbiere a Bergamo · Taglio, barba e styling</p>
       <a class="btn btn-primary" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener" id="book-hero">📅 Prenota ora</a>
-      <div class="stars">★★★★★ &nbsp;<b>5,0</b> su Google</div>
     </div>
   </section>
 
@@ -224,8 +221,8 @@
       <div class="gallery reveal">
         <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.jpg" alt="Taglio afro sfumato a Bergamo" loading="lazy"></a>
         <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.jpg" alt="Taglio mullet con sfumatura" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.jpg" alt="Barbiere al lavoro" loading="lazy"></a>
         <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.jpg" alt="Contorni e lineup di precisione" loading="lazy"></a>
+        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.jpg" alt="Barbiere al lavoro" loading="lazy"></a>
         <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.jpg" alt="Il team al lavoro" loading="lazy"></a>
         <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-interno.jpg" alt="Interno del salone a Bergamo" loading="lazy"></a>
       </div>
@@ -245,7 +242,7 @@
         <div class="h-line"><span class="day">Lunedì – Venerdì</span><span class="val">09:30 – 19:00</span></div>
         <div class="h-line"><span class="day">Sabato</span><span class="val">08:30 – 19:00</span></div>
         <div class="h-line"><span class="day">Domenica</span><span class="val cl">Chiuso</span></div>
-        <p style="color:#a99f8d;font-size:.9rem;margin-top:22px">Su appuntamento — prenota dall'alto o con il tasto qui sotto 👇</p>
+        <p style="color:#a99f8d;font-size:.9rem;margin-top:22px">Riceviamo su appuntamento.</p>
       </div>
     </div>
   </section>
@@ -288,6 +285,7 @@
     <div class="wrap">
       <img class="logo-f" src="img/hermann-barbershop-logo.jpg" alt="Barberr Hermann" />
       <div class="fname">Barberr Hermann</div>
+      <div style="color:var(--brass-2);font-size:.82rem;letter-spacing:.06em;margin-bottom:16px">★★★★★ &nbsp;5,0 su Google</div>
       <div class="socials">
         <a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">Instagram</a>
         <a href="tel:+393882589071">Telefono</a>
