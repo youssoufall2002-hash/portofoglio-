@@ -3,214 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menù — INDUSTRIAL 14, Cisano Bergamasco</title>
-  <meta name="description" content="Il menù di INDUSTRIAL 14: pizze classiche, rivisitate e Industrial, hamburger, carni alla griglia, tegamini gourmet, fritture, proposte vegane, menù bambini e birre artigianali." />
-  <meta name="theme-color" content="#0e0e10" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- ===== SEO ===== -->
+  <title>Menù — INDUSTRIAL 14 | Pizzeria a Cisano Bergamasco</title>
+  <meta name="description" content="Il menù di INDUSTRIAL 14, pizzeria napoletana a Cisano Bergamasco (BG): pizze classiche e gourmet, burger, griglia, proposte vegane e birre alla spina." />
+  <meta name="theme-color" content="#111111" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="canonical" href="https://youssoufall2002-hash.github.io/portofoglio-/industrial14/menu.html" />
+
+  <!-- ===== Google Fonts (Oswald condensato + Inter) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ===== Dati strutturati Schema.org — Menu ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Menù INDUSTRIAL 14",
+    "inLanguage": "it",
+    "url": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/menu.html",
+    "provider": {
+      "@type": "Restaurant",
+      "name": "INDUSTRIAL 14",
+      "servesCuisine": ["Pizza napoletana", "Burger", "Griglia", "Birreria"],
+      "telephone": "+39 035 039 0279",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Mura 2",
+        "addressLocality": "Cisano Bergamasco",
+        "addressRegion": "BG",
+        "postalCode": "24034",
+        "addressCountry": "IT"
+      }
+    }
+  }
+  </script>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html">INDUSTRIAL <span style="color:var(--accent)">14</span></a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#locale">Chi siamo</a>
-        <a href="menu.html" class="active">Menù</a>
-        <a href="galleria.html">Galleria</a>
-        <a href="contatti.html">Contatti</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-accent nav-book" href="tel:+390350390279">Prenota</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-controls="navOverlay" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
+  <!-- ====================================================================
+       NAVBAR
+       ==================================================================== -->
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="INDUSTRIAL 14 — home">INDUSTRIAL<b>14</b></a>
+
+    <nav aria-label="Menu principale">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#locale">Il locale</a></li>
+        <li><a href="index.html#cosa-mangi">Cosa mangi</a></li>
+        <li><a href="index.html#galleria">Galleria</a></li>
+        <li><a href="index.html#contatti">Contatti</a></li>
+        <li><a href="menu.html" aria-current="page">Menù</a></li>
+      </ul>
+    </nav>
+
+    <a class="nav__cta" href="tel:+390350390279">Prenota</a>
+
+    <button class="nav__toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- MENU A SCHERMO INTERO -->
-  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
-    <button class="nav-close" id="navClose" aria-label="Chiudi menu">&times;</button>
-    <nav class="nav-overlay-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#locale">Chi siamo</a>
-      <a href="menu.html" class="active">Menù</a>
-      <a href="galleria.html">Galleria</a>
-      <a href="contatti.html">Contatti</a>
-      <a class="ov-book" href="tel:+390350390279">📞 Prenota</a>
-    </nav>
-  </div>
+  <main>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero" style="--phimg:url('img/industrial14-pizza-metro.jpg')">
-    <div class="wrap">
-      <span class="eyebrow">La cucina</span>
-      <h1>Il menù</h1>
-      <div class="rule"></div>
-      <p>Pizza gourmet dall'impasto leggero e digeribile, hamburger, carni e birre artigianali di produzione propria.</p>
+    <!-- ================================================================
+         INTESTAZIONE MENÙ
+         ================================================================ -->
+    <header class="menu-hero">
+      <span class="bignum" aria-hidden="true">14</span>
+      <div class="container">
+        <span class="eyebrow">Cisano Bergamasco</span>
+        <h1>Menù</h1>
+
+        <!-- Collegamenti rapidi alle categorie -->
+        <nav class="menu-jump" aria-label="Categorie del menù">
+          <a href="#antipasti">Antipasti</a>
+          <a href="#tegamini">Tegamini</a>
+          <a href="#fritture">Fritture</a>
+          <a href="#classiche">Pizze classiche</a>
+          <a href="#rivisitate">Rivisitate</a>
+          <a href="#industrial">Industrial</a>
+          <a href="#burger">Burger</a>
+          <a href="#griglia">Griglia</a>
+          <a href="#vegano">Veganø</a>
+          <a href="#bambini">Bambini</a>
+          <a href="#birre">Birre</a>
+          <a href="#beverage">Beverage</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container" style="padding-top: clamp(3rem, 8vw, 5rem); padding-bottom: clamp(4rem, 10vw, 7rem);">
+
+      <!-- ANTIPASTI & VARIE -->
+      <section class="menu-cat reveal" id="antipasti">
+        <h2><span class="n">01</span> Antipasti &amp; Varie</h2>
+        <div class="menu-item"><div class="menu-item__name">Tagliere di salumi e formaggi<span class="menu-item__desc">Con gnocco fritto o focaccia</span></div><div class="menu-item__price">15,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Burrata con alici e pistacchi</div><div class="menu-item__price">12,00 €</div></div>
+      </section>
+
+      <!-- TEGAMINI GOURMET -->
+      <section class="menu-cat reveal" id="tegamini">
+        <h2><span class="n">02</span> Tegamini Gourmet</h2>
+        <div class="menu-item"><div class="menu-item__name">Parma<span class="menu-item__desc">Crudo di Parma DOP, burrata, basilico, olio evo</span></div><div class="menu-item__price">13,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Crudité<span class="menu-item__desc">Rucola, stracciatella, tartare di gambero, zest di limone, fiori edibili</span></div><div class="menu-item__price">15,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Fondue<span class="menu-item__desc">Fonduta di quattro formaggi, petali di tartufo, battuta di fassona al coltello</span></div><div class="menu-item__price">16,00 €</div></div>
+      </section>
+
+      <!-- FRITTURE -->
+      <section class="menu-cat reveal" id="fritture">
+        <h2><span class="n">03</span> Fritture</h2>
+        <div class="menu-item"><div class="menu-item__name">Patatine fritte</div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Crocchette di patate</div><div class="menu-item__price">4,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Olive ascolane</div><div class="menu-item__price">4,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Anelli di cipolla</div><div class="menu-item__price">4,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Stick di mozzarella</div><div class="menu-item__price">4,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Jalapeño fritti</div><div class="menu-item__price">5,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Alette di pollo messicane<span class="menu-item__desc">x5 / x10</span></div><div class="menu-item__price">5,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Nuggets di pollo<span class="menu-item__desc">x5 / x10</span></div><div class="menu-item__price">5,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Mix frittura</div><div class="menu-item__price">12,00 €</div></div>
+      </section>
+
+      <!-- PIZZE CLASSICHE -->
+      <section class="menu-cat reveal" id="classiche">
+        <h2><span class="n">04</span> Pizze Classiche</h2>
+        <div class="menu-item"><div class="menu-item__name">Marinara<span class="menu-item__desc">Pomodoro, aglio, olio evo, origano</span></div><div class="menu-item__price">5,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Margherita<span class="menu-item__desc">Pomodoro, fiordilatte</span></div><div class="menu-item__price">6,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Napoli<span class="menu-item__desc">Pomodoro, fiordilatte, acciughe, origano</span></div><div class="menu-item__price">8,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Calzone liscio<span class="menu-item__desc">Pomodoro, fiordilatte, prosciutto cotto</span></div><div class="menu-item__price">8,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Diavola<span class="menu-item__desc">Pomodoro, fiordilatte, salamino piccante stagionato</span></div><div class="menu-item__price">8,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Romana<span class="menu-item__desc">Pomodoro, fiordilatte, acciughe, olive taggiasche, capperi, origano</span></div><div class="menu-item__price">8,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Boscaiola<span class="menu-item__desc">Pomodoro, fiordilatte, salsiccia, funghi champignon</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Tonno e cipolle<span class="menu-item__desc">Pomodoro, fiordilatte, tonno, cipolle rosse</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Americana<span class="menu-item__desc">Pomodoro, fiordilatte, würstel, patatine fritte</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Capricciosa<span class="menu-item__desc">Pomodoro, fiordilatte, cotto, funghi, olive, carciofi</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Vegetariana<span class="menu-item__desc">Pomodoro, fiordilatte, melanzane, peperoni e zucchine grigliate</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Calzone farcito<span class="menu-item__desc">Pomodoro, fiordilatte, funghi, cotto, carciofi, olive</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">4 Stagioni<span class="menu-item__desc">Pomodoro, fiordilatte, cotto, funghi, olive, carciofi</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">4 Formaggi<span class="menu-item__desc">Pomodoro, fiordilatte, gorgonzola, brie, taleggio</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Speck e brie<span class="menu-item__desc">Pomodoro, fiordilatte, speck, brie</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Prosciutto e funghi<span class="menu-item__desc">Pomodoro, fiordilatte, cotto, funghi champignon</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Gamberetti<span class="menu-item__desc">Pomodoro, fiordilatte, gamberetti</span></div><div class="menu-item__price">9,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Crudo<span class="menu-item__desc">Pomodoro, fiordilatte, prosciutto crudo di Parma DOP</span></div><div class="menu-item__price">10,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Valtellinese<span class="menu-item__desc">Pomodoro, fiordilatte, rucola, bresaola, scaglie di grana</span></div><div class="menu-item__price">10,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Caprese<span class="menu-item__desc">Pomodoro, bufala di Battipaglia DOP, pomodorini, basilico</span></div><div class="menu-item__price">10,50 €</div></div>
+      </section>
+
+      <!-- PIZZE — LE RIVISITATE -->
+      <section class="menu-cat reveal" id="rivisitate">
+        <h2><span class="n">05</span> Pizze — Le Rivisitate</h2>
+        <div class="menu-item"><div class="menu-item__name">La Sbagliata<span class="menu-item__desc">Pomodoro, stracciatella di bufala, pomodorini gialli e rossi, origano</span></div><div class="menu-item__price">11,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Carbonara<span class="menu-item__desc">Carbocrema, fiordilatte, pecorino romano, guanciale croccante</span></div><div class="menu-item__price">11,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Margherita DOP<span class="menu-item__desc">Pomodoro, bufala DOP, gocce di pesto fresco, spuma di pecorino</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Frutti di mare<span class="menu-item__desc">Pomodoro, selezione di frutti di mare</span></div><div class="menu-item__price">13,00 €</div></div>
+      </section>
+
+      <!-- PIZZE INDUSTRIAL -->
+      <section class="menu-cat reveal" id="industrial">
+        <h2><span class="n">06</span> Pizze Industrial</h2>
+        <div class="menu-item"><div class="menu-item__name">Ol Diaol<span class="menu-item__desc">Pomodoro, fiordilatte, salamino piccante, 'nduja, ricotta di bufala</span></div><div class="menu-item__price">11,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Sofestech<span class="menu-item__desc">Fiordilatte, pere, gorgonzola, noci</span></div><div class="menu-item__price">11,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Sbusada<span class="menu-item__desc">Ciambella ripiena di fiordilatte, brie e porcini, ricoperta di speck</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Purseluna<span class="menu-item__desc">Pomodoro, fiordilatte, porchetta, carciofi, provola affumicata</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Mia Mal<span class="menu-item__desc">Rucola, burrata DOP, salmone affumicato, gamberetti, scorza di limone</span></div><div class="menu-item__price">13,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Teruna<span class="menu-item__desc">Pomodorini del piennolo, burrata affumicata, tarallo, 'nduja di Spilinga, spianata calabra</span></div><div class="menu-item__price">13,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Bocia<span class="menu-item__desc">Fiordilatte, salame bergamasco, porcini trifolati, formaggini passati</span></div><div class="menu-item__price">13,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Russi<span class="menu-item__desc">Pomodoro, fiordilatte, crudo di Parma, noci, scaglie di grana</span></div><div class="menu-item__price">13,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">La Bulugnes<span class="menu-item__desc">Fiordilatte, burrata DOP, mortadella, pesto al pistacchio</span></div><div class="menu-item__price">14,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">So Mia<span class="menu-item__desc">Pomodoro, bufala di Battipaglia DOP, crudo di Parma, granella di pistacchi</span></div><div class="menu-item__price">14,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ingurda<span class="menu-item__desc">Fiordilatte, cornicione ripieno di ricotta, salsiccia, friarielli, provola affumicata</span></div><div class="menu-item__price">14,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">L'è Buna<span class="menu-item__desc">Fiordilatte, crudo di Parma, burrata affumicata, petali di tartufo nero</span></div><div class="menu-item__price">15,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Industrial<span class="menu-item__desc">Pomodoro, bufala DOP, crudo iberico, pecorino al pepe</span></div><div class="menu-item__price">16,00 €</div></div>
+      </section>
+
+      <!-- HAMBURGER -->
+      <section class="menu-cat reveal" id="burger">
+        <h2><span class="n">07</span> Hamburger <span class="n" style="letter-spacing:.05em">serviti con patatine</span></h2>
+        <div class="menu-item"><div class="menu-item__name">Ol Nurmal<span class="menu-item__desc">Burger di fassona, cheddar, pomodoro, insalata</span></div><div class="menu-item__price">9,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ol Barbecue<span class="menu-item__desc">Fassona, cheddar, bacon, cipolla caramellata, salsa barbecue</span></div><div class="menu-item__price">10,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ol Pulastrel<span class="menu-item__desc">Petto di pollo alla piastra, bacon, pomodoro, insalata, maionese</span></div><div class="menu-item__price">10,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ol Crispy<span class="menu-item__desc">Crispy chicken, salsa cheddar, insalata, doppio bacon croccante</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">L'esagerat<span class="menu-item__desc">Black angus 200g, uovo, bacon, anelli di cipolla fritti, scaglie di grana</span></div><div class="menu-item__price">13,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ol Sofestech<span class="menu-item__desc">Tartare di manzo, olive taggiasche, tuorlo, insalata; panino con impasto della pizza</span></div><div class="menu-item__price">13,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Stèrlöch<span class="menu-item__desc">Fassona, porcini, taleggio, crudo iberico, songino</span></div><div class="menu-item__price">14,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Ol Norveges<span class="menu-item__desc">Filetto di salmone, zucchine grigliate, stracciatella DOP, salsa agli agrumi, songino</span></div><div class="menu-item__price">14,00 €</div></div>
+      </section>
+
+      <!-- CARNI & GRIGLIA -->
+      <section class="menu-cat reveal" id="griglia">
+        <h2><span class="n">08</span> Carni &amp; Griglia</h2>
+        <div class="menu-item"><div class="menu-item__name">Ribs<span class="menu-item__desc">Costine di maiale cotte a bassa temperatura</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Tagliata di pollo<span class="menu-item__desc">Rucola, scaglie di grana, pomodorini</span></div><div class="menu-item__price">14,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Tagliata di manzo<span class="menu-item__desc">Rucola, scaglie di grana, pomodorini</span></div><div class="menu-item__price">16,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Picanha alla griglia</div><div class="menu-item__price">18,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Orecchia di elefante<span class="menu-item__desc">Cotoletta maxi di maiale con osso e panatura</span></div><div class="menu-item__price">19,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Costata di scottona</div><div class="menu-item__price">22,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Filetto al rosmarino</div><div class="menu-item__price">25,00 €</div></div>
+      </section>
+
+      <!-- MENÙ VEGANO -->
+      <section class="menu-cat reveal" id="vegano">
+        <h2><span class="n">09</span> Menù Veganø</h2>
+        <div class="menu-item"><div class="menu-item__name">Insalatona<span class="menu-item__desc">Lattuga, pomodorini, olive, burger vegano, zucchine grigliate, noci</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Spitinfia<span class="menu-item__desc">Pomodoro, aglio, origano, olio evo, rucola, pomodorini, carciofi grigliati, glassa balsamica</span></div><div class="menu-item__price">12,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Burger Ol Vegan<span class="menu-item__desc">Burger vegano, songino, pomodori, patate crunchy, maionese vegana, cipolla caramellata</span></div><div class="menu-item__price">15,00 €</div></div>
+      </section>
+
+      <!-- MENÙ BAMBINI -->
+      <section class="menu-cat reveal" id="bambini">
+        <h2><span class="n">10</span> Menù Bambini</h2>
+        <div class="menu-item"><div class="menu-item__name">Munel<span class="menu-item__desc">Polipetti di würstel con patatine</span></div><div class="menu-item__price">6,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Scetin<span class="menu-item__desc">Burger di fassona, cheddar, ketchup, con patatine</span></div><div class="menu-item__price">7,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Tiramat<span class="menu-item__desc">Cotoletta e patatine</span></div><div class="menu-item__price">8,00 €</div></div>
+      </section>
+
+      <!-- BIRRE -->
+      <section class="menu-cat reveal" id="birre">
+        <h2><span class="n">11</span> Birre</h2>
+        <div class="menu-item"><div class="menu-item__name">Bocia<span class="menu-item__desc">La nostra lager in lattina (0,33l)</span></div><div class="menu-item__price">5,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">R-1p4<span class="menu-item__desc">La nostra American IPA alla spina, agrumi e frutta tropicale (0,33l · 6,6%)</span></div><div class="menu-item__price">6,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Leffe Rouge<span class="menu-item__desc">Rossa, avvolgente e dolce (piccola/media · 6,6%)</span></div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Hoegaarden<span class="menu-item__desc">Blanche fresca, agrumata (piccola/media · 4,9%)</span></div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Löwenbräu<span class="menu-item__desc">Bionda equilibrata e dissetante (piccola/media · 5,2%)</span></div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Birra del mese<span class="menu-item__desc">Selezione artigianale (piccola/media)</span></div><div class="menu-item__price">3,50 €</div></div>
+      </section>
+
+      <!-- BEVERAGE -->
+      <section class="menu-cat reveal" id="beverage">
+        <h2><span class="n">12</span> Beverage</h2>
+        <div class="menu-item"><div class="menu-item__name">Acqua</div><div class="menu-item__price">1,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Caffè</div><div class="menu-item__price">1,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Bibita in vetro</div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Amaro</div><div class="menu-item__price">3,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Grappe aromatizzate</div><div class="menu-item__price">4,50 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Analcolico</div><div class="menu-item__price">6,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Cocktail</div><div class="menu-item__price">6,00 €</div></div>
+        <div class="menu-item"><div class="menu-item__name">Gin tonic premium</div><div class="menu-item__price">10,00 €</div></div>
+      </section>
+
+      <p class="menu-note reveal">
+        🌱 Disponibili proposte vegane. Alcuni prodotti possono essere surgelati all'origine.
+        I prezzi possono variare: fa fede il listino esposto in sala.
+      </p>
+
+      <div class="hero__cta reveal" style="margin-top: 2.5rem;">
+        <a class="btn btn--solid" href="tel:+390350390279">Prenota un tavolo</a>
+        <a class="btn btn--ghost" href="index.html">Torna alla home</a>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- MENU -->
-  <section>
-    <div class="wrap">
-      <div class="cat-chips" style="margin-bottom:40px">
-        <a href="#pizze">Pizze</a>
-        <a href="#hamburger">Hamburger</a>
-        <a href="#carni">Carni</a>
-        <a href="#fritture">Fritture</a>
-        <a href="#vegano">🌱 Veganø</a>
-        <a href="#birre">Birre</a>
-      </div>
-      <div class="menu-list">
-
-        <div class="menu-cat">Antipasti &amp; Varie</div>
-        <div class="menu-row"><span class="name">Tagliere di salumi e formaggi <span class="desc">— con gnocco fritto o focaccia</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
-        <div class="menu-row"><span class="name">Burrata con alici e pistacchi</span><span class="dots"></span><span class="price">12,00 €</span></div>
-
-        <div class="menu-cat">Tegamini Gourmet</div>
-        <div class="menu-row"><span class="name">Parma <span class="desc">— crudo di Parma DOP, burrata, basilico, olio evo</span></span><span class="dots"></span><span class="price">13,50 €</span></div>
-        <div class="menu-row"><span class="name">Crudité <span class="desc">— rucola, stracciatella, tartare di gambero, zest di limone, fiori edibili</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
-        <div class="menu-row"><span class="name">Fondue <span class="desc">— fonduta di quattro formaggi, petali di tartufo, battuta di fassona al coltello</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
-
-        <div class="menu-cat" id="fritture">Fritture</div>
-        <div class="menu-row"><span class="name">Patatine fritte</span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Crocchette di patate</span><span class="dots"></span><span class="price">4,00 €</span></div>
-        <div class="menu-row"><span class="name">Olive ascolane</span><span class="dots"></span><span class="price">4,00 €</span></div>
-        <div class="menu-row"><span class="name">Anelli di cipolla</span><span class="dots"></span><span class="price">4,00 €</span></div>
-        <div class="menu-row"><span class="name">Stick di mozzarella</span><span class="dots"></span><span class="price">4,00 €</span></div>
-        <div class="menu-row"><span class="name">Jalapeño fritti</span><span class="dots"></span><span class="price">5,00 €</span></div>
-        <div class="menu-row"><span class="name">Alette di pollo messicane <span class="desc">— x5 / x10</span></span><span class="dots"></span><span class="price">5,00 €</span></div>
-        <div class="menu-row"><span class="name">Nuggets di pollo <span class="desc">— x5 / x10</span></span><span class="dots"></span><span class="price">5,00 €</span></div>
-        <div class="menu-row"><span class="name">Mix frittura <span class="desc">— mix delle fritture sopra elencate</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-
-        <div class="menu-cat" id="pizze">Pizze Classiche</div>
-        <div class="menu-row"><span class="name">Marinara <span class="desc">— pomodoro, aglio, olio evo, origano</span></span><span class="dots"></span><span class="price">5,50 €</span></div>
-        <div class="menu-row"><span class="name">Margherita <span class="desc">— pomodoro, fiordilatte</span></span><span class="dots"></span><span class="price">6,50 €</span></div>
-        <div class="menu-row"><span class="name">Napoli <span class="desc">— pomodoro, fiordilatte, acciughe, origano</span></span><span class="dots"></span><span class="price">8,00 €</span></div>
-        <div class="menu-row"><span class="name">Calzone liscio <span class="desc">— pomodoro, fiordilatte, prosciutto cotto</span></span><span class="dots"></span><span class="price">8,00 €</span></div>
-        <div class="menu-row"><span class="name">Diavola <span class="desc">— pomodoro, fiordilatte, salamino piccante stagionato</span></span><span class="dots"></span><span class="price">8,50 €</span></div>
-        <div class="menu-row"><span class="name">Romana <span class="desc">— pomodoro, fiordilatte, acciughe, olive taggiasche, capperi, origano</span></span><span class="dots"></span><span class="price">8,50 €</span></div>
-        <div class="menu-row"><span class="name">Boscaiola <span class="desc">— pomodoro, fiordilatte, salsiccia, funghi champignon</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Tonno e cipolle <span class="desc">— pomodoro, fiordilatte, tonno, cipolle rosse</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Americana <span class="desc">— pomodoro, fiordilatte, würstel, patatine fritte*</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Capricciosa <span class="desc">— pomodoro, fiordilatte, prosciutto cotto, funghi, olive taggiasche, carciofi</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Vegetariana <span class="desc">— pomodoro, fiordilatte, melanzane, peperoni e zucchine grigliate</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Calzone farcito <span class="desc">— pomodoro, fiordilatte, funghi, prosciutto cotto, carciofi, olive</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">4 Stagioni <span class="desc">— pomodoro, fiordilatte, prosciutto cotto, funghi, olive, carciofi</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">4 Formaggi <span class="desc">— pomodoro, fiordilatte, gorgonzola, brie, taleggio</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">Speck e brie <span class="desc">— pomodoro, fiordilatte, speck, brie</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">Prosciutto e funghi <span class="desc">— pomodoro, fiordilatte, prosciutto cotto, funghi champignon</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">Gamberetti <span class="desc">— pomodoro, fiordilatte, gamberetti</span></span><span class="dots"></span><span class="price">9,50 €</span></div>
-        <div class="menu-row"><span class="name">Crudo <span class="desc">— pomodoro, fiordilatte, prosciutto crudo di Parma DOP</span></span><span class="dots"></span><span class="price">10,00 €</span></div>
-        <div class="menu-row"><span class="name">Valtellinese <span class="desc">— pomodoro, fiordilatte, rucola, bresaola, scaglie di grana</span></span><span class="dots"></span><span class="price">10,50 €</span></div>
-        <div class="menu-row"><span class="name">Caprese <span class="desc">— pomodoro, bufala di Battipaglia DOP, pomodorini, basilico</span></span><span class="dots"></span><span class="price">10,50 €</span></div>
-
-        <div class="menu-cat">Pizze — Le Rivisitate</div>
-        <div class="menu-row"><span class="name">La Sbagliata <span class="desc">— pomodoro, stracciatella di bufala, pomodorini gialli e rossi, origano</span></span><span class="dots"></span><span class="price">11,00 €</span></div>
-        <div class="menu-row"><span class="name">Carbonara <span class="desc">— carbocrema, fiordilatte, pecorino romano, guanciale croccante</span></span><span class="dots"></span><span class="price">11,50 €</span></div>
-        <div class="menu-row"><span class="name">Margherita DOP <span class="desc">— pomodoro, bufala DOP, gocce di pesto fresco, spuma di pecorino</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Frutti di mare <span class="desc">— pomodoro, selezione di frutti di mare*</span></span><span class="dots"></span><span class="price">13,00 €</span></div>
-
-        <div class="menu-cat">Pizze Industrial</div>
-        <div class="menu-row"><span class="name">Ol Diaol <span class="desc">— pomodoro, fiordilatte, salamino piccante, 'nduja, ricotta di bufala</span></span><span class="dots"></span><span class="price">11,00 €</span></div>
-        <div class="menu-row"><span class="name">Sofestech <span class="desc">— fiordilatte, pere, gorgonzola, noci</span></span><span class="dots"></span><span class="price">11,00 €</span></div>
-        <div class="menu-row"><span class="name">Sbusada <span class="desc">— ciambella ripiena di fiordilatte, brie e porcini, ricoperta di speck</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Purseluna <span class="desc">— pomodoro, fiordilatte, porchetta, carciofi, provola affumicata</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Mia Mal <span class="desc">— rucola, burrata DOP, salmone affumicato, gamberetti, scorza di limone</span></span><span class="dots"></span><span class="price">13,00 €</span></div>
-        <div class="menu-row"><span class="name">Teruna <span class="desc">— pomodorini del piennolo, burrata affumicata, tarallo, 'nduja di Spilinga, spianata calabra</span></span><span class="dots"></span><span class="price">13,50 €</span></div>
-        <div class="menu-row"><span class="name">Bocia <span class="desc">— fiordilatte, salame bergamasco, porcini trifolati, formaggini passati</span></span><span class="dots"></span><span class="price">13,50 €</span></div>
-        <div class="menu-row"><span class="name">Russi <span class="desc">— pomodoro, fiordilatte, crudo di Parma, noci, scaglie di grana</span></span><span class="dots"></span><span class="price">13,50 €</span></div>
-        <div class="menu-row"><span class="name">La Bulugnes <span class="desc">— fiordilatte, burrata DOP, mortadella, pesto al pistacchio</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
-        <div class="menu-row"><span class="name">So Mia <span class="desc">— pomodoro, bufala di Battipaglia DOP, crudo di Parma, granella di pistacchi</span></span><span class="dots"></span><span class="price">14,50 €</span></div>
-        <div class="menu-row"><span class="name">Ingurda <span class="desc">— fiordilatte, cornicione ripieno di ricotta, salsiccia, friarielli, provola affumicata</span></span><span class="dots"></span><span class="price">14,50 €</span></div>
-        <div class="menu-row"><span class="name">L'è Buna <span class="desc">— fiordilatte, crudo di Parma, burrata affumicata, petali di tartufo nero</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
-        <div class="menu-row"><span class="name">Industrial <span class="desc">— pomodoro, bufala DOP, crudo iberico, pecorino al pepe</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
-
-        <div class="menu-cat" id="hamburger">Hamburger <span style="font-family:var(--font-testo);text-transform:none;letter-spacing:0;color:var(--muted);font-size:.8rem">· serviti con patatine</span></div>
-        <div class="menu-row"><span class="name">Ol Nurmal <span class="desc">— burger di fassona, cheddar, pomodoro, insalata</span></span><span class="dots"></span><span class="price">9,00 €</span></div>
-        <div class="menu-row"><span class="name">Ol Barbecue <span class="desc">— burger di fassona, cheddar, bacon, cipolla caramellata, salsa barbecue</span></span><span class="dots"></span><span class="price">10,00 €</span></div>
-        <div class="menu-row"><span class="name">Ol Pulastrel <span class="desc">— petto di pollo alla piastra, bacon, pomodoro, insalata, maionese</span></span><span class="dots"></span><span class="price">10,50 €</span></div>
-        <div class="menu-row"><span class="name">Ol Crispy <span class="desc">— crispy chicken, salsa cheddar, insalata, doppio bacon croccante</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">L'esagerat <span class="desc">— black angus 200g, uovo, bacon, anelli di cipolla fritti, scaglie di grana</span></span><span class="dots"></span><span class="price">13,00 €</span></div>
-        <div class="menu-row"><span class="name">Ol Sofestech <span class="desc">— tartare di manzo, olive taggiasche, tuorlo, insalata; panino con impasto della pizza</span></span><span class="dots"></span><span class="price">13,50 €</span></div>
-        <div class="menu-row"><span class="name">Stèrlöch <span class="desc">— burger di fassona, porcini, taleggio, crudo iberico, songino</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
-        <div class="menu-row"><span class="name">Ol Norveges <span class="desc">— filetto di salmone, zucchine grigliate, stracciatella DOP, salsa agli agrumi, songino</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
-
-        <div class="menu-cat" id="carni">Carni &amp; Griglia</div>
-        <div class="menu-row"><span class="name">Ribs <span class="desc">— costine di maiale cotte a bassa temperatura</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Tagliata di pollo <span class="desc">— rucola, scaglie di grana, pomodorini</span></span><span class="dots"></span><span class="price">14,00 €</span></div>
-        <div class="menu-row"><span class="name">Tagliata di manzo <span class="desc">— rucola, scaglie di grana, pomodorini</span></span><span class="dots"></span><span class="price">16,00 €</span></div>
-        <div class="menu-row"><span class="name">Picanha alla griglia</span><span class="dots"></span><span class="price">18,00 €</span></div>
-        <div class="menu-row"><span class="name">Orecchia di elefante <span class="desc">— cotoletta maxi di maiale con osso e panatura</span></span><span class="dots"></span><span class="price">19,00 €</span></div>
-        <div class="menu-row"><span class="name">Costata di scottona</span><span class="dots"></span><span class="price">22,00 €</span></div>
-        <div class="menu-row"><span class="name">Filetto al rosmarino</span><span class="dots"></span><span class="price">25,00 €</span></div>
-
-        <div class="menu-cat" id="vegano">🌱 Menù Veganø</div>
-        <div class="menu-row"><span class="name">Insalatona <span class="desc">— lattuga, pomodorini, olive, burger vegano, zucchine grigliate, noci</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Spitinfia <span class="desc">— pomodoro, aglio, origano, olio evo, rucola, pomodorini, carciofi grigliati, glassa balsamica</span></span><span class="dots"></span><span class="price">12,00 €</span></div>
-        <div class="menu-row"><span class="name">Burger Ol Vegan <span class="desc">— burger vegano, songino, pomodori, patate crunchy, maionese vegana, cipolla caramellata</span></span><span class="dots"></span><span class="price">15,00 €</span></div>
-
-        <div class="menu-cat">Menù Bambini</div>
-        <div class="menu-row"><span class="name">Munel <span class="desc">— polipetti di würstel con patatine</span></span><span class="dots"></span><span class="price">6,00 €</span></div>
-        <div class="menu-row"><span class="name">Scetin <span class="desc">— burger di fassona, cheddar, ketchup, con patatine</span></span><span class="dots"></span><span class="price">7,00 €</span></div>
-        <div class="menu-row"><span class="name">Tiramat <span class="desc">— cotoletta e patatine</span></span><span class="dots"></span><span class="price">8,00 €</span></div>
-
-        <div class="menu-cat" id="birre">Birre</div>
-        <div class="menu-row"><span class="name">Bocia <span class="desc">— la nostra lager in lattina (0,33l)</span></span><span class="dots"></span><span class="price">5,00 €</span></div>
-        <div class="menu-row"><span class="name">R-1p4 <span class="desc">— la nostra American IPA alla spina, note di agrumi e frutta tropicale (0,33l · 6,6%)</span></span><span class="dots"></span><span class="price">6,50 €</span></div>
-        <div class="menu-row"><span class="name">Leffe Rouge <span class="desc">— rossa, avvolgente e dolce (piccola/media · 6,6%)</span></span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Hoegaarden <span class="desc">— blanche fresca, sentori agrumati e fruttati (piccola/media · 4,9%)</span></span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Löwenbräu <span class="desc">— bionda equilibrata e dissetante (piccola/media · 5,2%)</span></span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Birra del mese <span class="desc">— selezione mensile artigianale (piccola/media)</span></span><span class="dots"></span><span class="price">3,50 €</span></div>
-
-        <div class="menu-cat">Beverage</div>
-        <div class="menu-row"><span class="name">Acqua</span><span class="dots"></span><span class="price">1,50 €</span></div>
-        <div class="menu-row"><span class="name">Caffè</span><span class="dots"></span><span class="price">1,50 €</span></div>
-        <div class="menu-row"><span class="name">Bibita in vetro</span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Amaro</span><span class="dots"></span><span class="price">3,50 €</span></div>
-        <div class="menu-row"><span class="name">Grappe aromatizzate</span><span class="dots"></span><span class="price">4,50 €</span></div>
-        <div class="menu-row"><span class="name">Analcolico</span><span class="dots"></span><span class="price">6,00 €</span></div>
-        <div class="menu-row"><span class="name">Cocktail</span><span class="dots"></span><span class="price">6,00 €</span></div>
-        <div class="menu-row"><span class="name">Gin tonic premium</span><span class="dots"></span><span class="price">10,00 €</span></div>
-      </div>
-      <p class="menu-note">🌱 Disponibili proposte vegane. * Alcuni prodotti possono essere surgelati all'origine. Per allergeni e proposte del giorno chiedi al personale.</p>
-      <div class="center-cta">
-        <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota un tavolo</a>
-        <a class="btn btn-ghost" href="index.html">← Torna alla home</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="fbrand">INDUSTRIAL <span>14</span></div>
-      <div class="socials">
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menù</a>
-        <a href="galleria.html">Galleria</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <div>© <span id="year"></span> INDUSTRIAL 14 · Via Mura 2, Cisano Bergamasco (BG)</div>
-      <div class="legal">
-        <a href="#" onclick="alert('Inserire qui la Privacy &amp; Cookie Policy.');return false;">Privacy &amp; Cookie Policy</a>
-      </div>
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">INDUSTRIAL<b>14</b></div>
+      <small>Via Mura 2, Cisano Bergamasco (BG) · <a href="tel:+390350390279">+39 035 039 0279</a></small>
+      <small>© <span id="year">2026</span> INDUSTRIAL 14 · <a href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">Instagram</a></small>
     </div>
   </footer>
 
-
-  <!-- COOKIE BANNER -->
-  <div class="cookie hidden" id="cookie">
-    <p>Usiamo cookie tecnici e la mappa di Google. <a href="#" onclick="alert('Inserire la Cookie Policy completa.');return false;">Maggiori info</a></p>
-    <button class="btn btn-accent" onclick="acceptCookie()">Ho capito</button>
-  </div>
+  <!-- Barra "Chiama ora" fissa in basso su mobile -->
+  <a class="callbar" href="tel:+390350390279">📞 Chiama ora — +39 035 039 0279</a>
 
   <script src="script.js"></script>
 </body>

@@ -3,33 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INDUSTRIAL 14 — Ristorante e pizzeria a Cisano Bergamasco (BG)</title>
-  <meta name="description" content="INDUSTRIAL 14 — pizzeria e ristorante a Cisano Bergamasco. Pizza gourmet, hamburger, carne e birre artigianali in Via Mura 2. Prenota il tuo tavolo." />
-  <meta name="theme-color" content="#0e0e10" />
 
+  <!-- ===== SEO ===== -->
+  <title>INDUSTRIAL 14 — Pizzeria a Cisano Bergamasco | Pizza, Burger, Griglia, Birra</title>
+  <meta name="description" content="Pizzeria napoletana a Cisano Bergamasco (BG): pizza, burger, griglieria e birreria con serate live. Via Mura 2. Prenota al +39 035 039 0279." />
+  <meta name="theme-color" content="#111111" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="canonical" href="https://youssoufall2002-hash.github.io/portofoglio-/industrial14/" />
+
+  <!-- ===== Open Graph ===== -->
   <meta property="og:type" content="restaurant" />
-  <meta property="og:title" content="INDUSTRIAL 14 — Ristorante a Cisano Bergamasco" />
-  <meta property="og:description" content="Pizzeria e griglia a Cisano Bergamasco. Via Mura 2 (BG)." />
-  <meta property="og:image" content="img/industrial14-logo.jpg" />
+  <meta property="og:title" content="INDUSTRIAL 14 — Pizzeria a Cisano Bergamasco" />
+  <meta property="og:description" content="Pizza napoletana, burger, griglia e birra alla spina. Serate live. Via Mura 2, Cisano Bergamasco (BG)." />
   <meta property="og:locale" content="it_IT" />
+  <meta property="og:image" content="img/industrial14-esterno-notte.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <!-- ===== Google Fonts (Oswald condensato + Inter) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ===== Dati strutturati Schema.org — Restaurant ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "INDUSTRIAL 14",
-    "description": "Ristorante e pizzeria a Cisano Bergamasco con cucina, drink e atmosfera industrial.",
+    "description": "Pizzeria napoletana, burger, griglieria e birreria con serate live a Cisano Bergamasco.",
+    "servesCuisine": ["Pizza napoletana", "Burger", "Griglia", "Birreria"],
+    "image": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/img/industrial14-esterno-notte.jpg",
     "url": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/",
-    "servesCuisine": ["Pizza", "Italiana", "Hamburger", "Vegana"],
-    "priceRange": "€€",
+    "menu": "https://youssoufall2002-hash.github.io/portofoglio-/industrial14/menu.html",
     "telephone": "+39 035 039 0279",
+    "priceRange": "€€",
+    "acceptsReservations": "True",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Mura 2",
@@ -38,177 +48,287 @@
       "postalCode": "24034",
       "addressCountry": "IT"
     },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:30", "closes": "14:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "11:30", "closes": "14:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:30", "closes": "23:59" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:30", "closes": "14:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "01:00" }
-    ],
     "sameAs": [
-      "https://www.instagram.com/industrial14_cisano/",
-      "https://www.facebook.com/p/Industrial14-Cisano-61581664965413/"
+      "https://www.instagram.com/industrial14_cisano/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "73"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:30", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:30", "closes": "24:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "01:00" }
     ]
   }
   </script>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html">INDUSTRIAL <span style="color:var(--accent)">14</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="index.html#locale">Chi siamo</a>
-        <a href="menu.html">Menù</a>
-        <a href="galleria.html">Galleria</a>
-        <a href="contatti.html">Contatti</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-accent nav-book" href="tel:+390350390279">Prenota</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-controls="navOverlay" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
+  <!-- ====================================================================
+       NAVBAR
+       ==================================================================== -->
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="INDUSTRIAL 14 — home">INDUSTRIAL<b>14</b></a>
+
+    <nav aria-label="Menu principale">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#locale">Il locale</a></li>
+        <li><a href="#cosa-mangi">Cosa mangi</a></li>
+        <li><a href="#galleria">Galleria</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="menu.html">Menù</a></li>
+      </ul>
+    </nav>
+
+    <a class="nav__cta" href="tel:+390350390279">Prenota</a>
+
+    <button class="nav__toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- MENU A SCHERMO INTERO -->
-  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
-    <button class="nav-close" id="navClose" aria-label="Chiudi menu">&times;</button>
-    <nav class="nav-overlay-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="index.html#locale">Chi siamo</a>
-      <a href="menu.html">Menù</a>
-      <a href="galleria.html">Galleria</a>
-      <a href="contatti.html">Contatti</a>
-      <a class="ov-book" href="tel:+390350390279">📞 Prenota</a>
-    </nav>
-  </div>
+  <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <h1 class="hero-logo-wrap"><img class="hero-logo" src="img/industrial14-logo.jpg" alt="INDUSTRIAL 14 — Cisano Bergamasco"></h1>
-      <p class="sub">Pizzeria &amp; griglia a Cisano Bergamasco.</p>
-    </div>
-  </section>
+    <!-- ================================================================
+         1. HERO
+         ================================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <!-- SOSTITUIRE con foto reale (esterno/insegna del locale) -->
+        <img src="img/industrial14-esterno-notte.jpg" alt="Esterno di INDUSTRIAL 14 a Cisano Bergamasco di sera" fetchpriority="high" />
+      </div>
 
-  <!-- CHI SIAMO -->
-  <section id="locale">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="eyebrow">Chi siamo</span>
+      <span class="bignum" aria-hidden="true">14</span>
+
+      <div class="hero__inner container">
+        <h1>Industrial<br>14</h1>
+        <p class="hero__sub"><b>Pizza</b> · <b>Burger</b> · <b>Griglia</b> · <b>Birra</b></p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="tel:+390350390279">Prenota</a>
+          <a class="btn btn--ghost" href="menu.html">Menù</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         2. IL LOCALE (layout asimmetrico testo/foto)
+         ================================================================ -->
+    <section id="locale" class="band">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="index">01</span>
           <h2>Il locale</h2>
-          <p>INDUSTRIAL 14 è un ristorante e pizzeria a Cisano Bergamasco: ferro, mattone a vista e luci calde, cucina genuina e una bella selezione di birre alla spina.</p>
-          <p>Un ambiente informale e accogliente, per un pranzo veloce, una cena tra amici o un aperitivo.</p>
-          <div class="features">
-            <div class="feature"><span class="ico">🍸</span><div><b>Happy Hour</b><p>Aperitivo e drink con cibo dedicato.</p></div></div>
-            <div class="feature"><span class="ico">🌱</span><div><b>Piatti vegani</b><p>Sempre disponibili nel menù.</p></div></div>
-            <div class="feature"><span class="ico">🥂</span><div><b>Sala privata</b><p>Per feste, gruppi ed eventi.</p></div></div>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <span class="eyebrow">Cisano Bergamasco</span>
+            <p>Cemento, metallo e fuoco vivo. INDUSTRIAL 14 è pizzeria napoletana, griglieria e birreria in un unico spazio, dove l'impasto a lunga lievitazione incontra la carne alla brace e la birra alla spina.</p>
+            <p>Dal pranzo veloce alla cena con le serate live: un locale contemporaneo pensato per stare bene, senza fronzoli. Materie prime selezionate, cottura a vista, atmosfera diretta.</p>
+          </div>
+
+          <figure class="about__media reveal">
+            <!-- SOSTITUIRE con foto reale (sala / interni) -->
+            <img src="img/industrial14-sala.jpg" alt="Sala interna di INDUSTRIAL 14 con parete bar in mattoni" loading="lazy" />
+            <span class="tag">La sala</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         3. COSA MANGI (4 card con icone lineari, senza prezzi)
+         ================================================================ -->
+    <section id="cosa-mangi">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="index">02</span>
+          <h2>Cosa mangi</h2>
+        </div>
+
+        <div class="eat__grid reveal">
+          <!-- Pizza napoletana -->
+          <article class="eat__card">
+            <span class="eat__num">/ 01</span>
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M6 14 24 6l18 8-18 30z" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="20" cy="17" r="1.8"/><circle cx="27" cy="21" r="1.8"/><circle cx="21" cy="26" r="1.8"/>
+            </svg>
+            <h3>Pizza<br>napoletana</h3>
+            <p>Impasto a lunga lievitazione, cornicione alto, cotta nel forno a legna.</p>
+          </article>
+
+          <!-- Burger -->
+          <article class="eat__card">
+            <span class="eat__num">/ 02</span>
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M8 18c0-6 7-10 16-10s16 4 16 10z" stroke-linejoin="round"/>
+              <path d="M7 24h34" /><path d="M8 30h32c0 5-6 8-16 8s-16-3-16-8z" stroke-linejoin="round"/>
+            </svg>
+            <h3>Burger</h3>
+            <p>Carne di fassona e black angus, pane fatto in casa, farciture generose.</p>
+          </article>
+
+          <!-- Griglia -->
+          <article class="eat__card">
+            <span class="eat__num">/ 03</span>
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="10" y="14" width="28" height="16" rx="1"/>
+              <path d="M16 30v8M32 30v8M15 20h18M15 24h18"/>
+            </svg>
+            <h3>Griglia</h3>
+            <p>Tagliate, costata, filetto e picanha alla brace. Carne al punto giusto.</p>
+          </article>
+
+          <!-- Birre alla spina -->
+          <article class="eat__card">
+            <span class="eat__num">/ 04</span>
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M14 12h16v26a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z" stroke-linejoin="round"/>
+              <path d="M30 18h5a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-5"/>
+              <path d="M18 20v14M24 20v14"/>
+            </svg>
+            <h3>Birre<br>alla spina</h3>
+            <p>La nostra lager Bocia, l'IPA R-1p4 e una selezione sempre in rotazione.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         4. GALLERIA (masonry + lightbox)
+         ================================================================ -->
+    <section id="galleria" class="band">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="index">03</span>
+          <h2>Galleria</h2>
+        </div>
+
+        <div class="gallery reveal">
+          <!-- Ogni <figure> è cliccabile → apre il lightbox.
+               SOSTITUIRE con foto reali del locale mantenendo lo stesso markup. -->
+          <figure>
+            <img src="img/industrial14-pizza-diavola.jpg" alt="Pizza diavola — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-hamburger-bacon.jpg" alt="Hamburger con bacon — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-spine-birra.jpg" alt="Spine della birra alla spina — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-filetto.jpg" alt="Filetto al rosmarino dalla griglia — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-pizza-burrata-fichi.jpg" alt="Pizza gourmet con burrata e fichi — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-pizzaiolo.jpg" alt="Il pizzaiolo al lavoro sull'impasto — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-bar.jpg" alt="Il bancone bar con i distillati — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-pizza-porcini-tartufo.jpg" alt="Pizza con porcini e tartufo — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/industrial14-pizza-crudo.jpg" alt="Pizza con crudo di Parma e grana — INDUSTRIAL 14" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         5. CONTATTI
+         ================================================================ -->
+    <section id="contatti">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="index">04</span>
+          <h2>Contatti</h2>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Colonna sinistra: orari -->
+          <div class="reveal">
+            <table class="hours">
+              <caption>Cucina: pranzo tutti i giorni · cena dal martedì alla domenica.</caption>
+              <thead>
+                <tr><th scope="col">Giorno</th><td>Orari</td></tr>
+              </thead>
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunedì</th><td>11:30–14:30 · sera chiuso</td></tr>
+                <tr data-day="2"><th scope="row">Martedì</th><td>11:30–14:30 · 17:30–24:00</td></tr>
+                <tr data-day="3"><th scope="row">Mercoledì</th><td>11:30–14:30 · 17:30–24:00</td></tr>
+                <tr data-day="4"><th scope="row">Giovedì</th><td>11:30–14:30 · 17:30–24:00</td></tr>
+                <tr data-day="5"><th scope="row">Venerdì</th><td>11:30–14:30 · 17:30–01:00</td></tr>
+                <tr data-day="6"><th scope="row">Sabato</th><td>11:30–14:30 · 17:30–01:00</td></tr>
+                <tr data-day="0"><th scope="row">Domenica</th><td>11:30–14:30 · 17:30–24:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Colonna destra: indirizzo, telefono, instagram -->
+          <div class="reveal">
+            <ul class="info-list">
+              <li>
+                <span class="k">Indirizzo</span>
+                <a class="v" href="https://maps.google.com/?q=Via+Mura+2,+24034+Cisano+Bergamasco+BG" target="_blank" rel="noopener">Via Mura 2, 24034 Cisano Bergamasco (BG)</a>
+              </li>
+              <li>
+                <span class="k">Telefono</span>
+                <a class="v" href="tel:+390350390279">+39 035 039 0279</a>
+              </li>
+              <li>
+                <span class="k">Instagram</span>
+                <a class="v" href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">@industrial14_cisano</a>
+              </li>
+              <li>
+                <span class="k">Giudizio</span>
+                <span class="v">4,5 / 5 su Google · 73 recensioni</span>
+              </li>
+            </ul>
+            <a class="btn btn--solid" href="tel:+390350390279">Chiama ora</a>
           </div>
         </div>
-        <div class="about-visual reveal">
-          <img src="img/industrial14-sala.jpg" alt="Sala di INDUSTRIAL 14 con tavoli e parete bar in mattoni" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- MENU (richiamo unico) -->
-  <section id="menu">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">La cucina</span>
-        <h2>Il menù</h2>
-        <p>Pizza gourmet, hamburger, carne alla griglia e birre artigianali di produzione propria.</p>
+        <!-- Mappa Google — SOSTITUIRE con l'iframe reale dal pin di Google Maps -->
+        <iframe
+          class="map reveal"
+          title="Mappa: INDUSTRIAL 14, Via Mura 2, Cisano Bergamasco"
+          src="https://maps.google.com/maps?q=Via%20Mura%202,%2024034%20Cisano%20Bergamasco%20BG&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div class="center-cta reveal">
-        <a class="btn btn-accent" href="menu.html">Guarda il menù →</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- GALLERIA (anteprima ordinata) -->
-  <section id="galleria">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Ambiente &amp; piatti</span>
-        <h2>Galleria</h2>
-      </div>
-      <div class="gallery teaser reveal">
-        <div class="shot"><img src="img/industrial14-pizza-burrata-fichi.jpg" alt="Pizza gourmet con burrata, crudo e fichi — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Pizza gourmet</span></div>
-        <div class="shot"><img src="img/industrial14-hamburger-bacon.jpg" alt="Hamburger con bacon croccante — INDUSTRIAL 14" loading="lazy"><span class="shot-label">Hamburger</span></div>
-      </div>
-      <div class="center-cta reveal">
-        <a class="btn btn-ghost" href="galleria.html">Vedi tutte le foto →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- RECENSIONI -->
-  <section id="recensioni">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Testimonianze</span>
-        <h2>Cosa dicono</h2>
-        <p>Recensioni reali dei nostri clienti su Google.</p>
-      </div>
-      <div class="reviews reveal">
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Carne spettacolare, ottima birra e servizio top: personale sorridente, gentile e professionale!»</p>
-          <span class="who">Dina Stucchi</span> <span class="via">· Google</span>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Locale nuovo e molto ben curato. Gli hamburger sono spettacolari e il tiramisù merita tantissimo!»</p>
-          <span class="who">Simone S.</span> <span class="via">· Google</span>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Le pizze sono buonissime, per le materie prime e per gli abbinamenti particolari delle gourmet.»</p>
-          <span class="who">Raffaele</span> <span class="via">· Google</span>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Ottima pizza con buonissimo impasto, dolci buoni, servizio attento, qualità/prezzo eccezionale.»</p>
-          <span class="who">Paolo Ravasi</span> <span class="via">· Google</span>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Pizza buonissima, panini deliziosi, buona anche la loro birra "Bocia". Super consigliato.»</p>
-          <span class="who">Roby V.</span> <span class="via">· Google</span>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>«Cenetta in famiglia e ci siamo trovati davvero bene: pizza molto digeribile, ingredienti di alta qualità, personale disponibile. La consiglio!»</p>
-          <span class="who">Franca Ravasio</span> <span class="via">· Google</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="fbrand">INDUSTRIAL <span>14</span></div>
-      <div class="socials">
-        <a href="menu.html">Menù</a>
-        <a href="galleria.html">Galleria</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <div>Via Mura 2, 24034 Cisano Bergamasco (BG) · 035 039 0279</div>
-      <div class="legal">© <span id="year"></span> INDUSTRIAL 14 · <a href="#" onclick="alert('Inserire qui la Privacy &amp; Cookie Policy.');return false;">Privacy &amp; Cookie</a></div>
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">INDUSTRIAL<b>14</b></div>
+      <small>Via Mura 2, Cisano Bergamasco (BG) · <a href="tel:+390350390279">+39 035 039 0279</a></small>
+      <small>© <span id="year">2026</span> INDUSTRIAL 14 · <a href="https://www.instagram.com/industrial14_cisano/" target="_blank" rel="noopener">Instagram</a></small>
     </div>
   </footer>
 
+  <!-- Barra "Chiama ora" fissa in basso su mobile -->
+  <a class="callbar" href="tel:+390350390279">📞 Chiama ora — +39 035 039 0279</a>
 
-  <!-- COOKIE BANNER -->
-  <div class="cookie hidden" id="cookie">
-    <p>Usiamo cookie tecnici e la mappa di Google. <a href="#" onclick="alert('Inserire la Cookie Policy completa.');return false;">Maggiori info</a></p>
-    <button class="btn btn-accent" onclick="acceptCookie()">Ho capito</button>
+  <!-- ====================================================================
+       LIGHTBOX (galleria)
+       ==================================================================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galleria fotografica">
+    <button class="lightbox__close" type="button" aria-label="Chiudi">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Immagine precedente">‹</button>
+    <img src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Immagine successiva">›</button>
   </div>
 
   <script src="script.js"></script>

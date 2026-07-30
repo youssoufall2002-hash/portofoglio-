@@ -1,32 +1,32 @@
 # INDUSTRIAL 14 — Sito web
 
-Sito **multi-pagina** per **INDUSTRIAL 14**, ristorante e pizzeria a
-**Cisano Bergamasco (BG)**, Via Mura 2.
-Stile **industrial** (nero/cemento, accento rame-arancio), font **Oswald + Inter**.
+Sito statico per **INDUSTRIAL 14**, pizzeria napoletana + burger + griglieria +
+birreria a **Cisano Bergamasco (BG)**, Via Mura 2.
+HTML + CSS + JS **vanilla**, nessun framework, pronto per **GitHub Pages**.
+
+Estetica **industriale contemporanea**: fondo scuro (`#111`), metallo grafite,
+un solo accento **ambra** (`#FFB400`), titoli condensati uppercase (**Oswald**),
+testo in **Inter**, griglia visibile, linee 1px, micro-animazioni.
 
 ## Come si apre
 
-Apri `industrial14/index.html` in un browser. Nessuna dipendenza esterna a parte
-i font di Google e l'iframe della mappa.
+Apri `index.html` in un browser. Nessuna dipendenza esterna a parte i font di
+Google e l'iframe della mappa. Online (GitHub Pages):
+`https://youssoufall2002-hash.github.io/portofoglio-/industrial14/`
 
-Online (GitHub Pages): `https://youssoufall2002-hash.github.io/portofoglio-/industrial14/`
+## Struttura
 
-## Struttura (multi-pagina)
+Sito **single page** (una pagina, 5 sezioni) + **pagina menù separata**.
 
-Stile e script sono condivisi in `style.css` e `script.js`, così le pagine
-restano coerenti e leggere.
+- **`index.html`** — Hero · Il locale · Cosa mangi · Galleria (con lightbox) · Contatti
+- **`menu.html`** — menù completo per categorie con i prezzi
+- **`style.css`** — foglio di stile unico con variabili CSS
+- **`script.js`** — navbar hamburger, reveal on scroll, lightbox, giorno corrente
+- **`img/`** — foto del locale e dei piatti · **`favicon.png`** — icona "14"
 
-- **`index.html` (Home)** — copertina con logo, "Il locale", anteprima galleria,
-  anteprima menù (categorie), recensioni, contatti rapidi
-- **`menu.html` (Menù)** — menù completo: 86 voci in 12 categorie con prezzi
-- **`galleria.html` (Galleria)** — 9 foto del locale e dei piatti
-- **`contatti.html` (Contatti)** — indirizzo, telefono, orari, accessibilità, mappa
-- **`style.css`** — foglio di stile condiviso
-- **`script.js`** — anno footer, banner cookie, animazioni allo scroll
-
-In più: menu di navigazione in alto (Home · Menù · Galleria · Contatti),
-barra fissa in basso su mobile, banner cookie, dati strutturati
-`Restaurant` (schema.org), meta SEO.
+In più: navbar hamburger mobile-first, barra "Chiama ora" fissa in basso su
+mobile, dati strutturati `Restaurant` (schema.org), meta SEO con
+"pizzeria Cisano Bergamasco", lazy loading immagini.
 
 ## Dati reali già inseriti
 
@@ -34,28 +34,27 @@ barra fissa in basso su mobile, banner cookie, dati strutturati
 |---|---|
 | Nome | **INDUSTRIAL 14** |
 | Indirizzo | **Via Mura 2, 24034 Cisano Bergamasco (BG)** |
-| Telefono | **035 039 0279** |
-| Orari | Mar–Dom 11:30–14:30 · 17:30–24:00 (Ven/Sab fino all'01:00); Lun solo pranzo |
-| Servizi | Happy hour · Sala da pranzo privata · Piatti vegani |
+| Telefono | **+39 035 039 0279** |
+| Orari | Pranzo 11:30–14:30 tutti i giorni · Cena 17:30–24:00 (mar–dom), ven/sab fino all'01:00; lunedì solo pranzo |
 | Instagram | [@industrial14_cisano](https://www.instagram.com/industrial14_cisano/) |
-| Facebook | [Industrial14 Cisano](https://www.facebook.com/p/Industrial14-Cisano-61581664965413/) |
+| Recensioni | 4,5/5 su Google (73 recensioni) |
 
-## ⚠️ DA COMPLETARE (segnaposto nel file)
+## Immagini
 
-Cerca i commenti `SEGNAPOSTO` / `SOSTITUIRE` in `index.html`:
+Le foto reali sono in `img/`. Per sostituirle mantieni lo **stesso nome file**
+oppure aggiorna l'attributo `src`. Nel codice ogni immagine da sostituire è
+marcata con il commento `<!-- SOSTITUIRE con foto reale -->`.
+Esporta in **WebP/JPG sotto i 250 KB**, con `alt` descrittivo.
+
+## ⚠️ Da completare (segnaposto nel codice)
 
 | Segnaposto | Sostituire con |
 |---|---|
 | `src` iframe mappa | Per il pin preciso, incolla l'iframe reale da Google Maps |
-| Link Privacy/Cookie | Testo o pagina di privacy e cookie policy |
+| Prezzi menù | Verificare/aggiornare i prezzi in `menu.html` (fa fede il listino in sala) |
 
-**Menu completo con prezzi**, **recensioni** reali da Google e **foto reali**
-del locale sono già inseriti. Le immagini sono in `industrial14/img/`
-(ingresso/insegna, sala, esterno, bar e piatti: pizze, hamburger, filetto).
-Il sito è sostanzialmente completo.
+## Pubblicazione su GitHub Pages
 
-## Immagini
-
-Crea una cartella `industrial14/img/` ed esporta le foto in **WebP/JPG sotto i 250 KB**.
-Sostituisci ogni `<div class="shot">…</div>` con
-`<img src="img/nome-foto.webp" alt="Descrizione — INDUSTRIAL 14 Cisano Bergamasco">`.
+**Settings → Pages → Source: Deploy from a branch →** branch `main`, cartella
+`/ (root)`. Il sito sarà online su
+`https://youssoufall2002-hash.github.io/portofoglio-/industrial14/`.
