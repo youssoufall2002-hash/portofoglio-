@@ -1,59 +1,146 @@
-// Anno nel footer
+/* ==========================================================================
+   INDUSTRIAL 14 — JavaScript vanilla (nessuna libreria esterna)
+   - Navbar hamburger
+   - Reveal on scroll (IntersectionObserver)
+   - Lightbox galleria in JS puro
+   - Evidenzia il giorno corrente nella tabella orari
+   - Anno nel footer
+   ========================================================================== */
 (function () {
-  var y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-})();
+  "use strict";
 
-// Banner cookie
-(function () {
-  var c = document.getElementById('cookie');
-  if (!c) return;
-  function spazio() {
-    document.body.style.paddingBottom = c.classList.contains('hidden') ? '' : c.offsetHeight + 'px';
-  }
-  if (!localStorage.getItem('i14_cookie_ok')) {
-    c.classList.remove('hidden');
-    spazio();
-    window.addEventListener('resize', spazio);
-  }
-  window.acceptCookie = function () {
-    localStorage.setItem('i14_cookie_ok', '1');
-    c.classList.add('hidden');
-    spazio();
-  };
-})();
+  /* ----------------------------------------------------------------------
+     1. Navbar hamburger
+     ---------------------------------------------------------------------- */
+  var toggle = document.querySelector(".nav__toggle");
+  var links = document.getElementById("nav-links");
 
-// Menu a schermo intero (hamburger)
-(function () {
-  var t = document.getElementById('navToggle');
-  var o = document.getElementById('navOverlay');
-  var c = document.getElementById('navClose');
-  if (!t || !o) return;
-  function open() {
-    o.classList.add('open'); o.setAttribute('aria-hidden', 'false');
-    t.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden';
-  }
-  function close() {
-    o.classList.remove('open'); o.setAttribute('aria-hidden', 'true');
-    t.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-  }
-  t.addEventListener('click', open);
-  if (c) c.addEventListener('click', close);
-  o.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-})();
-
-// Comparsa allo scroll
-(function () {
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    for (var i = 0; i < els.length; i++) els[i].classList.add('in');
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var isOpen = links.classList.toggle("open");
+      toggle.classList.toggle("open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
-  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
-  els.forEach(function (el) { io.observe(el); });
+
+    // Chiude il menu quando si clicca un link (single page)
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        links.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     2. Reveal on scroll
+     ---------------------------------------------------------------------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    // Fallback: mostra tutto se l'API non è disponibile
+    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ----------------------------------------------------------------------
+     3. Lightbox galleria (JS puro)
+     ---------------------------------------------------------------------- */
+  var figures = Array.prototype.slice.call(
+    document.querySelectorAll(".gallery figure")
+  );
+  var lightbox = document.getElementById("lightbox");
+
+  if (figures.length && lightbox) {
+    var lbImg = lightbox.querySelector("img");
+    var btnClose = lightbox.querySelector(".lightbox__close");
+    var btnPrev = lightbox.querySelector(".lightbox__nav--prev");
+    var btnNext = lightbox.querySelector(".lightbox__nav--next");
+    var current = 0;
+
+    function sources() {
+      return figures.map(function (fig) {
+        var img = fig.querySelector("img");
+        // usa la versione a piena risoluzione se indicata, altrimenti src
+        return { src: img.getAttribute("data-full") || img.src, alt: img.alt };
+      });
+    }
+
+    function show(index) {
+      var list = sources();
+      current = (index + list.length) % list.length; // ciclico
+      lbImg.src = list[current].src;
+      lbImg.alt = list[current].alt;
+    }
+
+    function open(index) {
+      show(index);
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      btnClose.focus();
+    }
+
+    function close() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    figures.forEach(function (fig, i) {
+      fig.addEventListener("click", function () { open(i); });
+      // accessibilità: apertura con Invio/Spazio
+      fig.setAttribute("tabindex", "0");
+      fig.setAttribute("role", "button");
+      fig.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open(i);
+        }
+      });
+    });
+
+    btnClose.addEventListener("click", close);
+    btnPrev.addEventListener("click", function () { show(current - 1); });
+    btnNext.addEventListener("click", function () { show(current + 1); });
+
+    // chiude cliccando sullo sfondo scuro
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) close();
+    });
+
+    // navigazione da tastiera
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(current - 1);
+      else if (e.key === "ArrowRight") show(current + 1);
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     4. Evidenzia il giorno corrente negli orari
+     getDay(): 0 = domenica ... 6 = sabato
+     ---------------------------------------------------------------------- */
+  var todayRow = document.querySelector(
+    '.hours tr[data-day="' + new Date().getDay() + '"]'
+  );
+  if (todayRow) todayRow.classList.add("is-today");
+
+  /* ----------------------------------------------------------------------
+     5. Anno nel footer
+     ---------------------------------------------------------------------- */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();

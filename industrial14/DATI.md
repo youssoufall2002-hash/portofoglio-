@@ -10,10 +10,8 @@ Documento di riepilogo del sito e dell'attività. Aggiornato al 29/07/2026.
 
 | Pagina | Indirizzo |
 |---|---|
-| Home | `…/industrial14/` |
+| Home (single page: Il locale · Cosa mangi · Galleria · Contatti) | `…/industrial14/` |
 | Menù | `…/industrial14/menu.html` |
-| Galleria | `…/industrial14/galleria.html` |
-| Contatti | `…/industrial14/contatti.html` |
 
 ---
 
@@ -233,15 +231,13 @@ Tutte ottimizzate per il web (max 1000px, totale ~2,5 MB).
 
 | File | A cosa serve |
 |---|---|
-| `index.html` | Home: copertina, Chi siamo, richiamo menù, anteprima galleria, recensioni |
+| `index.html` | Single page: Hero, Il locale, Cosa mangi, Galleria (con lightbox), Contatti |
 | `menu.html` | Menù completo con collegamenti rapidi alle categorie |
-| `galleria.html` | Tutte le 12 foto |
-| `contatti.html` | Indirizzo, telefono, orari, accessibilità, mappa |
-| `style.css` | Tutti i colori, i font e l'impaginazione (condiviso) |
-| `script.js` | Menu ☰, banner cookie, animazioni allo scorrimento |
+| `style.css` | Tutti i colori, i font e l'impaginazione (foglio unico con variabili) |
+| `script.js` | Menu ☰, reveal on scroll, lightbox galleria, giorno corrente |
 | `img/` | Tutte le foto |
 
-**Stile:** industrial — nero/cemento con accento rame-arancio `#e2672b`; font **Oswald** (titoli) + **Inter** (testo).
+**Stile:** industrial contemporaneo — fondo scuro `#111`, metallo grafite, accento ambra `#FFB400`; font **Oswald** (titoli condensati) + **Inter** (testo).
 
 **Pubblicazione:** GitHub Pages dal branch `main` del repository
 `youssoufall2002-hash/portofoglio-`. Ogni modifica caricata su `main` va online in 1–2 minuti.
