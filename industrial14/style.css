@@ -261,6 +261,20 @@ footer .socials a:hover { color: var(--accent); }
 footer .legal { margin-top: 10px; font-size: .78rem; }
 footer .legal a { color: var(--muted); text-decoration: underline; }
 
+/* Form prenotazione */
+#prenota { scroll-margin-top: 80px; }
+.book-form { max-width: 620px; margin: 0 auto; display: grid; gap: 16px; }
+.book-form .bf-row { display: grid; gap: 16px; }
+@media (min-width: 620px) { .book-form .bf-row { grid-template-columns: 1fr 1fr; } }
+.book-form label { display: flex; flex-direction: column; gap: 7px; font-family: var(--font-titoli); text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; color: var(--muted); }
+.book-form input {
+  font-family: var(--font-testo); font-size: 1rem; color: var(--text);
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px;
+}
+.book-form input:focus-visible { outline: none; border-color: var(--accent); }
+.book-form .bf-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.book-form .bf-note { font-size: .8rem; color: var(--muted); font-family: var(--font-testo); text-transform: none; letter-spacing: 0; margin: 0; }
+
 /* Cookie banner */
 /* Striscia sottile in fondo: non copre i contenuti */
 .cookie {

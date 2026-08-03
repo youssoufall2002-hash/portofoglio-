@@ -27,7 +27,7 @@
         <a href="contatti.html" class="active">Contatti</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-accent nav-book" href="tel:+390350390279">Prenota</a>
+        <a class="btn btn-accent nav-book" href="contatti.html#prenota">Prenota</a>
         <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-controls="navOverlay" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -42,7 +42,7 @@
       <a href="menu.html">Menù</a>
       <a href="galleria.html">Galleria</a>
       <a href="contatti.html" class="active">Contatti</a>
-      <a class="ov-book" href="tel:+390350390279">📞 Prenota</a>
+      <a class="ov-book" href="contatti.html#prenota">Prenota</a>
     </nav>
   </div>
 
@@ -53,6 +53,33 @@
       <h1>Contatti &amp; orari</h1>
       <div class="rule"></div>
       <p>Ti aspettiamo in Via Mura 2, a Cisano Bergamasco.</p>
+    </div>
+  </section>
+
+  <!-- PRENOTAZIONE -->
+  <section id="prenota">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Prenotazioni</span>
+        <h2>Prenota un tavolo</h2>
+        <p>Compila la richiesta: la invii su WhatsApp e ti confermiamo noi.</p>
+      </div>
+      <form class="book-form reveal" id="bookForm">
+        <div class="bf-row">
+          <label>Nome<input type="text" name="nome" autocomplete="name" required></label>
+          <label>Persone<input type="number" name="persone" min="1" max="30" value="2" required></label>
+        </div>
+        <div class="bf-row">
+          <label>Giorno<input type="date" name="giorno" required></label>
+          <label>Ora<input type="time" name="ora" required></label>
+        </div>
+        <label>Note (opzionale)<input type="text" name="note" placeholder="Es. tavolo all'aperto, allergie, occasione…"></label>
+        <div class="bf-actions">
+          <button type="submit" class="btn btn-accent">💬 Invia su WhatsApp</button>
+          <a class="btn btn-ghost" href="tel:+390350390279">📞 Chiama</a>
+        </div>
+        <p class="bf-note">Inviando, si apre WhatsApp con il messaggio già pronto. Se preferisci, chiamaci: ti confermiamo la disponibilità.</p>
+      </form>
     </div>
   </section>
 
@@ -91,7 +118,7 @@
             <div class="hours-row"><span class="day">Domenica</span><span class="val">11:30 – 14:30 · 17:30 – 24:00</span></div>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-accent" href="tel:+390350390279">📞 Prenota</a>
+            <a class="btn btn-accent" href="tel:+390350390279">📞 Chiama</a>
             <a class="btn btn-ghost" href="https://maps.google.com/?q=INDUSTRIAL+14,+Via+Mura+2,+Cisano+Bergamasco" target="_blank" rel="noopener">🧭 Indicazioni</a>
           </div>
         </div>
