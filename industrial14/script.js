@@ -43,6 +43,24 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 
+// Form prenotazione → WhatsApp precompilato
+(function () {
+  var f = document.getElementById('bookForm');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = new FormData(f);
+    var msg = 'Ciao INDUSTRIAL 14, vorrei prenotare un tavolo.'
+      + '\nNome: ' + (d.get('nome') || '')
+      + '\nPersone: ' + (d.get('persone') || '')
+      + '\nGiorno: ' + (d.get('giorno') || '')
+      + '\nOra: ' + (d.get('ora') || '');
+    var note = (d.get('note') || '').trim();
+    if (note) msg += '\nNote: ' + note;
+    window.open('https://wa.me/390350390279?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+
 // Comparsa allo scroll
 (function () {
   var els = document.querySelectorAll('.reveal');

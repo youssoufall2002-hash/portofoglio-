@@ -1,0 +1,520 @@
+{
+  "aggiornato": "2026-07-29",
+  "nota": "🌱 Disponibili proposte vegane. * Alcuni prodotti possono essere surgelati all'origine. Per allergeni e proposte del giorno chiedi al personale.",
+  "categorie": [
+    {
+      "id": "",
+      "nome": "Antipasti & Varie",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Tagliere di salumi e formaggi",
+          "desc": "con gnocco fritto o focaccia",
+          "prezzo": "15,00 €"
+        },
+        {
+          "nome": "Burrata con alici e pistacchi",
+          "desc": "",
+          "prezzo": "12,00 €"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "nome": "Tegamini Gourmet",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Parma",
+          "desc": "crudo di Parma DOP, burrata, basilico, olio evo",
+          "prezzo": "13,50 €"
+        },
+        {
+          "nome": "Crudité",
+          "desc": "rucola, stracciatella, tartare di gambero, zest di limone, fiori edibili",
+          "prezzo": "15,00 €"
+        },
+        {
+          "nome": "Fondue",
+          "desc": "fonduta di quattro formaggi, petali di tartufo, battuta di fassona al coltello",
+          "prezzo": "16,00 €"
+        }
+      ]
+    },
+    {
+      "id": "fritture",
+      "nome": "Fritture",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Patatine fritte",
+          "desc": "",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Crocchette di patate",
+          "desc": "",
+          "prezzo": "4,00 €"
+        },
+        {
+          "nome": "Olive ascolane",
+          "desc": "",
+          "prezzo": "4,00 €"
+        },
+        {
+          "nome": "Anelli di cipolla",
+          "desc": "",
+          "prezzo": "4,00 €"
+        },
+        {
+          "nome": "Stick di mozzarella",
+          "desc": "",
+          "prezzo": "4,00 €"
+        },
+        {
+          "nome": "Jalapeño fritti",
+          "desc": "",
+          "prezzo": "5,00 €"
+        },
+        {
+          "nome": "Alette di pollo messicane",
+          "desc": "x5 / x10",
+          "prezzo": "5,00 €"
+        },
+        {
+          "nome": "Nuggets di pollo",
+          "desc": "x5 / x10",
+          "prezzo": "5,00 €"
+        },
+        {
+          "nome": "Mix frittura",
+          "desc": "mix delle fritture sopra elencate",
+          "prezzo": "12,00 €"
+        }
+      ]
+    },
+    {
+      "id": "pizze",
+      "nome": "Pizze Classiche",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Marinara",
+          "desc": "pomodoro, aglio, olio evo, origano",
+          "prezzo": "5,50 €"
+        },
+        {
+          "nome": "Margherita",
+          "desc": "pomodoro, fiordilatte",
+          "prezzo": "6,50 €"
+        },
+        {
+          "nome": "Napoli",
+          "desc": "pomodoro, fiordilatte, acciughe, origano",
+          "prezzo": "8,00 €"
+        },
+        {
+          "nome": "Calzone liscio",
+          "desc": "pomodoro, fiordilatte, prosciutto cotto",
+          "prezzo": "8,00 €"
+        },
+        {
+          "nome": "Diavola",
+          "desc": "pomodoro, fiordilatte, salamino piccante stagionato",
+          "prezzo": "8,50 €"
+        },
+        {
+          "nome": "Romana",
+          "desc": "pomodoro, fiordilatte, acciughe, olive taggiasche, capperi, origano",
+          "prezzo": "8,50 €"
+        },
+        {
+          "nome": "Boscaiola",
+          "desc": "pomodoro, fiordilatte, salsiccia, funghi champignon",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Tonno e cipolle",
+          "desc": "pomodoro, fiordilatte, tonno, cipolle rosse",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Americana",
+          "desc": "pomodoro, fiordilatte, würstel, patatine fritte*",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Capricciosa",
+          "desc": "pomodoro, fiordilatte, prosciutto cotto, funghi, olive taggiasche, carciofi",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Vegetariana",
+          "desc": "pomodoro, fiordilatte, melanzane, peperoni e zucchine grigliate",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Calzone farcito",
+          "desc": "pomodoro, fiordilatte, funghi, prosciutto cotto, carciofi, olive",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "4 Stagioni",
+          "desc": "pomodoro, fiordilatte, prosciutto cotto, funghi, olive, carciofi",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "4 Formaggi",
+          "desc": "pomodoro, fiordilatte, gorgonzola, brie, taleggio",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "Speck e brie",
+          "desc": "pomodoro, fiordilatte, speck, brie",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "Prosciutto e funghi",
+          "desc": "pomodoro, fiordilatte, prosciutto cotto, funghi champignon",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "Gamberetti",
+          "desc": "pomodoro, fiordilatte, gamberetti",
+          "prezzo": "9,50 €"
+        },
+        {
+          "nome": "Crudo",
+          "desc": "pomodoro, fiordilatte, prosciutto crudo di Parma DOP",
+          "prezzo": "10,00 €"
+        },
+        {
+          "nome": "Valtellinese",
+          "desc": "pomodoro, fiordilatte, rucola, bresaola, scaglie di grana",
+          "prezzo": "10,50 €"
+        },
+        {
+          "nome": "Caprese",
+          "desc": "pomodoro, bufala di Battipaglia DOP, pomodorini, basilico",
+          "prezzo": "10,50 €"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "nome": "Pizze — Le Rivisitate",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "La Sbagliata",
+          "desc": "pomodoro, stracciatella di bufala, pomodorini gialli e rossi, origano",
+          "prezzo": "11,00 €"
+        },
+        {
+          "nome": "Carbonara",
+          "desc": "carbocrema, fiordilatte, pecorino romano, guanciale croccante",
+          "prezzo": "11,50 €"
+        },
+        {
+          "nome": "Margherita DOP",
+          "desc": "pomodoro, bufala DOP, gocce di pesto fresco, spuma di pecorino",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Frutti di mare",
+          "desc": "pomodoro, selezione di frutti di mare*",
+          "prezzo": "13,00 €"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "nome": "Pizze Industrial",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Ol Diaol",
+          "desc": "pomodoro, fiordilatte, salamino piccante, 'nduja, ricotta di bufala",
+          "prezzo": "11,00 €"
+        },
+        {
+          "nome": "Sofestech",
+          "desc": "fiordilatte, pere, gorgonzola, noci",
+          "prezzo": "11,00 €"
+        },
+        {
+          "nome": "Sbusada",
+          "desc": "ciambella ripiena di fiordilatte, brie e porcini, ricoperta di speck",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Purseluna",
+          "desc": "pomodoro, fiordilatte, porchetta, carciofi, provola affumicata",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Mia Mal",
+          "desc": "rucola, burrata DOP, salmone affumicato, gamberetti, scorza di limone",
+          "prezzo": "13,00 €"
+        },
+        {
+          "nome": "Teruna",
+          "desc": "pomodorini del piennolo, burrata affumicata, tarallo, 'nduja di Spilinga, spianata calabra",
+          "prezzo": "13,50 €"
+        },
+        {
+          "nome": "Bocia",
+          "desc": "fiordilatte, salame bergamasco, porcini trifolati, formaggini passati",
+          "prezzo": "13,50 €"
+        },
+        {
+          "nome": "Russi",
+          "desc": "pomodoro, fiordilatte, crudo di Parma, noci, scaglie di grana",
+          "prezzo": "13,50 €"
+        },
+        {
+          "nome": "La Bulugnes",
+          "desc": "fiordilatte, burrata DOP, mortadella, pesto al pistacchio",
+          "prezzo": "14,00 €"
+        },
+        {
+          "nome": "So Mia",
+          "desc": "pomodoro, bufala di Battipaglia DOP, crudo di Parma, granella di pistacchi",
+          "prezzo": "14,50 €"
+        },
+        {
+          "nome": "Ingurda",
+          "desc": "fiordilatte, cornicione ripieno di ricotta, salsiccia, friarielli, provola affumicata",
+          "prezzo": "14,50 €"
+        },
+        {
+          "nome": "L'è Buna",
+          "desc": "fiordilatte, crudo di Parma, burrata affumicata, petali di tartufo nero",
+          "prezzo": "15,00 €"
+        },
+        {
+          "nome": "Industrial",
+          "desc": "pomodoro, bufala DOP, crudo iberico, pecorino al pepe",
+          "prezzo": "16,00 €"
+        }
+      ]
+    },
+    {
+      "id": "hamburger",
+      "nome": "Hamburger",
+      "nota": "serviti con patatine",
+      "voci": [
+        {
+          "nome": "Ol Nurmal",
+          "desc": "burger di fassona, cheddar, pomodoro, insalata",
+          "prezzo": "9,00 €"
+        },
+        {
+          "nome": "Ol Barbecue",
+          "desc": "burger di fassona, cheddar, bacon, cipolla caramellata, salsa barbecue",
+          "prezzo": "10,00 €"
+        },
+        {
+          "nome": "Ol Pulastrel",
+          "desc": "petto di pollo alla piastra, bacon, pomodoro, insalata, maionese",
+          "prezzo": "10,50 €"
+        },
+        {
+          "nome": "Ol Crispy",
+          "desc": "crispy chicken, salsa cheddar, insalata, doppio bacon croccante",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "L'esagerat",
+          "desc": "black angus 200g, uovo, bacon, anelli di cipolla fritti, scaglie di grana",
+          "prezzo": "13,00 €"
+        },
+        {
+          "nome": "Ol Sofestech",
+          "desc": "tartare di manzo, olive taggiasche, tuorlo, insalata; panino con impasto della pizza",
+          "prezzo": "13,50 €"
+        },
+        {
+          "nome": "Stèrlöch",
+          "desc": "burger di fassona, porcini, taleggio, crudo iberico, songino",
+          "prezzo": "14,00 €"
+        },
+        {
+          "nome": "Ol Norveges",
+          "desc": "filetto di salmone, zucchine grigliate, stracciatella DOP, salsa agli agrumi, songino",
+          "prezzo": "14,00 €"
+        }
+      ]
+    },
+    {
+      "id": "carni",
+      "nome": "Carni & Griglia",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Ribs",
+          "desc": "costine di maiale cotte a bassa temperatura",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Tagliata di pollo",
+          "desc": "rucola, scaglie di grana, pomodorini",
+          "prezzo": "14,00 €"
+        },
+        {
+          "nome": "Tagliata di manzo",
+          "desc": "rucola, scaglie di grana, pomodorini",
+          "prezzo": "16,00 €"
+        },
+        {
+          "nome": "Picanha alla griglia",
+          "desc": "",
+          "prezzo": "18,00 €"
+        },
+        {
+          "nome": "Orecchia di elefante",
+          "desc": "cotoletta maxi di maiale con osso e panatura",
+          "prezzo": "19,00 €"
+        },
+        {
+          "nome": "Costata di scottona",
+          "desc": "",
+          "prezzo": "22,00 €"
+        },
+        {
+          "nome": "Filetto al rosmarino",
+          "desc": "",
+          "prezzo": "25,00 €"
+        }
+      ]
+    },
+    {
+      "id": "vegano",
+      "nome": "🌱 Menù Veganø",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Insalatona",
+          "desc": "lattuga, pomodorini, olive, burger vegano, zucchine grigliate, noci",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Spitinfia",
+          "desc": "pomodoro, aglio, origano, olio evo, rucola, pomodorini, carciofi grigliati, glassa balsamica",
+          "prezzo": "12,00 €"
+        },
+        {
+          "nome": "Burger Ol Vegan",
+          "desc": "burger vegano, songino, pomodori, patate crunchy, maionese vegana, cipolla caramellata",
+          "prezzo": "15,00 €"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "nome": "Menù Bambini",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Munel",
+          "desc": "polipetti di würstel con patatine",
+          "prezzo": "6,00 €"
+        },
+        {
+          "nome": "Scetin",
+          "desc": "burger di fassona, cheddar, ketchup, con patatine",
+          "prezzo": "7,00 €"
+        },
+        {
+          "nome": "Tiramat",
+          "desc": "cotoletta e patatine",
+          "prezzo": "8,00 €"
+        }
+      ]
+    },
+    {
+      "id": "birre",
+      "nome": "Birre",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Bocia",
+          "desc": "la nostra lager in lattina (0,33l)",
+          "prezzo": "5,00 €"
+        },
+        {
+          "nome": "R-1p4",
+          "desc": "la nostra American IPA alla spina, note di agrumi e frutta tropicale (0,33l · 6,6%)",
+          "prezzo": "6,50 €"
+        },
+        {
+          "nome": "Leffe Rouge",
+          "desc": "rossa, avvolgente e dolce (piccola/media · 6,6%)",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Hoegaarden",
+          "desc": "blanche fresca, sentori agrumati e fruttati (piccola/media · 4,9%)",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Löwenbräu",
+          "desc": "bionda equilibrata e dissetante (piccola/media · 5,2%)",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Birra del mese",
+          "desc": "selezione mensile artigianale (piccola/media)",
+          "prezzo": "3,50 €"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "nome": "Beverage",
+      "nota": "",
+      "voci": [
+        {
+          "nome": "Acqua",
+          "desc": "",
+          "prezzo": "1,50 €"
+        },
+        {
+          "nome": "Caffè",
+          "desc": "",
+          "prezzo": "1,50 €"
+        },
+        {
+          "nome": "Bibita in vetro",
+          "desc": "",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Amaro",
+          "desc": "",
+          "prezzo": "3,50 €"
+        },
+        {
+          "nome": "Grappe aromatizzate",
+          "desc": "",
+          "prezzo": "4,50 €"
+        },
+        {
+          "nome": "Analcolico",
+          "desc": "",
+          "prezzo": "6,00 €"
+        },
+        {
+          "nome": "Cocktail",
+          "desc": "",
+          "prezzo": "6,00 €"
+        },
+        {
+          "nome": "Gin tonic premium",
+          "desc": "",
+          "prezzo": "10,00 €"
+        }
+      ]
+    }
+  ]
+}
