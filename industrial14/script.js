@@ -61,17 +61,18 @@
   });
 })();
 
-// Comparsa allo scroll
+// Comparsa allo scroll (con rete di sicurezza: il contenuto compare comunque)
 (function () {
+  document.documentElement.classList.add('reveal-on');
   var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    for (var i = 0; i < els.length; i++) els[i].classList.add('in');
-    return;
-  }
+  function revealAll() { for (var i = 0; i < els.length; i++) els[i].classList.add('in'); }
+  if (!('IntersectionObserver' in window) || !els.length) { revealAll(); return; }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
   els.forEach(function (el) { io.observe(el); });
+  // rete di sicurezza: qualunque cosa non sia stata rivelata, mostrala comunque
+  window.addEventListener('load', function () { setTimeout(revealAll, 1200); });
 })();
