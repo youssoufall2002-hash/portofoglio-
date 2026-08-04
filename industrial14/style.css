@@ -296,7 +296,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-toggle:focus-vis
 }
 .nav-overlay-links a:focus-visible { outline-offset: 6px; }
 
-/* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+/* Comparsa allo scroll — il contenuto è SEMPRE visibile per default;
+   l'animazione parte solo se il JS aggiunge '.reveal-on' e non può mai nascondere nulla */
+.reveal { transition: opacity .7s ease, transform .7s ease; }
+.reveal-on .reveal { opacity: 0; transform: translateY(22px); }
+.reveal-on .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal-on .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
