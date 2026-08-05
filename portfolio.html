@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youssouf Fall | Sviluppatore Web</title>
+  <meta name="description" content="Portfolio di Youssouf Fall, sviluppatore web. Creo siti puliti, veloci e responsive. Progetti, competenze e contatti." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Youssouf Fall — Sviluppatore Web" />
+  <meta property="og:description" content="Siti web puliti, veloci e responsive. Guarda i miei progetti." />
+  <meta property="og:locale" content="it_IT" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0D1117;
+      --surface: #161B22;
+      --surface-2: #1B222D;
+      --text: #E9EFF6;
+      --muted: #9BA7B4;
+      --accent: #5B9BFF;
+      --accent-soft: rgba(91,155,255,.14);
+      --line: #263040;
+      --radius: 16px;
+      --maxw: 1080px;
+      --disp: 'Poppins', system-ui, sans-serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans); background: var(--bg); color: var(--text);
+      line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3 { font-family: var(--disp); font-weight: 700; line-height: 1.15; letter-spacing: -.01em; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
+    section { padding: 80px 0; }
+    .eyebrow { color: var(--accent); font-weight: 600; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; }
+    .section-head { margin-bottom: 44px; }
+    .section-head h2 { margin-top: 10px; }
+    .section-head p { color: var(--muted); margin-top: 8px; max-width: 620px; }
+    .placeholder-note { color: var(--accent); background: var(--accent-soft); border: 1px dashed var(--accent); border-radius: 10px; padding: 3px 9px; font-size: .74rem; font-weight: 600; display: inline-block; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 13px 24px; border-radius: 10px; font-weight: 600; font-size: .94rem; cursor: pointer; border: 1.5px solid transparent; transition: transform .14s ease, background .2s, border-color .2s, color .2s; }
+    .btn:active { transform: translateY(1px); }
+    .btn-accent { background: var(--accent); color: #06122b; }
+    .btn-accent:hover { background: #7db0ff; }
+    .btn-ghost { border-color: var(--line); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Nav */
+    header { position: sticky; top: 0; z-index: 60; background: rgba(13,17,23,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: var(--disp); font-weight: 700; font-size: 1.15rem; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: none; align-items: center; gap: 28px; }
+    .nav-links a { color: var(--muted); font-size: .92rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: inline-flex; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; flex-direction: column; gap: 4px; padding: 8px 22px 18px; border-bottom: 1px solid var(--line); background: var(--bg); }
+    .mobile-menu.show { display: flex; }
+    .mobile-menu a { padding: 11px 6px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--line); }
+    .mobile-menu a:last-child { border-bottom: 0; }
+    @media (min-width: 800px) { .nav-links { display: flex; } .hamburger { display: none; } .mobile-menu { display: none !important; } }
+
+    /* Hero */
+    .hero { padding: 84px 0 64px; position: relative; }
+    .hero::before { content: ""; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 420px; background: radial-gradient(closest-side, rgba(91,155,255,.16), transparent); pointer-events: none; }
+    .hero-inner { display: grid; gap: 34px; align-items: center; }
+    @media (min-width: 780px) { .hero-inner { grid-template-columns: 1.4fr .9fr; } }
+    .hero .hi { color: var(--accent); font-weight: 600; letter-spacing: .04em; }
+    .hero h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); margin: 10px 0 6px; }
+    .hero .role { font-family: var(--disp); color: var(--muted); font-size: clamp(1.1rem, 3vw, 1.5rem); font-weight: 600; }
+    .hero p.lead { color: var(--muted); margin: 20px 0 28px; max-width: 520px; font-size: 1.05rem; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .avatar { width: min(260px, 70vw); aspect-ratio: 1; margin: 0 auto; border-radius: 24px; background: linear-gradient(150deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+    .avatar .mono { font-family: var(--disp); font-weight: 700; font-size: 5rem; color: var(--accent); }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Projects */
+    .projects { display: grid; gap: 26px; }
+    @media (min-width: 780px) { .projects { grid-template-columns: 1fr 1fr; } }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s ease, border-color .2s ease; }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card .thumb { aspect-ratio: 16/10; width: 100%; background: linear-gradient(135deg, #1c2430, #12171f); border-bottom: 1px solid var(--line); overflow: hidden; }
+    .card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .card .thumb.ph { display: grid; place-items: center; color: var(--muted); font-family: var(--disp); font-weight: 600; }
+    .card .body { padding: 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .card h3 { font-size: 1.25rem; }
+    .card .desc p { margin: 6px 0; font-size: .92rem; }
+    .card .desc b { color: var(--text); }
+    .card .desc { color: var(--muted); }
+    .tech { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tech span { font-size: .74rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 11px; }
+    .card .links { display: flex; gap: 10px; margin-top: auto; padding-top: 4px; }
+    .card .links a { flex: 1; justify-content: center; }
+
+    /* About */
+    .about-grid { display: grid; gap: 34px; align-items: center; }
+    @media (min-width: 780px) { .about-grid { grid-template-columns: .8fr 1.2fr; } }
+    .about-photo { aspect-ratio: 1; border-radius: var(--radius); background: linear-gradient(150deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); display: grid; place-items: center; color: var(--muted); overflow: hidden; }
+    .about-photo .mono { font-family: var(--disp); font-weight: 700; font-size: 4rem; color: var(--accent); }
+    .about-text p { color: var(--muted); margin-bottom: 16px; }
+    .about-text b { color: var(--text); }
+
+    /* Skills */
+    .skill-groups { display: grid; gap: 22px; }
+    @media (min-width: 720px) { .skill-groups { grid-template-columns: repeat(3, 1fr); } }
+    .skill-cat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .skill-cat h3 { font-size: 1rem; margin-bottom: 16px; color: var(--text); }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 12px; }
+    .skill { display: inline-flex; align-items: center; gap: 9px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 13px; font-size: .88rem; font-weight: 500; }
+    .skill img { width: 22px; height: 22px; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact .box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 48px 26px; max-width: 620px; margin: 0 auto; }
+    .contact p { color: var(--muted); margin: 10px 0 26px; }
+    .socials { display: flex; gap: 16px; justify-content: center; margin-top: 26px; }
+    .socials a { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; transition: .2s; }
+    .socials a:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .socials svg { width: 22px; height: 22px; fill: var(--text); }
+
+    footer { border-top: 1px solid var(--line); padding: 30px 0; text-align: center; color: var(--muted); font-size: .86rem; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">Youssouf<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#progetti">Progetti</a>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#skills">Competenze</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <button class="hamburger" id="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mmenu">
+      <a href="#progetti">Progetti</a>
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#skills">Competenze</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hi">👋 Ciao, sono</span>
+        <h1>Youssouf Fall</h1>
+        <div class="role">Sviluppatore Web</div>
+        <p class="lead">Creo siti web puliti, veloci e responsive che aiutano le attività a farsi trovare online e a convertire i visitatori in clienti.</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent" href="#progetti">Guarda i progetti</a>
+          <a class="btn btn-ghost" href="mailto:youssoufall02@icloud.com">Scrivimi</a>
+        </div>
+      </div>
+      <div class="avatar">
+        <!-- Sostituisci con una tua foto: <img src="img/youssouf.jpg" alt="Youssouf Fall"> -->
+        <span class="mono">Y</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGETTI -->
+  <section id="progetti">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Progetti</h2>
+        <p>Alcuni lavori realizzati: il problema di partenza, cosa ho fatto e le tecnologie usate.</p>
+      </div>
+      <div class="projects">
+
+        <!-- Progetto 1 — REALE -->
+        <article class="card reveal">
+          <div class="thumb"><img src="img/projects/barberr-hermann.jpg" alt="Sito Barberr Hermann — anteprima"></div>
+          <div class="body">
+            <h3>Barberr Hermann</h3>
+            <div class="desc">
+              <p><b>Il problema:</b> il barbiere aveva un buon profilo Instagram ma nessun sito. Chi cercava "barbiere Bergamo" su Google non trovava orari, contatti o un modo per prenotare.</p>
+              <p><b>La soluzione:</b> un sito one-page responsive con galleria dei lavori, orari con stato "aperto/chiuso" in tempo reale, mappa, pulsanti prenota/chiama e ottimizzazione SEO locale (dati strutturati schema.org).</p>
+            </div>
+            <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+            <div class="links">
+              <a class="btn btn-ghost" href="https://github.com/youssoufall2002-hash/portofoglio-" target="_blank" rel="noopener">Codice</a>
+              <a class="btn btn-accent" href="https://youssoufall2002-hash.github.io/portofoglio-/" target="_blank" rel="noopener">Sito live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Progetto 2 — DA COMPLETARE -->
+        <article class="card reveal">
+          <div class="thumb ph">Anteprima progetto</div>
+          <div class="body">
+            <h3>Progetto 2 <span class="placeholder-note">da completare</span></h3>
+            <div class="desc">
+              <p><b>Il problema:</b> [descrivi il problema che risolveva].</p>
+              <p><b>La soluzione:</b> [cosa hai fatto e perché].</p>
+            </div>
+            <div class="tech"><span>Tech 1</span><span>Tech 2</span></div>
+            <div class="links">
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Codice</a>
+              <a class="btn btn-accent" href="#" target="_blank" rel="noopener">Sito live</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section id="chi-sono">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Chi sono</span>
+        <h2>Un po' su di me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <!-- Sostituisci con una tua foto -->
+          <span class="mono">Y</span>
+        </div>
+        <div class="about-text reveal">
+          <p>Mi chiamo Youssouf e mi sono appassionato allo sviluppo web <b>[racconta come/quando è iniziata la passione]</b>. Mi piace trasformare un'idea in un sito reale, curando ogni dettaglio dell'interfaccia.</p>
+          <p>Mi concentro su <b>interfacce pulite, veloci e facili da usare</b>: credo che un buon sito debba caricarsi in fretta, funzionare bene da telefono e portare risultati concreti a chi lo usa.</p>
+          <p>Fuori dal computer <b>[i tuoi interessi: es. sport, videogiochi, musica…]</b> — cose che mi aiutano a staccare e tornare più creativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Competenze</span>
+        <h2>Con cosa lavoro</h2>
+      </div>
+      <div class="skill-groups reveal">
+        <div class="skill-cat">
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            <span class="skill"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" loading="lazy">HTML5</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="" loading="lazy">CSS3</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" loading="lazy">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Strumenti</h3>
+          <div class="skill-list">
+            <span class="skill"><img src="https://cdn.simpleicons.org/git/F05032" alt="" loading="lazy">Git</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="" loading="lazy">GitHub</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>In apprendimento <span class="placeholder-note">personalizza</span></h3>
+          <div class="skill-list">
+            <span class="skill">[es. React]</span>
+            <span class="skill">[es. Node.js]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="contact">
+    <div class="wrap">
+      <div class="box reveal">
+        <span class="eyebrow">Contatti</span>
+        <h2 style="margin-top:10px">Lavoriamo insieme?</h2>
+        <p>Scrivimi due righe: rispondo volentieri.</p>
+        <a class="btn btn-accent" href="mailto:youssoufall02@icloud.com">✉️ Scrivimi una email</a>
+        <div class="socials">
+          <a href="https://github.com/youssoufall2002-hash" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.8c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5 18 5.3 18 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn (da inserire)">
+            <svg viewBox="0 0 24 24"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.8v20.4C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.8C24 .8 23.2 0 22.2 0z"/></svg>
+          </a>
+        </div>
+        <p style="margin-top:18px;font-size:.82rem"><span class="placeholder-note">da inserire</span> aggiungi il link al tuo profilo LinkedIn</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Youssouf Fall · Sviluppatore Web</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Hamburger
+    var ham = document.getElementById('ham'), mm = document.getElementById('mmenu');
+    ham.addEventListener('click', function(){
+      var open = mm.classList.toggle('show');
+      ham.classList.toggle('open', open);
+      ham.setAttribute('aria-expanded', open);
+    });
+    mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('show'); ham.classList.remove('open'); }); });
+
+    // Reveal
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
