@@ -48,14 +48,14 @@
 
   <style>
     :root {
-      --bg: #FBFAF7;
+      --bg: #FBF6EC;
       --surface: #FFFFFF;
-      --ink: #1A1712;
-      --muted: #726A5C;
-      --brass: #A87B2E;
-      --brass-2: #C6A24C;
-      --line: #E9E3D6;
-      --dark: #15120C;
+      --ink: #15110A;
+      --muted: #665E4C;
+      --brass: #C8930D;
+      --brass-2: #EBB93A;
+      --line: #ECE2CE;
+      --dark: #120E07;
       --radius: 12px;
       --maxw: 1080px;
       --sans: 'Inter', system-ui, sans-serif;
@@ -94,7 +94,7 @@
     }
     .btn:active { transform: scale(.97); }
     .btn-primary { background: var(--brass); color: #fff; }
-    .btn-primary:hover { background: #96691f; }
+    .btn-primary:hover { background: #a87a08; }
     .btn-outline { border-color: var(--brass); color: var(--brass); background: transparent; }
     .btn-outline:hover { background: var(--brass); color: #fff; }
 
@@ -127,7 +127,7 @@
     .hero { text-align: center; padding: 74px 0 66px; position: relative; }
     .hero::before {
       content: ""; position: absolute; inset: 0;
-      background: radial-gradient(560px 300px at 50% 0%, rgba(198,162,76,.16), transparent 72%);
+      background: radial-gradient(600px 320px at 50% 0%, rgba(235,185,58,.28), transparent 72%);
       pointer-events: none;
     }
     .hero .wrap { position: relative; }
@@ -219,12 +219,6 @@
         <a href="#prenota">Prenota</a>
         <a href="#contatti">Contatti</a>
       </nav>
-      <button class="hamburger" id="ham" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-    <div class="mobile-menu" id="mmenu">
-      <a href="#lavori">Lavori</a>
-      <a href="#prenota">Prenota</a>
-      <a href="#contatti">Contatti</a>
     </div>
   </header>
 
@@ -335,17 +329,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Menu hamburger (mobile)
-    (function(){
-      var ham = document.getElementById('ham'), mm = document.getElementById('mmenu');
-      ham.addEventListener('click', function(){
-        var open = mm.classList.toggle('show');
-        ham.classList.toggle('open', open);
-        ham.setAttribute('aria-expanded', open);
-      });
-      mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('show'); ham.classList.remove('open'); ham.setAttribute('aria-expanded', false); }); });
-    })();
 
     // Stato apertura (orari reali)
     (function(){
