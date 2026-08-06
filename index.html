@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Barberr Hermann — Barbiere a Bergamo | Taglio e Barba</title>
-  <meta name="description" content="Barberr Hermann, barbiere a Bergamo. Taglio, barba e styling curati nei dettagli. Prenota il tuo appuntamento." />
+  <meta name="description" content="Barberr Hermann, barbiere a Bergamo. Taglio, barba, styling e dread curati nei dettagli. Prenota il tuo appuntamento." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/webp" href="img/hermann-barbershop-logo.webp" />
   <link rel="apple-touch-icon" href="img/hermann-barbershop-logo.webp" />
@@ -227,7 +227,7 @@
     <div class="wrap">
       <img class="logo-hero" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann Bergamo" />
       <h1>Barberr Hermann</h1>
-      <p class="sub">Barbiere a Bergamo. Taglio, barba e styling curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione.</p>
+      <p class="sub">Barbiere a Bergamo. Taglio, barba, styling e <b style="color:var(--ink);font-weight:600">dread</b> curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione.</p>
     </div>
   </section>
 
@@ -263,15 +263,6 @@
 
         <form id="book-form" class="book-form" novalidate>
           <label>Nome<input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
-          <label>Servizio
-            <select id="bf-service" required>
-              <option value="Taglio uomo">Taglio uomo</option>
-              <option value="Taglio + barba">Taglio + barba</option>
-              <option value="Barba">Barba</option>
-              <option value="Taglio bambino">Taglio bambino</option>
-              <option value="Rasatura completa">Rasatura completa</option>
-            </select>
-          </label>
           <div class="bf-row">
             <label>Giorno<select id="bf-day" required></select></label>
             <label>Ora<select id="bf-time" required></select></label>
@@ -391,13 +382,11 @@
         e.preventDefault();
         var name = document.getElementById('bf-name').value.trim();
         if (!name){ alert('Inserisci il tuo nome.'); return; }
-        var service = document.getElementById('bf-service').value;
         var dayLabel = daySel.options[daySel.selectedIndex].textContent;
         var time = timeSel.value;
         var subject = 'Prenotazione — ' + name + ' — ' + dayLabel + ' ' + time;
         var body = 'Nuova richiesta di prenotazione dal sito:\n\n'
           + 'Nome: ' + name + '\n'
-          + 'Servizio: ' + service + '\n'
           + 'Giorno: ' + dayLabel + '\n'
           + 'Ora: ' + time + '\n';
         window.location.href = 'mailto:' + EMAIL_SALONE
