@@ -134,7 +134,7 @@
     .hero .logo-hero { width: 108px; height: 108px; border-radius: 50%; margin: 0 auto 24px; border: 1px solid var(--line); object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,.06); }
     .hero h1 { font-size: clamp(2.6rem, 8vw, 5rem); text-transform: uppercase; letter-spacing: .04em; }
     .hero .tag { font-family: var(--disp); font-weight: 500; letter-spacing: .18em; text-transform: uppercase; font-size: .8rem; color: var(--muted); margin: 14px 0 4px; }
-    .hero .sub { color: var(--muted); max-width: 440px; margin: 12px auto 30px; }
+    .hero .sub { color: var(--muted); max-width: 600px; margin: 16px auto 0; font-size: 1.02rem; line-height: 1.7; }
     .hero .stars { color: var(--brass); font-weight: 600; margin-top: 22px; font-size: .9rem; }
     .hero .stars b { color: var(--ink); }
 
@@ -233,7 +233,7 @@
     <div class="wrap">
       <img class="logo-hero" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann Bergamo" />
       <h1>Barberr Hermann</h1>
-      <p class="sub">Barbiere a Bergamo · Taglio, barba e styling</p>
+      <p class="sub">Barbiere a Bergamo. Taglio, barba e styling curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione.</p>
     </div>
   </section>
 
@@ -268,10 +268,7 @@
         <div class="hours-status" id="status"><span class="dot"></span><span id="status-text">—</span></div>
 
         <form id="book-form" class="book-form" novalidate>
-          <div class="bf-row">
-            <label>Nome<input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
-            <label>Telefono<input type="tel" id="bf-phone" required autocomplete="tel" placeholder="Il tuo numero"></label>
-          </div>
+          <label>Nome<input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
           <label>Servizio
             <select id="bf-service" required>
               <option value="Taglio uomo">Taglio uomo</option>
@@ -410,15 +407,13 @@
       form.addEventListener('submit', function(e){
         e.preventDefault();
         var name = document.getElementById('bf-name').value.trim();
-        var phone = document.getElementById('bf-phone').value.trim();
-        if (!name || !phone){ alert('Inserisci nome e telefono.'); return; }
+        if (!name){ alert('Inserisci il tuo nome.'); return; }
         var service = document.getElementById('bf-service').value;
         var dayLabel = daySel.options[daySel.selectedIndex].textContent;
         var time = timeSel.value;
         var subject = 'Prenotazione — ' + name + ' — ' + dayLabel + ' ' + time;
         var body = 'Nuova richiesta di prenotazione dal sito:\n\n'
           + 'Nome: ' + name + '\n'
-          + 'Telefono: ' + phone + '\n'
           + 'Servizio: ' + service + '\n'
           + 'Giorno: ' + dayLabel + '\n'
           + 'Ora: ' + time + '\n';
