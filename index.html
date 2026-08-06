@@ -67,7 +67,7 @@
       font-family: var(--sans);
       background: var(--bg); color: var(--ink);
       line-height: 1.65; -webkit-font-smoothing: antialiased;
-      overflow-x: hidden; padding-bottom: 62px;
+      overflow-x: hidden;
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
@@ -234,7 +234,6 @@
       <img class="logo-hero" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann Bergamo" />
       <h1>Barberr Hermann</h1>
       <p class="sub">Barbiere a Bergamo · Taglio, barba e styling</p>
-      <a class="btn btn-primary" href="#prenota" id="book-hero">📅 Prenota ora</a>
     </div>
   </section>
 
@@ -332,20 +331,10 @@
       <img class="logo-f" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann" />
       <div class="fname">Barberr Hermann</div>
       <div style="color:var(--brass-2);font-size:.82rem;letter-spacing:.06em;margin-bottom:16px">★★★★★ &nbsp;5,0 su Google</div>
-      <div class="socials">
-        <a href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">Instagram</a>
-        <a href="tel:+393882589071">Telefono</a>
-        <a href="https://wa.me/393882589071" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
       <div class="copy">© <span id="year"></span> Barberr Hermann · Bergamo</div>
     </div>
   </footer>
 
-  <!-- STICKY MOBILE BAR -->
-  <div class="mobile-bar">
-    <a class="call" href="tel:+393882589071">📞 Chiama</a>
-    <a class="wa" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">💬 WhatsApp</a>
-  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
