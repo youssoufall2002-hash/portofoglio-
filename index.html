@@ -146,33 +146,33 @@
     .shot:hover img { transform: scale(1.05); }
     .gallery-cta { text-align: center; margin-top: 30px; }
 
-    /* Orari */
-    .hours-wrap { background: var(--dark); color: #f3efe6; }
+    /* Prenota (chiaro) */
+    .hours-wrap { background: #F7F5EF; color: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .hours-card { max-width: 460px; margin: 0 auto; text-align: center; }
-    .hours-card .eyebrow { color: var(--brass-2); }
-    .hours-card h2 { color: #fff; }
+    .hours-card .eyebrow { color: var(--brass); }
+    .hours-card h2 { color: var(--ink); }
     .hours-status { font-family: var(--disp); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .82rem; margin: 8px 0 26px; }
     .hours-status .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: middle; }
-    .is-open { color: #7ec98d; } .is-open .dot { background: #7ec98d; }
-    .is-closed { color: #d99; } .is-closed .dot { background: #d99; }
-    .h-line { display: flex; justify-content: space-between; padding: 11px 4px; border-bottom: 1px solid rgba(255,255,255,.12); font-size: .96rem; }
+    .is-open { color: #2f8a4a; } .is-open .dot { background: #2f8a4a; }
+    .is-closed { color: #b3453f; } .is-closed .dot { background: #b3453f; }
+    .h-line { display: flex; justify-content: space-between; padding: 11px 4px; border-bottom: 1px solid var(--line); font-size: .96rem; }
     .h-line:last-child { border-bottom: 0; }
-    .h-line .day { color: #cfc7b8; font-family: var(--disp); font-weight: 500; letter-spacing: .05em; text-transform: uppercase; font-size: .84rem; }
+    .h-line .day { color: var(--muted); font-family: var(--disp); font-weight: 500; letter-spacing: .05em; text-transform: uppercase; font-size: .84rem; }
     .h-line .val { font-variant-numeric: tabular-nums; }
-    .h-line .val.cl { color: #d99; }
+    .h-line .val.cl { color: #b3453f; }
     .hours-card .btn { margin-top: 30px; }
 
     /* Modulo prenotazione */
     .book-form { display: grid; gap: 14px; margin: 24px 0 14px; text-align: left; }
-    .book-form label { display: flex; flex-direction: column; gap: 6px; font-family: var(--disp); font-weight: 500; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: #cfc7b8; }
-    .book-form input, .book-form select { font-family: var(--sans); font-weight: 500; font-size: 1rem; padding: 12px 14px; border-radius: 10px; border: 1px solid #3b3529; background: #fffdf8; color: var(--ink); text-transform: none; letter-spacing: 0; width: 100%; }
-    .book-form input:focus, .book-form select:focus { outline: 2px solid var(--brass-2); outline-offset: 1px; border-color: var(--brass-2); }
+    .book-form label { display: flex; flex-direction: column; gap: 6px; font-family: var(--disp); font-weight: 500; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .book-form input, .book-form select { font-family: var(--sans); font-weight: 500; font-size: 1rem; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); text-transform: none; letter-spacing: 0; width: 100%; }
+    .book-form input:focus, .book-form select:focus { outline: 2px solid var(--brass); outline-offset: 1px; border-color: var(--brass); }
     .bf-row { display: grid; gap: 14px; }
     @media (min-width: 520px) { .bf-row { grid-template-columns: 1fr 1fr; } }
     .book-form .btn { margin-top: 6px; justify-content: center; width: 100%; }
-    .bf-note { font-family: var(--sans); font-size: .82rem; color: #a99f8d; text-transform: none; letter-spacing: 0; text-align: center; margin-top: 4px; }
-    .hours-mini { color: #a99f8d; font-size: .82rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); }
-    .hours-mini b { color: #e7dfce; font-weight: 600; }
+    .bf-note { font-family: var(--sans); font-size: .82rem; color: var(--muted); text-transform: none; letter-spacing: 0; text-align: center; margin-top: 4px; }
+    .hours-mini { color: var(--muted); font-size: .82rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .hours-mini b { color: var(--ink); font-weight: 600; }
 
     /* Contatti */
     .contact-grid { display: grid; gap: 32px; }
