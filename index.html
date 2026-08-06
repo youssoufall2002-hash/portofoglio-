@@ -162,6 +162,18 @@
     .h-line .val.cl { color: #d99; }
     .hours-card .btn { margin-top: 30px; }
 
+    /* Modulo prenotazione */
+    .book-form { display: grid; gap: 14px; margin: 24px 0 14px; text-align: left; }
+    .book-form label { display: flex; flex-direction: column; gap: 6px; font-family: var(--disp); font-weight: 500; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: #cfc7b8; }
+    .book-form input, .book-form select { font-family: var(--sans); font-weight: 500; font-size: 1rem; padding: 12px 14px; border-radius: 10px; border: 1px solid #3b3529; background: #fffdf8; color: var(--ink); text-transform: none; letter-spacing: 0; width: 100%; }
+    .book-form input:focus, .book-form select:focus { outline: 2px solid var(--brass-2); outline-offset: 1px; border-color: var(--brass-2); }
+    .bf-row { display: grid; gap: 14px; }
+    @media (min-width: 520px) { .bf-row { grid-template-columns: 1fr 1fr; } }
+    .book-form .btn { margin-top: 6px; justify-content: center; width: 100%; }
+    .bf-note { font-family: var(--sans); font-size: .82rem; color: #a99f8d; text-transform: none; letter-spacing: 0; text-align: center; margin-top: 4px; }
+    .hours-mini { color: #a99f8d; font-size: .82rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); }
+    .hours-mini b { color: #e7dfce; font-weight: 600; }
+
     /* Contatti */
     .contact-grid { display: grid; gap: 32px; }
     @media (min-width: 820px) { .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
@@ -204,14 +216,14 @@
       </a>
       <nav class="nav-links">
         <a href="#lavori">Lavori</a>
-        <a href="#orari">Orari</a>
+        <a href="#prenota">Prenota</a>
         <a href="#contatti">Contatti</a>
       </nav>
       <button class="hamburger" id="ham" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu" id="mmenu">
       <a href="#lavori">Lavori</a>
-      <a href="#orari">Orari</a>
+      <a href="#prenota">Prenota</a>
       <a href="#contatti">Contatti</a>
     </div>
   </header>
@@ -222,7 +234,7 @@
       <img class="logo-hero" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann Bergamo" />
       <h1>Barberr Hermann</h1>
       <p class="sub">Barbiere a Bergamo · Taglio, barba e styling</p>
-      <a class="btn btn-primary" href="https://wa.me/393882589071?text=Ciao,%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener" id="book-hero">📅 Prenota ora</a>
+      <a class="btn btn-primary" href="#prenota" id="book-hero">📅 Prenota ora</a>
     </div>
   </section>
 
@@ -248,17 +260,39 @@
     </div>
   </section>
 
-  <!-- ORARI -->
-  <section class="hours-wrap" id="orari">
+  <!-- PRENOTA -->
+  <section class="hours-wrap" id="prenota">
     <div class="wrap">
       <div class="hours-card reveal">
-        <span class="eyebrow">Quando siamo aperti</span>
-        <h2>Orari</h2>
+        <span class="eyebrow">Prenota</span>
+        <h2>Prenota il tuo appuntamento</h2>
         <div class="hours-status" id="status"><span class="dot"></span><span id="status-text">—</span></div>
-        <div class="h-line"><span class="day">Lunedì – Venerdì</span><span class="val">09:30 – 19:00</span></div>
-        <div class="h-line"><span class="day">Sabato</span><span class="val">08:30 – 19:00</span></div>
-        <div class="h-line"><span class="day">Domenica</span><span class="val cl">Chiuso</span></div>
-        <p style="color:#a99f8d;font-size:.9rem;margin-top:22px">Riceviamo su appuntamento.</p>
+
+        <form id="book-form" class="book-form" novalidate>
+          <div class="bf-row">
+            <label>Nome<input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
+            <label>Telefono<input type="tel" id="bf-phone" required autocomplete="tel" placeholder="Il tuo numero"></label>
+          </div>
+          <label>Servizio
+            <select id="bf-service" required>
+              <option value="Taglio uomo">Taglio uomo</option>
+              <option value="Taglio + barba">Taglio + barba</option>
+              <option value="Barba">Barba</option>
+              <option value="Taglio bambino">Taglio bambino</option>
+              <option value="Rasatura completa">Rasatura completa</option>
+            </select>
+          </label>
+          <div class="bf-row">
+            <label>Giorno<select id="bf-day" required></select></label>
+            <label>Ora<select id="bf-time" required></select></label>
+          </div>
+          <button type="submit" class="btn btn-primary">📅 Invia richiesta</button>
+          <p class="bf-note">La richiesta arriva via email al salone, che ti conferma l'appuntamento.</p>
+        </form>
+
+        <div class="hours-mini">
+          <b>Orari:</b> Lun–Ven 09:30–19:00 · Sab 08:30–19:00 · Dom chiuso
+        </div>
       </div>
     </div>
   </section>
@@ -338,6 +372,71 @@
       var el = document.getElementById('status'), txt = document.getElementById('status-text');
       if (open) { el.className = 'hours-status is-open'; txt.textContent = 'Aperto ora · chiude alle 19:00'; }
       else { el.className = 'hours-status is-closed'; txt.textContent = 'Ora chiuso'; }
+    })();
+
+    // Modulo prenotazione: giorni disponibili + orari + invio via email
+    (function(){
+      var daySel = document.getElementById('bf-day');
+      var timeSel = document.getElementById('bf-time');
+      var form = document.getElementById('book-form');
+      if (!daySel || !timeSel || !form) return;
+
+      // ▼▼ EMAIL del barbiere (dove arrivano le prenotazioni). Da sostituire con l'email reale. ▼▼
+      var EMAIL_SALONE = 'youssoufall02@icloud.com';
+
+      var giorni = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+      var mesi = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+      var pad = function(n){ return (n<10?'0':'')+n; };
+
+      // Prossimi giorni di apertura (salta la domenica), max 12
+      var today = new Date();
+      var added = 0;
+      for (var i=0; i<21 && added<12; i++){
+        var d = new Date(today); d.setDate(today.getDate()+i);
+        if (d.getDay() === 0) continue; // domenica chiuso
+        var label = giorni[d.getDay()] + ' ' + d.getDate() + ' ' + mesi[d.getMonth()];
+        if (i === 0) label += ' (oggi)';
+        var o = document.createElement('option');
+        o.value = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+        o.textContent = label; o.setAttribute('data-dow', d.getDay());
+        daySel.appendChild(o); added++;
+      }
+
+      function slotsFor(dow){
+        var start = (dow === 6) ? 8*60+30 : 9*60+30;  // sabato 08:30, altrimenti 09:30
+        var end = 19*60;                               // ultimo slot 18:30 (chiude 19:00)
+        var arr = [];
+        for (var m=start; m+30<=end; m+=30){ arr.push(pad(Math.floor(m/60))+':'+pad(m%60)); }
+        return arr;
+      }
+      function fillTimes(){
+        var opt = daySel.options[daySel.selectedIndex];
+        var dow = opt ? parseInt(opt.getAttribute('data-dow'),10) : 1;
+        timeSel.innerHTML = '';
+        slotsFor(dow).forEach(function(t){ var o=document.createElement('option'); o.value=t; o.textContent=t; timeSel.appendChild(o); });
+      }
+      daySel.addEventListener('change', fillTimes);
+      fillTimes();
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var name = document.getElementById('bf-name').value.trim();
+        var phone = document.getElementById('bf-phone').value.trim();
+        if (!name || !phone){ alert('Inserisci nome e telefono.'); return; }
+        var service = document.getElementById('bf-service').value;
+        var dayLabel = daySel.options[daySel.selectedIndex].textContent;
+        var time = timeSel.value;
+        var subject = 'Prenotazione — ' + name + ' — ' + dayLabel + ' ' + time;
+        var body = 'Nuova richiesta di prenotazione dal sito:\n\n'
+          + 'Nome: ' + name + '\n'
+          + 'Telefono: ' + phone + '\n'
+          + 'Servizio: ' + service + '\n'
+          + 'Giorno: ' + dayLabel + '\n'
+          + 'Ora: ' + time + '\n';
+        window.location.href = 'mailto:' + EMAIL_SALONE
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
     })();
 
     // Reveal
