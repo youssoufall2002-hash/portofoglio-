@@ -214,7 +214,7 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
     @keyframes pop { from { opacity: 0; transform: scale(.88); } to { opacity: 1; transform: scale(1); } }
     @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(47,138,74,.55); } 70% { box-shadow: 0 0 0 7px rgba(47,138,74,0); } }
-    .hero .logo-hero { animation: pop .7s ease both; }
+    .hero .logo-hero { animation: pop .7s ease both, float 4.5s ease-in-out .9s infinite; }
     .hero h1 { animation: fadeUp .7s .12s ease both; }
     .hero .sub { animation: fadeUp .7s .26s ease both; }
 
@@ -222,13 +222,33 @@
     .is-open .dot { animation: pulse 2.2s infinite; }
     .btn { will-change: transform; }
     .btn-primary:hover, .btn-outline:hover { transform: translateY(-2px); }
-    .shot img { transition: transform .55s cubic-bezier(.2,.7,.2,1); }
-    .shot:hover img { transform: scale(1.06); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    @keyframes breathe { 0%,100% { opacity: .5; transform: scale(1); } 50% { opacity: .95; transform: scale(1.07); } }
+    .hero::before { animation: breathe 6s ease-in-out infinite; }
+
+    /* Sottolineatura animata nel menu */
+    .nav-links a { position: relative; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 100%; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    /* Linea oro che cresce quando la sezione appare */
+    .rule { transform: scaleX(0); transform-origin: center; transition: transform .6s .15s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in .rule { transform: scaleX(1); }
+
+    /* Foto: zoom + sollevamento all'hover */
+    .shot { transition: opacity .7s ease, transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease; }
+    .shot img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .shot:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(0,0,0,.16); }
+    .gallery .shot:hover { transition-delay: 0s; }
+    .shot:hover img { transform: scale(1.07); }
 
     @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .hero .logo-hero, .hero h1, .hero .sub, .is-open .dot { animation: none; }
-      .btn-primary:hover, .btn-outline:hover, .shot:hover img { transform: none; }
+      .reveal { opacity: 1; transform: none !important; transition: none; }
+      .hero .logo-hero, .hero h1, .hero .sub, .is-open .dot, .hero::before { animation: none; }
+      .rule { transform: none; }
+      .btn-primary:hover, .btn-outline:hover, .shot:hover, .shot:hover img { transform: none; box-shadow: none; }
+      .nav-links a:hover::after { transform: scaleX(1); }
     }
   </style>
 </head>
