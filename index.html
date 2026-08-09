@@ -199,10 +199,37 @@
     .mobile-bar .wa { background: #25D366; color: #06331a; }
     @media (min-width: 820px) { .mobile-bar { display: none; } body { padding-bottom: 0; } }
 
-    /* Reveal */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    /* Reveal + animazioni */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
     .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    /* Comparsa in sequenza delle foto */
+    .gallery .shot:nth-child(2) { transition-delay: .07s; }
+    .gallery .shot:nth-child(3) { transition-delay: .14s; }
+    .gallery .shot:nth-child(4) { transition-delay: .21s; }
+    .gallery .shot:nth-child(5) { transition-delay: .28s; }
+    .gallery .shot:nth-child(6) { transition-delay: .35s; }
+
+    /* Ingresso hero al caricamento */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    @keyframes pop { from { opacity: 0; transform: scale(.88); } to { opacity: 1; transform: scale(1); } }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(47,138,74,.55); } 70% { box-shadow: 0 0 0 7px rgba(47,138,74,0); } }
+    .hero .logo-hero { animation: pop .7s ease both; }
+    .hero h1 { animation: fadeUp .7s .12s ease both; }
+    .hero .sub { animation: fadeUp .7s .26s ease both; }
+
+    /* Dettagli animati */
+    .is-open .dot { animation: pulse 2.2s infinite; }
+    .btn { will-change: transform; }
+    .btn-primary:hover, .btn-outline:hover { transform: translateY(-2px); }
+    .shot img { transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+    .shot:hover img { transform: scale(1.06); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero .logo-hero, .hero h1, .hero .sub, .is-open .dot { animation: none; }
+      .btn-primary:hover, .btn-outline:hover, .shot:hover img { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -239,13 +266,13 @@
         <h2>I tagli</h2>
         <div class="rule"></div>
       </div>
-      <div class="gallery reveal">
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.webp" alt="Taglio afro sfumato a Bergamo" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.webp" alt="Taglio mullet con sfumatura" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.webp" alt="Contorni e lineup di precisione" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.webp" alt="Barbiere al lavoro" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.webp" alt="Il team al lavoro" loading="lazy"></a>
-        <a class="shot" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-interno.webp" alt="Interno del salone a Bergamo" loading="lazy"></a>
+      <div class="gallery">
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.webp" alt="Taglio afro sfumato a Bergamo" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.webp" alt="Taglio mullet con sfumatura" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.webp" alt="Contorni e lineup di precisione" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.webp" alt="Barbiere al lavoro" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.webp" alt="Il team al lavoro" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-interno.webp" alt="Interno del salone a Bergamo" loading="lazy"></a>
       </div>
       <div class="gallery-cta reveal">
         <a class="btn btn-outline" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">📷 @barberr_hermann</a>
