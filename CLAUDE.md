@@ -25,7 +25,7 @@ Questo file guida Claude Code nel lavorare su questo repository. Va aggiornato m
 ## Struttura `.claude/`
 
 - `settings.json` — permessi e configurazione di Claude Code per questo progetto.
-- `skills/` — skill disponibili (es. `ui-ux-pro-max`).
+- `skills/` — skill disponibili (es. `ui-ux-pro-max`, `skill-creator`). Vedi `.claude/rules/skill-creator.md`: va usata sempre per creare/modificare skill.
 - `agents/` — agenti dedicati a compiti isolati (da definire).
 - `rules/` — regole che Claude deve rispettare lavorando su questo repo.
 
