@@ -1,0 +1,19 @@
+# Segreti
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Log
+*.log
+
+# Claude Code (locale, non condiviso)
+.claude/settings.local.json
