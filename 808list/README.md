@@ -13,23 +13,23 @@ La Privacy Policy è un modal in-pagina (si apre dal form o dal footer), non una
 
 ## Sezioni
 
-1. **Hero** — logo "808" con estrusione 3D, wordmark evento, tagline, badge "Lista aperta" / "Posti limitati", countdown live
+1. **Hero** — logo "808" con estrusione 3D, wordmark evento, badge "Lista aperta" / "Posti limitati", countdown live
 2. **Night card** — data/ora, location, lineup DJ: un'unica card con divisori interni invece di sezioni separate
 3. **Form prenotazione** — Nome e cognome, Email + ripeti email, Genere (Donna/Uomo), consenso privacy (apre il modal), messaggi di errore specifici per campo
 4. **Conferma** — il form si trasforma in un messaggio "Sei in lista" col nome inserito
 5. **Footer** — cuore col filo spinato, Instagram @808.network_, pulsante Privacy Policy, muscle car in filigrana
 6. **Dock sticky** — scorciatoia fissa "Entra in lista" che sparisce non appena il form è stato visto una volta (non ricompare sopra il footer)
 
-## Dettagli tecnici ripresi da un riferimento (Lista Shakara)
+## Note tecniche
 
-Su richiesta, la pagina adotta gli stessi pattern di qualità di un altro progetto guestlist
-già collaudato:
+Animazione minimale e intenzionale: solo una coreografia di ingresso al primo scroll
+(`IntersectionObserver` + delay scaglionati, classe `.anim`) e il pallino "lista aperta"
+che pulsa — nessun movimento continuo in loop (niente loghi che ondeggiano, testo che
+respira o sfondi animati), per restare leggibile e non "incasinato". Altri dettagli:
 - estrusione tipografica 3D sui titoli (rampa di `text-shadow`, non un'immagine)
-- coreografia di ingresso con `IntersectionObserver` + delay scaglionati (classe `.anim`)
 - validazione con messaggi specifici per errore (non un generico "compila il form")
 - modal privacy con focus trap, chiusura via `Esc` e click fuori
-- `@media (prefers-reduced-motion: reduce)` che azzera tutte le animazioni
-- luci ambientali di sfondo (due bagliori rossi che derivano lentamente)
+- `@media (prefers-reduced-motion: reduce)` che azzera anche la coreografia di ingresso
 
 ## ⚠️ DA COMPLETARE — dati reali dell'evento
 
