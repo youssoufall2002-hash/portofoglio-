@@ -2,39 +2,52 @@
 
 Sito one-page per **808LIST**, community **808.network_**.
 Estetica underground/streetwear: nero (`#0a0a0a`) + rosso (`#e8342e`) + accenti bianchi,
-stelle a 4 punte, cuore avvolto nel filo spinato, muscle car stilizzata (tutto in SVG inline,
-nessuna immagine esterna, nessuna libreria pesante — solo HTML/CSS/JS vanilla).
+stelle a 4 punte, cuore avvolto nel filo spinato, muscle car stilizzata (tutto in SVG inline).
+Un solo font caricato da Google Fonts (Anton, per i titoli) — il resto usa lo stack di
+sistema: nessuna libreria pesante, nessuna dipendenza esterna oltre a quella.
 
 ## Come si apre
 
 Apri `index.html` in un browser. Tutto in un unico file (HTML + CSS + JS inline).
-`privacy.html` è la pagina Privacy Policy collegata dal footer e dal form.
+La Privacy Policy è un modal in-pagina (si apre dal form o dal footer), non una pagina separata.
 
 ## Sezioni
 
-1. **Hero** — logo 808 con stelle, wordmark "LIST" stile adesivo, nome evento, data/ora/location, countdown live
-2. **Badge** — "LISTA APERTA" / "POSTI LIMITATI" (adesivi ruotati)
-3. **Lineup** — card DJ (nome + ruolo, avatar segnaposto)
-4. **Form prenotazione** — Nome, Cognome, Genere (Donna/Uomo), Email + ripeti email, consenso privacy
-5. **CTA** — "ENTRA IN LISTA" rosso, hover scale + glow
-6. **Footer** — Instagram @808.network_, link Privacy Policy
+1. **Hero** — logo "808" con estrusione 3D, wordmark evento, tagline, badge "Lista aperta" / "Posti limitati", countdown live
+2. **Night card** — data/ora, location, lineup DJ: un'unica card con divisori interni invece di sezioni separate
+3. **Form prenotazione** — Nome e cognome, Email + ripeti email, Genere (Donna/Uomo), consenso privacy (apre il modal), messaggi di errore specifici per campo
+4. **Conferma** — il form si trasforma in un messaggio "Sei in lista" col nome inserito
+5. **Footer** — cuore col filo spinato, Instagram @808.network_, pulsante Privacy Policy, muscle car in filigrana
+6. **Dock sticky** — scorciatoia fissa "Entra in lista" che sparisce non appena il form è stato visto una volta (non ricompare sopra il footer)
+
+## Dettagli tecnici ripresi da un riferimento (Lista Shakara)
+
+Su richiesta, la pagina adotta gli stessi pattern di qualità di un altro progetto guestlist
+già collaudato:
+- estrusione tipografica 3D sui titoli (rampa di `text-shadow`, non un'immagine)
+- coreografia di ingresso con `IntersectionObserver` + delay scaglionati (classe `.anim`)
+- validazione con messaggi specifici per errore (non un generico "compila il form")
+- modal privacy con focus trap, chiusura via `Esc` e click fuori
+- `@media (prefers-reduced-motion: reduce)` che azzera tutte le animazioni
+- luci ambientali di sfondo (due bagliori rossi che derivano lentamente)
 
 ## ⚠️ DA COMPLETARE — dati reali dell'evento
 
 I dati dell'evento non erano disponibili: sono stati inseriti **segnaposto** ben visibili
-(marcati con ⚠ anche nel codice). Cerca e sostituisci in `index.html`:
+(marcati con ⚠ anche nel codice, in una nota sotto la lineup). Cerca e sostituisci in `index.html`:
 
 | Cosa | Dove | Segnaposto attuale |
 |---|---|---|
-| Nome serata | `<h1 class="event-name">` | "SUMMER TAKEOVER" |
-| Data/ora (testo) | `.event-meta` | "Sab 19 Set 2026 · 23:00" |
+| Nome serata | `.word2` (sotto il logo "808") | "Summer Takeover" |
+| Data (testo) | `.night .date` | "Sabato 19 Set 2026" |
+| Ora (testo) | `.night .time` | "Dalle 23:00" |
 | Data/ora (countdown) | `<script>` → `EVENT_DATE` | `2026-09-19T23:00:00+02:00` |
-| Location | `.event-meta` | "Location da confermare · Milano" |
-| DJ / lineup | sezione `#lineup` | "DJ Set #1/#2/#3" + avatar con iniziali |
-| Foto DJ | `.dj-avatar` | sostituisci il `<div>` con `<img>` (foto quadrata, WebP < 200KB) |
+| Location | `.night .venue` / `.addr` | "Location da confermare" / "Milano" |
+| DJ / lineup | `.bill` | "DJ Set #1/#2/#3" + ruoli |
 
-In `privacy.html`: sostituisci `[Ragione sociale / nome del titolare]`, `[indirizzo]` e
-`[email di contatto]`, poi fai revisionare il testo da un legale prima di pubblicare.
+Nel modal privacy (`#privacy`): sostituisci il testo `<span class="todo">...</span>` con
+ragione sociale ed email reali del titolare, poi fai revisionare l'intero testo da un
+legale prima di pubblicare.
 
 ## Collegare il form (invio email / salvataggio dati)
 
@@ -52,7 +65,7 @@ Per ricevere davvero le prenotazioni, apri `index.html`, cerca `FORM_ENDPOINT` n
 var FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxx';
 ```
 
-Il form invia un JSON con `nome`, `cognome`, `genere`, `email`, `data_invio`.
+Il form invia un JSON con `nome`, `email`, `genere`, `data_invio`.
 
 ## Countdown
 
@@ -62,7 +75,7 @@ es. `2026-09-19T23:00:00+02:00`).
 
 ## Come pubblicarlo online
 
-Sito statico: `index.html` + `privacy.html`, nessuna dipendenza server.
+Sito statico: solo `index.html`, nessuna dipendenza server.
 
 ### Opzione 1 — Netlify
 1. [netlify.com](https://www.netlify.com) → *Add new site* → *Import an existing project* → questo repo
@@ -77,8 +90,8 @@ Sito statico: `index.html` + `privacy.html`, nessuna dipendenza server.
 
 - [ ] Nome evento, data/ora, location reali inseriti
 - [ ] Countdown (`EVENT_DATE`) aggiornato con data/ora reali
-- [ ] Lineup DJ reale (nomi + foto)
+- [ ] Lineup DJ reale (nomi, ruoli, eventuali link Instagram)
 - [ ] `FORM_ENDPOINT` collegato a un servizio reale (email/Sheet)
 - [ ] Privacy Policy completata con dati reali e revisionata da un legale
-- [ ] Testato su iPhone e Android (form, countdown, link Instagram)
+- [ ] Testato su iPhone e Android (form, countdown, dock sticky, modal privacy)
 - [ ] Link Instagram verificato (@808.network_)
