@@ -116,9 +116,7 @@
     .hero h1 .hl { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .hero .sub { color: var(--muted); max-width: 600px; margin: 20px auto 0; font-size: 1.08rem; line-height: 1.7; }
     .hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
-
-    .badges { display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: center; margin-top: 34px; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--disp); font-weight: 600; font-size: .88rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: 9px 16px; border-radius: 999px; }
+    .hero .meta { color: var(--muted); font-size: .88rem; margin-top: 22px; }
 
     /* Vantaggi */
     .cards { display: grid; gap: 20px; grid-template-columns: 1fr; }
@@ -206,11 +204,11 @@
     .hero h1 { animation: fadeUp .7s .1s ease both; }
     .hero .sub { animation: fadeUp .7s .22s ease both; }
     .hero .cta-row { animation: fadeUp .7s .32s ease both; }
-    .hero .badges { animation: fadeUp .7s .42s ease both; }
+    .hero .meta { animation: fadeUp .7s .42s ease both; }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none !important; transition: none; }
-      .hero h1, .hero .sub, .hero .cta-row, .hero .badges { animation: none; }
+      .hero h1, .hero .sub, .hero .cta-row, .hero .meta { animation: none; }
       .card:hover, .pf-card:hover, .btn-primary:hover, .btn-outline:hover { transform: none; box-shadow: none; }
     }
   </style>
@@ -225,7 +223,7 @@
         <span class="name">Siti Web Locali</span>
       </a>
       <nav class="nav-links">
-        <a href="#vantaggi">Perché sceglierci</a>
+        <a href="#vantaggi">Perché scegliermi</a>
         <a href="#portfolio">Esempi</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -243,11 +241,7 @@
         <a class="btn btn-primary" href="#contatti">💬 Scrivimi per una demo gratuita</a>
         <a class="btn btn-outline" href="#portfolio">Guarda gli esempi</a>
       </div>
-      <div class="badges">
-        <span class="badge">📍 Online in 7 giorni</span>
-        <span class="badge">🎨 Design moderno, non un template già visto</span>
-        <span class="badge">💬 Demo gratuita</span>
-      </div>
+      <p class="meta">📍 Online in 7 giorni — senza impegno</p>
     </div>
   </section>
 
@@ -338,7 +332,7 @@
           <span class="pf-link">Vedi il sito <span class="arrow">→</span></span>
         </a>
       </div>
-      <p class="portfolio-note">Vuoi vedere come potrebbe essere il sito della tua attività? Scrivimi per una demo gratuita, senza impegno.</p>
+      <p class="portfolio-note">Vuoi vedere come potrebbe essere il sito della tua attività? <a href="#contatti" style="color:var(--accent);font-weight:600">Fammi sapere di che attività si tratta →</a></p>
     </div>
   </section>
 
@@ -409,7 +403,7 @@
 
   <!-- STICKY MOBILE BAR -->
   <div class="mobile-bar">
-    <a class="btn btn-primary" href="#contatti">💬 Scrivimi per una demo gratuita</a>
+    <a class="btn btn-primary" href="#contatti">💬 Scrivimi</a>
   </div>
 
   <script>
