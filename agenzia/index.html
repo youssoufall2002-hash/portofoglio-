@@ -102,7 +102,19 @@
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after { transform: scaleX(1); }
     .nav .btn-primary { display: none; padding: 10px 20px; font-size: .88rem; }
-    @media (min-width: 820px) { .nav-links { display: flex; } .nav .btn-primary { display: inline-flex; } }
+
+    .hamburger { display: inline-flex; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; flex-direction: column; padding: 6px 22px 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+    .mobile-menu.show { display: flex; }
+    .mobile-menu a { padding: 13px 4px; font-family: var(--disp); font-weight: 500; font-size: .92rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+    .mobile-menu a:last-child { border-bottom: 0; }
+    .mobile-menu .mm-cta { color: var(--accent); font-weight: 600; }
+
+    @media (min-width: 820px) { .nav-links { display: flex; } .nav .btn-primary { display: inline-flex; } .hamburger { display: none; } .mobile-menu { display: none !important; } }
 
     /* Hero */
     .hero { text-align: center; padding: 78px 0 60px; position: relative; }
@@ -228,7 +240,16 @@
         <a href="#faq">FAQ</a>
       </nav>
       <a class="btn btn-primary" href="#contatti">Demo gratuita</a>
+      <button class="hamburger" id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="#vantaggi">Perché scegliermi</a>
+      <a href="#portfolio">Esempi</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contatti" class="mm-cta">Demo gratuita</a>
+    </nav>
   </header>
 
   <!-- HERO -->
@@ -257,7 +278,7 @@
         <div class="card reveal">
           <div class="ic">⚡</div>
           <h3>Veloce</h3>
-          <p>Online in 7 giorni, non mesi d'attesa. Ti serve un sito ora, non tra sei mesi.</p>
+          <p>Zero mesi di attesa: parti subito, senza rincorrere preventivi che non arrivano mai.</p>
         </div>
         <div class="card reveal">
           <div class="ic">🎨</div>
@@ -293,8 +314,8 @@
         </div>
         <div class="step reveal">
           <span class="num">2</span>
-          <h3>Demo gratuita</h3>
-          <p>Ti preparo una demo del sito, senza impegno, per farti vedere il risultato.</p>
+          <h3>Ti mostro un'anteprima</h3>
+          <p>Preparo una prima bozza del sito, così vedi subito che direzione prende.</p>
         </div>
         <div class="step reveal">
           <span class="num">3</span>
@@ -304,7 +325,7 @@
         <div class="step reveal">
           <span class="num">4</span>
           <h3>Sito online</h3>
-          <p>Pubblichiamo il sito: pronto e raggiungibile da tutti, in 7 giorni.</p>
+          <p>Pubblichiamo tutto: da quel momento è raggiungibile da chiunque, ovunque.</p>
         </div>
       </div>
     </div>
@@ -316,7 +337,7 @@
       <div class="section-head reveal">
         <span class="eyebrow">Esempi</span>
         <h2>Alcuni siti già realizzati</h2>
-        <p>Ogni sito è costruito su misura per l'attività: stile, colori e contenuti cambiano in base a chi lo usa.</p>
+        <p>Stile, colori e contenuti cambiano in base a chi li usa: nessuno di questi siti è un copia-incolla dell'altro.</p>
       </div>
       <div class="portfolio-grid">
         <a class="pf-card hermann reveal" href="../index.html">
@@ -332,7 +353,7 @@
           <span class="pf-link">Vedi il sito <span class="arrow">→</span></span>
         </a>
       </div>
-      <p class="portfolio-note">Vuoi vedere come potrebbe essere il sito della tua attività? <a href="#contatti" style="color:var(--accent);font-weight:600">Fammi sapere di che attività si tratta →</a></p>
+      <p class="portfolio-note">Vuoi vedere come potrebbe venire il tuo? <a href="#contatti" style="color:var(--accent);font-weight:600">Raccontami cosa fai →</a></p>
     </div>
   </section>
 
@@ -346,7 +367,7 @@
       <div class="faq reveal">
         <details>
           <summary>Quanto costa un sito?</summary>
-          <div class="a">Dipende dalla complessità: numero di pagine, funzionalità richieste, contenuti. Scrivimi e ti preparo un preventivo gratuito su misura per la tua attività.</div>
+          <div class="a">Dipende dalla complessità: numero di pagine, funzionalità richieste, contenuti. Scrivimi e ti preparo un preventivo gratuito in base a quello che ti serve.</div>
         </details>
         <details>
           <summary>Quanto tempo ci vuole?</summary>
@@ -376,7 +397,7 @@
           <div class="contact-copy">
             <span class="eyebrow">Parliamone</span>
             <h2>Richiedi la tua demo gratuita</h2>
-            <p>Raccontami la tua attività: ti rispondo con una demo del sito, senza impegno.</p>
+            <p>Dimmi cosa fai e dove lavori: ti rispondo con una prima bozza, senza impegno.</p>
             <div class="direct">
               <span>✉️ <a href="mailto:youssoufall02@icloud.com">youssoufall02@icloud.com</a></span>
             </div>
@@ -408,6 +429,17 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile (hamburger)
+    (function(){
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+      function close(){ menu.classList.remove('show'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+      function open(){ menu.classList.add('show'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); }
+      toggle.addEventListener('click', function(){ menu.classList.contains('show') ? close() : open(); });
+      menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    })();
 
     // Modulo contatti -> invio via email
     (function(){
