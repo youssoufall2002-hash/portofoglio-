@@ -135,7 +135,7 @@
     /* Vantaggi */
     .cards { display: grid; gap: 20px; grid-template-columns: 1fr; }
     @media (min-width: 640px) { .cards { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 980px) { .cards { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 980px) { .cards { grid-template-columns: repeat(3, 1fr); } }
     .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgba(0,0,0,.5); border-color: var(--accent); }
     .card .ic { font-size: 1.7rem; margin-bottom: 14px; }
@@ -144,7 +144,7 @@
 
     /* Come funziona */
     .steps { display: grid; gap: 22px; grid-template-columns: 1fr; counter-reset: step; }
-    @media (min-width: 780px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 780px) { .steps { grid-template-columns: repeat(3, 1fr); } }
     .step { position: relative; padding: 28px 20px 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
     .step .num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 6px; background: var(--accent); color: var(--accent-ink); font-family: var(--mono); font-weight: 700; font-size: .95rem; margin-bottom: 14px; }
     .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
@@ -207,10 +207,8 @@
     .reveal.in { opacity: 1; transform: none; }
     .cards .card:nth-child(2) { transition-delay: .07s; }
     .cards .card:nth-child(3) { transition-delay: .14s; }
-    .cards .card:nth-child(4) { transition-delay: .21s; }
     .steps .step:nth-child(2) { transition-delay: .07s; }
     .steps .step:nth-child(3) { transition-delay: .14s; }
-    .steps .step:nth-child(4) { transition-delay: .21s; }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
     .hero h1 { animation: fadeUp .7s .1s cubic-bezier(.22,1,.36,1) both; }
@@ -286,11 +284,6 @@
           <p>Un sito pensato per te, non un template anonimo già visto ovunque.</p>
         </div>
         <div class="card reveal">
-          <div class="ic">💶</div>
-          <h3>Prezzi giusti</h3>
-          <p>Pensati per un negozio, non per il budget di una grande azienda.</p>
-        </div>
-        <div class="card reveal">
           <div class="ic">🤝</div>
           <h3>Ti seguo io</h3>
           <p>Dalla prima idea alla pubblicazione, senza lasciarti solo.</p>
@@ -314,16 +307,11 @@
         </div>
         <div class="step reveal">
           <span class="num">2</span>
-          <h3>Ti mostro un'anteprima</h3>
-          <p>Preparo una prima bozza del sito, così vedi subito che direzione prende.</p>
+          <h3>Costruiamo il sito insieme</h3>
+          <p>Ti mostro una prima bozza e la rifiniamo finché ti rappresenta davvero.</p>
         </div>
         <div class="step reveal">
           <span class="num">3</span>
-          <h3>Rifiniamo insieme</h3>
-          <p>Sistemiamo testi, foto e dettagli finché il sito ti rappresenta davvero.</p>
-        </div>
-        <div class="step reveal">
-          <span class="num">4</span>
           <h3>Sito online</h3>
           <p>Pubblichiamo tutto: da quel momento è raggiungibile da chiunque, ovunque.</p>
         </div>
@@ -380,10 +368,6 @@
         <details>
           <summary>Posso aggiornarlo dopo la pubblicazione?</summary>
           <div class="a">Certo — restiamo in contatto per modifiche, aggiunte o aggiornamenti ogni volta che ne hai bisogno.</div>
-        </details>
-        <details>
-          <summary>Il sito funziona bene da telefono?</summary>
-          <div class="a">Sì, ogni sito è pensato prima di tutto per mobile, da dove arriva la maggior parte dei tuoi clienti.</div>
         </details>
       </div>
     </div>
