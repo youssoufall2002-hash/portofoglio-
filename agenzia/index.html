@@ -139,8 +139,8 @@
     .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgba(0,0,0,.5); border-color: var(--accent); }
     .card .ic { font-size: 1.7rem; margin-bottom: 14px; }
-    .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
-    .card p { color: var(--muted); font-size: .93rem; font-family: var(--sans); text-transform: none; }
+    .card .pain { color: var(--muted); font-size: .86rem; font-family: var(--sans); text-transform: none; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
+    .card h3 { font-size: 1.15rem; color: var(--accent); }
 
     /* Come funziona */
     .steps { display: grid; gap: 22px; grid-template-columns: 1fr; counter-reset: step; }
@@ -193,9 +193,15 @@
     .cform-note { font-size: .8rem; color: #777; text-align: center; margin-top: 2px; font-family: var(--sans); }
 
     /* Footer */
-    footer { text-align: center; padding: 40px 0 20px; color: var(--muted); font-size: .86rem; font-family: var(--sans); }
-    footer .fbrand { font-family: var(--disp); letter-spacing: .04em; text-transform: uppercase; font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
+    footer { padding: 56px 0 24px; color: var(--muted); font-size: .88rem; font-family: var(--sans); border-top: 1px solid var(--line); }
+    .footer-grid { display: grid; gap: 32px; text-align: center; }
+    @media (min-width: 720px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; text-align: left; } }
+    footer .fbrand { font-family: var(--disp); letter-spacing: .04em; text-transform: uppercase; font-size: 1.2rem; color: var(--ink); margin-bottom: 6px; }
+    footer .ftag { font-family: var(--mono); font-size: .8rem; color: var(--accent); }
+    footer h4 { font-family: var(--sans); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; font-weight: 700; }
+    footer .flinks { display: flex; flex-direction: column; gap: 10px; }
     footer a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .8rem; }
 
     /* Sticky mobile bar */
     .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 60; background: var(--surface); border-top: 1px solid var(--line); padding: 10px 16px; display: flex; }
@@ -271,29 +277,29 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Perché scegliermi</span>
-        <h2>Un sito fatto per far crescere la tua attività</h2>
+        <h2>Il problema ha già una soluzione</h2>
         <p>Non un sito generico: un progetto pensato per il tuo negozio, i tuoi clienti e il tuo budget.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
           <div class="ic">⚡</div>
-          <h3>Veloce</h3>
-          <p>Zero mesi di attesa: parti subito, senza rincorrere preventivi che non arrivano mai.</p>
+          <p class="pain">Rimandi da mesi perché non trovi il tempo o chi se ne occupi.</p>
+          <h3>Online in 7 giorni</h3>
         </div>
         <div class="card reveal">
           <div class="ic">🎨</div>
+          <p class="pain">Hai paura che venga un sito anonimo, uguale a mille altri.</p>
           <h3>Design su misura</h3>
-          <p>Niente template già visti ovunque: un sito pensato per la tua attività, non copiato.</p>
         </div>
         <div class="card reveal">
           <div class="ic">💶</div>
+          <p class="pain">Le agenzie ti hanno chiesto cifre fuori budget per un negozio.</p>
           <h3>Prezzi giusti</h3>
-          <p>Pensati per piccole attività: niente costi da migliaia di euro o abbonamenti nascosti.</p>
         </div>
         <div class="card reveal">
           <div class="ic">🤝</div>
+          <p class="pain">Non sai da dove iniziare né a chi rivolgerti.</p>
           <h3>Ti seguo io</h3>
-          <p>Dalla prima idea alla pubblicazione online, passo dopo passo, senza lasciarti solo.</p>
         </div>
       </div>
     </div>
@@ -417,8 +423,28 @@
   <!-- FOOTER -->
   <footer>
     <div class="wrap">
-      <div class="fbrand">🖥️ Siti Web Locali</div>
-      <div>© <span id="year"></span> · Siti web per negozi e attività locali · <a href="mailto:youssoufall02@icloud.com">youssoufall02@icloud.com</a></div>
+      <div class="footer-grid">
+        <div>
+          <div class="fbrand">🖥️ Siti Web Locali</div>
+          <div class="ftag">Il tuo sito, senza pensieri.</div>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <div class="flinks">
+            <a href="#vantaggi">Perché scegliermi</a>
+            <a href="#portfolio">Esempi</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contatti</h4>
+          <div class="flinks">
+            <a href="mailto:youssoufall02@icloud.com">youssoufall02@icloud.com</a>
+            <a href="#contatti">Richiedi una demo →</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> · Siti web per negozi e attività locali</div>
     </div>
   </footer>
 
