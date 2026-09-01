@@ -174,24 +174,6 @@
     .faq details[open] summary::after { transform: rotate(45deg); }
     .faq .a { color: var(--muted); font-size: .94rem; padding-bottom: 18px; line-height: 1.7; }
 
-    /* Contatti */
-    .contact-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 54px 30px; }
-    @media (min-width: 720px) { .contact-wrap { padding: 60px 60px; } }
-    .contact-grid { display: grid; gap: 40px; }
-    @media (min-width: 820px) { .contact-grid { grid-template-columns: 1fr 1fr; align-items: center; } }
-    .contact-copy p { color: var(--muted); margin-top: 12px; max-width: 420px; font-family: var(--sans); }
-    .contact-copy .direct { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; font-size: .95rem; }
-    .contact-copy .direct a { color: var(--ink); font-weight: 600; }
-    .contact-copy .direct a:hover { color: var(--accent); }
-
-    .cform { display: grid; gap: 14px; }
-    .cform label { display: flex; flex-direction: column; gap: 6px; font-family: var(--mono); font-weight: 700; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
-    .cform input, .cform textarea { font-family: var(--sans); font-weight: 500; font-size: 1rem; padding: 13px 14px; border-radius: var(--btn-radius); border: 1px solid var(--line); background: var(--bg); color: var(--ink); width: 100%; resize: vertical; }
-    .cform input::placeholder, .cform textarea::placeholder { color: #666; }
-    .cform input:focus, .cform textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
-    .cform .btn { margin-top: 4px; justify-content: center; width: 100%; }
-    .cform-note { font-size: .8rem; color: #777; text-align: center; margin-top: 2px; font-family: var(--sans); }
-
     /* Footer */
     footer { text-align: center; padding: 40px 0 20px; color: var(--muted); font-size: .86rem; font-family: var(--sans); border-top: 1px solid var(--line); }
     footer .fbrand { font-family: var(--disp); letter-spacing: .04em; text-transform: uppercase; font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
@@ -237,7 +219,7 @@
         <a href="#portfolio">Esempi</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary" href="#contatti">Demo gratuita</a>
+      <a class="btn btn-primary" href="mailto:youssoufall02@icloud.com?subject=Richiesta%20demo%20gratuita">Demo gratuita</a>
       <button class="hamburger" id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -246,7 +228,7 @@
       <a href="#vantaggi">Perché scegliermi</a>
       <a href="#portfolio">Esempi</a>
       <a href="#faq">FAQ</a>
-      <a href="#contatti" class="mm-cta">Demo gratuita</a>
+      <a href="mailto:youssoufall02@icloud.com?subject=Richiesta%20demo%20gratuita" class="mm-cta">Demo gratuita</a>
     </nav>
   </header>
 
@@ -256,10 +238,6 @@
       <span class="eyebrow">Siti web per negozi e attività locali</span>
       <h1>Il sito web <span class="hl">professionale</span> che la tua attività merita</h1>
       <p class="sub">Aiuto negozi e attività locali ad avere un sito moderno — senza pagare migliaia di euro e senza aspettare mesi.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contatti">💬 Scrivimi per una demo gratuita</a>
-        <a class="btn btn-outline" href="#portfolio">Guarda gli esempi</a>
-      </div>
       <p class="meta">📍 Online in 7 giorni — senza impegno</p>
     </div>
   </section>
@@ -341,7 +319,7 @@
           <span class="pf-link">Vedi il sito <span class="arrow">→</span></span>
         </a>
       </div>
-      <p class="portfolio-note">Vuoi vedere come potrebbe venire il tuo? <a href="#contatti" style="color:var(--accent);font-weight:700">Raccontami cosa fai →</a></p>
+      <p class="portfolio-note">Vuoi vedere come potrebbe venire il tuo? <a href="mailto:youssoufall02@icloud.com?subject=Richiesta%20demo%20gratuita" style="color:var(--accent);font-weight:700">Raccontami cosa fai →</a></p>
     </div>
   </section>
 
@@ -373,31 +351,6 @@
     </div>
   </section>
 
-  <!-- CONTATTI -->
-  <section id="contatti">
-    <div class="wrap">
-      <div class="contact-wrap reveal">
-        <div class="contact-grid">
-          <div class="contact-copy">
-            <span class="eyebrow">Parliamone</span>
-            <h2>Richiedi la tua demo gratuita</h2>
-            <p>Dimmi cosa fai e dove lavori: ti rispondo con una prima bozza, senza impegno.</p>
-            <div class="direct">
-              <span>✉️ <a href="mailto:youssoufall02@icloud.com">youssoufall02@icloud.com</a></span>
-            </div>
-          </div>
-          <form id="contact-form" class="cform" novalidate>
-            <label>Nome<input type="text" id="cf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
-            <label>Attività<input type="text" id="cf-business" required placeholder="Es. Bar, negozio, parrucchiere..."></label>
-            <label>Messaggio<textarea id="cf-message" rows="3" placeholder="Raccontami brevemente cosa ti serve"></textarea></label>
-            <button type="submit" class="btn btn-primary">✉️ Invia richiesta</button>
-            <p class="cform-note">Si apre il tuo client email con il messaggio già pronto.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="wrap">
@@ -408,7 +361,7 @@
 
   <!-- STICKY MOBILE BAR -->
   <div class="mobile-bar">
-    <a class="btn btn-primary" href="#contatti">💬 Contattami</a>
+    <a class="btn btn-primary" href="mailto:youssoufall02@icloud.com?subject=Richiesta%20demo%20gratuita">💬 Contattami</a>
   </div>
 
   <script>
@@ -423,29 +376,6 @@
       function open(){ menu.classList.add('show'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); }
       toggle.addEventListener('click', function(){ menu.classList.contains('show') ? close() : open(); });
       menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
-    })();
-
-    // Modulo contatti -> invio via email
-    (function(){
-      var form = document.getElementById('contact-form');
-      if (!form) return;
-      var EMAIL_AGENZIA = 'youssoufall02@icloud.com';
-
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var name = document.getElementById('cf-name').value.trim();
-        var business = document.getElementById('cf-business').value.trim();
-        var message = document.getElementById('cf-message').value.trim();
-        if (!name || !business){ alert('Inserisci nome e attività.'); return; }
-        var subject = 'Richiesta demo gratuita — ' + name + ' (' + business + ')';
-        var body = 'Nuova richiesta dal sito:\n\n'
-          + 'Nome: ' + name + '\n'
-          + 'Attività: ' + business + '\n'
-          + 'Messaggio: ' + (message || '—') + '\n';
-        window.location.href = 'mailto:' + EMAIL_AGENZIA
-          + '?subject=' + encodeURIComponent(subject)
-          + '&body=' + encodeURIComponent(body);
-      });
     })();
 
     // Reveal on scroll
