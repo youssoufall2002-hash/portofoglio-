@@ -73,7 +73,7 @@
     h2 { font-size: clamp(1.8rem, 4.2vw, 2.5rem); }
     section { padding: 76px 0; }
     .section-head { text-align: center; max-width: 620px; margin: 0 auto 46px; }
-    .section-head h2 { margin-top: 14px; }
+    .section-head h2 { margin-top: 16px; }
     .section-head p { color: var(--muted); margin-top: 16px; font-family: var(--sans); font-weight: 400; }
 
     /* Buttons */
@@ -86,8 +86,6 @@
     .btn:active { transform: scale(.97); }
     .btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: 0 8px 22px rgba(212,162,76,.25); }
     .btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(212,162,76,.32); }
-    .btn-outline { border-color: var(--line); color: var(--ink); background: transparent; }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
     /* Header */
     header {
@@ -203,7 +201,7 @@
     @media (prefers-reduced-motion: reduce) {
       .reveal, .reveal .rule { opacity: 1; transform: none !important; transition: none; }
       .hero .eyebrow, .hero .rule, .hero h1, .hero .sub, .hero .meta { animation: none; }
-      .card:hover, .pf-card:hover, .btn-primary:hover, .btn-outline:hover { transform: none; box-shadow: none; }
+      .card:hover, .pf-card:hover, .btn-primary:hover { transform: none; box-shadow: none; }
     }
   </style>
 </head>
