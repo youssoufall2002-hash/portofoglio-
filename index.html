@@ -124,7 +124,11 @@
     @media (min-width: 820px) { .nav-links { display: flex; } .hamburger { display: none; } .mobile-menu { display: none !important; } }
 
     /* Hero */
-    .hero { text-align: center; padding: 74px 0 66px; position: relative; }
+    .hero {
+      text-align: center; padding: 74px 0 66px; position: relative;
+      background: linear-gradient(180deg, rgba(13,13,12,.72) 0%, rgba(13,13,12,.88) 60%, var(--bg) 100%), url('img/hermann-barbershop-bergamo-hero.webp');
+      background-size: cover; background-position: center 65%;
+    }
     .hero::before {
       content: ""; position: absolute; inset: 0;
       background: radial-gradient(600px 320px at 50% 0%, rgba(235,185,58,.28), transparent 72%);
