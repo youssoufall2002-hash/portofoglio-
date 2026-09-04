@@ -123,6 +123,18 @@
     .mobile-menu .mm-book { color: var(--brass); }
     @media (min-width: 820px) { .nav-links { display: flex; } .hamburger { display: none; } .mobile-menu { display: none !important; } }
 
+    /* Selettore lingua */
+    .lang-toggle {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: var(--disp); font-weight: 600; font-size: .74rem; letter-spacing: .08em;
+      background: transparent; border: 1px solid var(--line); border-radius: 999px;
+      padding: 7px 13px; cursor: pointer; color: var(--muted); transition: border-color .2s ease;
+    }
+    .lang-toggle:hover { border-color: var(--brass); }
+    .lang-toggle span[data-lang-opt] { opacity: .5; transition: opacity .2s ease, color .2s ease; }
+    .lang-toggle span[data-lang-opt].active { opacity: 1; color: var(--brass); }
+    .lang-toggle span[aria-hidden] { color: var(--line); }
+
     /* Hero */
     .hero {
       text-align: center; padding: 74px 0 66px; position: relative;
@@ -266,10 +278,13 @@
         <span class="name">Barberr Hermann</span>
       </a>
       <nav class="nav-links">
-        <a href="#lavori">Lavori</a>
-        <a href="#prenota">Prenota</a>
-        <a href="#contatti">Contatti</a>
+        <a href="#lavori" data-it="Lavori" data-en="Work">Lavori</a>
+        <a href="#prenota" data-it="Prenota" data-en="Book">Prenota</a>
+        <a href="#contatti" data-it="Contatti" data-en="Contact">Contatti</a>
       </nav>
+      <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Cambia lingua / Switch language">
+        <span data-lang-opt="it">IT</span><span aria-hidden="true">/</span><span data-lang-opt="en">EN</span>
+      </button>
     </div>
   </header>
 
@@ -278,7 +293,10 @@
     <div class="wrap">
       <img class="logo-hero" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann Bergamo" />
       <h1>Barberr Hermann</h1>
-      <p class="sub">Barbiere a Bergamo. Taglio, barba, styling e <b style="color:var(--ink);font-weight:600">dread</b> curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione.</p>
+      <p class="sub"
+        data-it-html="Barbiere a Bergamo. Taglio, barba, styling e <b style=&quot;color:var(--ink);font-weight:600&quot;>dread</b> curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione."
+        data-en-html="Barbershop in Bergamo. Haircuts, beard, styling and <b style=&quot;color:var(--ink);font-weight:600&quot;>dreadlocks</b> tended down to the last detail: every client gets the right attention, from expert hands, professional products, and a clean, tailored result. We're waiting for you in the heart of the city, at Via Casalino 2c — just steps from the station."
+      >Barbiere a Bergamo. Taglio, barba, styling e <b style="color:var(--ink);font-weight:600">dread</b> curati nei minimi dettagli: da noi ogni cliente riceve la giusta attenzione, con mani esperte, prodotti professionali e un risultato pulito e su misura. Ti aspettiamo nel cuore della città, in Via Casalino 2c — a due passi dalla stazione.</p>
     </div>
   </section>
 
@@ -286,17 +304,17 @@
   <section id="lavori">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">I nostri lavori</span>
-        <h2>I tagli</h2>
+        <span class="eyebrow" data-it="I nostri lavori" data-en="Our work">I nostri lavori</span>
+        <h2 data-it="I tagli" data-en="The Cuts">I tagli</h2>
         <div class="rule"></div>
       </div>
       <div class="gallery">
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.webp" alt="Taglio afro sfumato a Bergamo" loading="lazy"></a>
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.webp" alt="Taglio mullet con sfumatura" loading="lazy"></a>
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.webp" alt="Contorni e lineup di precisione" loading="lazy"></a>
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.webp" alt="Barbiere al lavoro" loading="lazy"></a>
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.webp" alt="Il team al lavoro" loading="lazy"></a>
-        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-interno.webp" alt="Interno del salone a Bergamo" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-02.webp" alt="Taglio afro sfumato a Bergamo" data-it-alt="Taglio afro sfumato a Bergamo" data-en-alt="Afro fade haircut in Bergamo" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-04.webp" alt="Taglio mullet con sfumatura" data-it-alt="Taglio mullet con sfumatura" data-en-alt="Mullet cut with fade" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-03.webp" alt="Contorni e lineup di precisione" data-it-alt="Contorni e lineup di precisione" data-en-alt="Precision edge-up and lineup" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-taglio-01.webp" alt="Barbiere al lavoro" data-it-alt="Barbiere al lavoro" data-en-alt="Barber at work" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-team.webp" alt="Il team al lavoro" data-it-alt="Il team al lavoro" data-en-alt="The team at work" loading="lazy"></a>
+        <a class="shot reveal" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener"><img src="img/hermann-barbershop-bergamo-interno.webp" alt="Interno del salone a Bergamo" data-it-alt="Interno del salone a Bergamo" data-en-alt="Salon interior in Bergamo" loading="lazy"></a>
       </div>
       <div class="gallery-cta reveal">
         <a class="btn btn-outline" href="https://www.instagram.com/barberr_hermann/" target="_blank" rel="noopener">📷 @barberr_hermann</a>
@@ -308,21 +326,21 @@
   <section class="hours-wrap" id="prenota">
     <div class="wrap">
       <div class="hours-card reveal">
-        <span class="eyebrow">Prenota</span>
-        <h2>Prenota il tuo appuntamento</h2>
+        <span class="eyebrow" data-it="Prenota" data-en="Book">Prenota</span>
+        <h2 data-it="Prenota il tuo appuntamento" data-en="Book your appointment">Prenota il tuo appuntamento</h2>
         <div class="hours-status" id="status"><span class="dot"></span><span id="status-text">—</span></div>
 
         <form id="book-form" class="book-form" novalidate>
-          <label>Nome<input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome"></label>
+          <label><span data-it="Nome" data-en="Name">Nome</span><input type="text" id="bf-name" required autocomplete="name" placeholder="Il tuo nome" data-it-placeholder="Il tuo nome" data-en-placeholder="Your name"></label>
           <div class="bf-row">
-            <label>Giorno<select id="bf-day" required></select></label>
-            <label>Ora<select id="bf-time" required></select></label>
+            <label><span data-it="Giorno" data-en="Day">Giorno</span><select id="bf-day" required></select></label>
+            <label><span data-it="Ora" data-en="Time">Ora</span><select id="bf-time" required></select></label>
           </div>
-          <button type="submit" class="btn btn-primary">📅 Invia richiesta</button>
-          <p class="bf-note">La richiesta arriva via email al salone, che ti conferma l'appuntamento.</p>
+          <button type="submit" class="btn btn-primary" data-it="📅 Invia richiesta" data-en="📅 Send request">📅 Invia richiesta</button>
+          <p class="bf-note" data-it="La richiesta arriva via email al salone, che ti conferma l'appuntamento." data-en="The request is sent by email to the salon, who will confirm your appointment.">La richiesta arriva via email al salone, che ti conferma l'appuntamento.</p>
         </form>
 
-        <div class="hours-mini">
+        <div class="hours-mini" data-it-html="<b>Orari:</b> Lun–Ven 09:30–19:00 · Sab 08:30–19:00 · Dom chiuso" data-en-html="<b>Hours:</b> Mon–Fri 09:30–19:00 · Sat 08:30–19:00 · Sun closed">
           <b>Orari:</b> Lun–Ven 09:30–19:00 · Sab 08:30–19:00 · Dom chiuso
         </div>
       </div>
@@ -333,28 +351,28 @@
   <section id="contatti">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Dove siamo</span>
-        <h2>Contatti</h2>
+        <span class="eyebrow" data-it="Dove siamo" data-en="Where we are">Dove siamo</span>
+        <h2 data-it="Contatti" data-en="Contact">Contatti</h2>
         <div class="rule"></div>
       </div>
       <div class="contact-grid">
         <div class="reveal">
           <div class="info-row">
             <span class="ico">📍</span>
-            <div><div class="label">Indirizzo</div><span class="v">Via Casalino 2c, Bergamo (BG)</span></div>
+            <div><div class="label" data-it="Indirizzo" data-en="Address">Indirizzo</div><span class="v">Via Casalino 2c, Bergamo (BG)</span></div>
           </div>
           <div class="info-row">
             <span class="ico">📞</span>
-            <div><div class="label">Telefono</div><a href="tel:+393882589071">388 258 9071</a></div>
+            <div><div class="label" data-it="Telefono" data-en="Phone">Telefono</div><a href="tel:+393882589071">388 258 9071</a></div>
           </div>
           <div class="info-row">
             <span class="ico">🕒</span>
-            <div><div class="label">Orari</div><span class="v" style="font-weight:500;line-height:1.75">Lun–Ven 09:30–19:00<br>Sabato 08:30–19:00<br>Domenica chiuso</span></div>
+            <div><div class="label" data-it="Orari" data-en="Hours">Orari</div><span class="v" style="font-weight:500;line-height:1.75" data-it-html="Lun–Ven 09:30–19:00<br>Sabato 08:30–19:00<br>Domenica chiuso" data-en-html="Mon–Fri 09:30–19:00<br>Saturday 08:30–19:00<br>Sunday closed">Lun–Ven 09:30–19:00<br>Sabato 08:30–19:00<br>Domenica chiuso</span></div>
           </div>
         </div>
         <div class="reveal">
           <div class="map-embed">
-            <iframe title="Mappa Barberr Hermann Bergamo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            <iframe title="Mappa Barberr Hermann Bergamo" data-it-title="Mappa Barberr Hermann Bergamo" data-en-title="Map of Barberr Hermann Bergamo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=Via%20Casalino%202c,%20Bergamo&output=embed"></iframe>
           </div>
         </div>
@@ -367,7 +385,7 @@
     <div class="wrap">
       <img class="logo-f" src="img/hermann-barbershop-logo.webp" alt="Barberr Hermann" />
       <div class="fname">Barberr Hermann</div>
-      <div style="color:var(--brass-2);font-size:.82rem;letter-spacing:.06em;margin-bottom:16px">★★★★★ &nbsp;5,0 su Google</div>
+      <div style="color:var(--brass-2);font-size:.82rem;letter-spacing:.06em;margin-bottom:16px" data-it-html="★★★★★ &nbsp;5,0 su Google" data-en-html="★★★★★ &nbsp;5.0 on Google">★★★★★ &nbsp;5,0 su Google</div>
       <div class="copy">© <span id="year"></span> Barberr Hermann · Bergamo</div>
     </div>
   </footer>
@@ -376,8 +394,46 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Stringhe per i contenuti generati via JS (le altre sono nei data-it/data-en nel markup)
+    var STR = {
+      it: {
+        title: "Barberr Hermann — Barbiere a Bergamo | Taglio e Barba",
+        days: ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'],
+        months: ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'],
+        today: ' (oggi)',
+        openNow: 'Aperto ora · chiude alle 19:00',
+        closedNow: 'Ora chiuso',
+        nameAlert: 'Inserisci il tuo nome.',
+        mailSubject: 'Prenotazione — ',
+        mailIntro: 'Nuova richiesta di prenotazione dal sito:\n\n',
+        mailName: 'Nome: ',
+        mailDay: 'Giorno: ',
+        mailTime: 'Ora: '
+      },
+      en: {
+        title: "Barberr Hermann — Barbershop in Bergamo | Haircut & Beard",
+        days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        today: ' (today)',
+        openNow: 'Open now · closes at 19:00',
+        closedNow: 'Closed now',
+        nameAlert: 'Please enter your name.',
+        mailSubject: 'Booking — ',
+        mailIntro: 'New booking request from the website:\n\n',
+        mailName: 'Name: ',
+        mailDay: 'Day: ',
+        mailTime: 'Time: '
+      }
+    };
+    var LANG_KEY = 'bh_lang';
+    var storedLang = null;
+    try { storedLang = localStorage.getItem(LANG_KEY); } catch (e) {}
+    var lang = storedLang === 'en' ? 'en' : 'it';
+
+    var pad = function(n){ return (n<10?'0':'')+n; };
+
     // Stato apertura (orari reali)
-    (function(){
+    function renderStatus(){
       var now = new Date();
       var day = now.getDay(); // 0 = domenica
       var mins = now.getHours()*60 + now.getMinutes();
@@ -385,70 +441,117 @@
       if (day >= 1 && day <= 5) open = mins >= 570 && mins < 1140;       // Lun-Ven 09:30-19:00
       else if (day === 6) open = mins >= 510 && mins < 1140;             // Sab 08:30-19:00
       var el = document.getElementById('status'), txt = document.getElementById('status-text');
-      if (open) { el.className = 'hours-status is-open'; txt.textContent = 'Aperto ora · chiude alle 19:00'; }
-      else { el.className = 'hours-status is-closed'; txt.textContent = 'Ora chiuso'; }
-    })();
+      var s = STR[lang];
+      if (open) { el.className = 'hours-status is-open'; txt.textContent = s.openNow; }
+      else { el.className = 'hours-status is-closed'; txt.textContent = s.closedNow; }
+    }
 
-    // Modulo prenotazione: giorni disponibili + orari + invio via email
-    (function(){
-      var daySel = document.getElementById('bf-day');
-      var timeSel = document.getElementById('bf-time');
-      var form = document.getElementById('book-form');
-      if (!daySel || !timeSel || !form) return;
+    // Modulo prenotazione: giorni disponibili + orari
+    var daySel = document.getElementById('bf-day');
+    var timeSel = document.getElementById('bf-time');
+    var form = document.getElementById('book-form');
 
-      // ▼▼ EMAIL del barbiere (dove arrivano le prenotazioni). Da sostituire con l'email reale. ▼▼
-      var EMAIL_SALONE = 'youssoufall02@icloud.com';
-
-      var giorni = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
-      var mesi = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
-      var pad = function(n){ return (n<10?'0':'')+n; };
-
-      // Prossimi giorni di apertura (salta la domenica), max 12
+    function renderDays(){
+      if (!daySel) return;
+      var prevIndex = daySel.selectedIndex;
+      var s = STR[lang];
+      daySel.innerHTML = '';
       var today = new Date();
       var added = 0;
       for (var i=0; i<21 && added<12; i++){
         var d = new Date(today); d.setDate(today.getDate()+i);
         if (d.getDay() === 0) continue; // domenica chiuso
-        var label = giorni[d.getDay()] + ' ' + d.getDate() + ' ' + mesi[d.getMonth()];
-        if (i === 0) label += ' (oggi)';
+        var label = s.days[d.getDay()] + ' ' + d.getDate() + ' ' + s.months[d.getMonth()];
+        if (i === 0) label += s.today;
         var o = document.createElement('option');
         o.value = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
         o.textContent = label; o.setAttribute('data-dow', d.getDay());
         daySel.appendChild(o); added++;
       }
+      if (prevIndex >= 0 && prevIndex < daySel.options.length) daySel.selectedIndex = prevIndex;
+    }
 
-      function slotsFor(dow){
-        var start = (dow === 6) ? 8*60+30 : 9*60+30;  // sabato 08:30, altrimenti 09:30
-        var end = 19*60;                               // ultimo slot 18:30 (chiude 19:00)
-        var arr = [];
-        for (var m=start; m+30<=end; m+=30){ arr.push(pad(Math.floor(m/60))+':'+pad(m%60)); }
-        return arr;
-      }
-      function fillTimes(){
-        var opt = daySel.options[daySel.selectedIndex];
-        var dow = opt ? parseInt(opt.getAttribute('data-dow'),10) : 1;
-        timeSel.innerHTML = '';
-        slotsFor(dow).forEach(function(t){ var o=document.createElement('option'); o.value=t; o.textContent=t; timeSel.appendChild(o); });
-      }
+    function slotsFor(dow){
+      var start = (dow === 6) ? 8*60+30 : 9*60+30;  // sabato 08:30, altrimenti 09:30
+      var end = 19*60;                               // ultimo slot 18:30 (chiude 19:00)
+      var arr = [];
+      for (var m=start; m+30<=end; m+=30){ arr.push(pad(Math.floor(m/60))+':'+pad(m%60)); }
+      return arr;
+    }
+    function fillTimes(){
+      if (!daySel || !timeSel) return;
+      var opt = daySel.options[daySel.selectedIndex];
+      var dow = opt ? parseInt(opt.getAttribute('data-dow'),10) : 1;
+      timeSel.innerHTML = '';
+      slotsFor(dow).forEach(function(t){ var o=document.createElement('option'); o.value=t; o.textContent=t; timeSel.appendChild(o); });
+    }
+
+    if (daySel && timeSel && form) {
       daySel.addEventListener('change', fillTimes);
-      fillTimes();
+
+      // ▼▼ EMAIL del barbiere (dove arrivano le prenotazioni). Da sostituire con l'email reale. ▼▼
+      var EMAIL_SALONE = 'youssoufall02@icloud.com';
 
       form.addEventListener('submit', function(e){
         e.preventDefault();
+        var s = STR[lang];
         var name = document.getElementById('bf-name').value.trim();
-        if (!name){ alert('Inserisci il tuo nome.'); return; }
+        if (!name){ alert(s.nameAlert); return; }
         var dayLabel = daySel.options[daySel.selectedIndex].textContent;
         var time = timeSel.value;
-        var subject = 'Prenotazione — ' + name + ' — ' + dayLabel + ' ' + time;
-        var body = 'Nuova richiesta di prenotazione dal sito:\n\n'
-          + 'Nome: ' + name + '\n'
-          + 'Giorno: ' + dayLabel + '\n'
-          + 'Ora: ' + time + '\n';
+        var subject = s.mailSubject + name + ' — ' + dayLabel + ' ' + time;
+        var body = s.mailIntro
+          + s.mailName + name + '\n'
+          + s.mailDay + dayLabel + '\n'
+          + s.mailTime + time + '\n';
         window.location.href = 'mailto:' + EMAIL_SALONE
           + '?subject=' + encodeURIComponent(subject)
           + '&body=' + encodeURIComponent(body);
       });
-    })();
+    }
+
+    // Selettore lingua: applica testi statici (data-it/-en, -html, -alt, -placeholder, -title)
+    var langToggle = document.getElementById('lang-toggle');
+    function applyLang(){
+      document.documentElement.lang = lang;
+      document.title = STR[lang].title;
+
+      document.querySelectorAll('[data-it]').forEach(function(el){
+        el.textContent = el.getAttribute('data-' + lang) || el.getAttribute('data-it');
+      });
+      document.querySelectorAll('[data-it-html]').forEach(function(el){
+        el.innerHTML = el.getAttribute('data-' + lang + '-html') || el.getAttribute('data-it-html');
+      });
+      document.querySelectorAll('[data-it-alt]').forEach(function(el){
+        el.alt = el.getAttribute('data-' + lang + '-alt') || el.getAttribute('data-it-alt');
+      });
+      document.querySelectorAll('[data-it-placeholder]').forEach(function(el){
+        el.placeholder = el.getAttribute('data-' + lang + '-placeholder') || el.getAttribute('data-it-placeholder');
+      });
+      document.querySelectorAll('[data-it-title]').forEach(function(el){
+        el.title = el.getAttribute('data-' + lang + '-title') || el.getAttribute('data-it-title');
+      });
+
+      if (langToggle) {
+        langToggle.querySelectorAll('[data-lang-opt]').forEach(function(el){
+          el.classList.toggle('active', el.getAttribute('data-lang-opt') === lang);
+        });
+      }
+
+      renderStatus();
+      renderDays();
+      fillTimes();
+    }
+
+    if (langToggle) {
+      langToggle.addEventListener('click', function(){
+        lang = (lang === 'it') ? 'en' : 'it';
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+        applyLang();
+      });
+    }
+
+    applyLang();
 
     // Reveal
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
