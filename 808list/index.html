@@ -193,7 +193,7 @@
 
   input[type="text"], input[type="email"]{
     width:100%; padding:15px; background:var(--field); border:1px solid var(--field-br); border-radius:6px;
-    color:var(--bone); font-family:var(--body); font-size:16px; text-align:left;
+    color:var(--bone); font-family:var(--body); font-size:16px; text-align:center;
     -webkit-appearance:none; appearance:none;
     transition:border-color .15s ease, box-shadow .15s ease;
   }
@@ -215,7 +215,7 @@
   .seg input:checked + span::before{ background:var(--ink); border-color:var(--ink); box-shadow:inset 0 0 0 3px var(--red); }
   .seg input:focus-visible + span{ outline:2px solid var(--bone); outline-offset:3px; }
 
-  .consent{ display:flex; gap:12px; align-items:flex-start; text-align:left; font-size:13px; line-height:1.5; color:var(--label); cursor:pointer; }
+  .consent{ display:flex; gap:12px; align-items:flex-start; justify-content:center; text-align:center; font-size:13px; line-height:1.5; color:var(--label); cursor:pointer; }
   .consent input{ flex:none; width:21px; height:21px; margin:0; accent-color:var(--red); cursor:pointer; }
   .consent input:focus-visible{ outline:2px solid var(--red); outline-offset:2px; }
   .link-privacy{ padding:0; background:none; border:0; color:var(--red); font:inherit; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
