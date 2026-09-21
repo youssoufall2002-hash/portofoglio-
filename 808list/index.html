@@ -109,6 +109,9 @@
     color:var(--dim); margin-bottom:22px;
   }
 
+  .wordmark-row{ display:flex; align-items:center; justify-content:center; gap:clamp(4px,2vw,16px); }
+  .wordmark-star{ width:clamp(20px,7vw,44px); height:clamp(20px,7vw,44px); color:var(--red); flex:none; }
+
   /* 3D extrusion: lit face + stepped-hue side wall + soft cast shadow.
      Offsets in em so the depth scales with font-size down to mobile. */
   .wordmark{
@@ -182,7 +185,6 @@
   .act .role{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim-2); }
   .act.head .name{ color:var(--red); font-size:clamp(28px,8vw,36px); }
 
-  .note{ margin-top:20px; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; color:var(--dim); opacity:.8; }
 
   /* ==================== FORM ==================== */
   form{ margin-top:28px; display:grid; gap:20px; }
@@ -320,7 +322,11 @@
       <svg class="star" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><use href="#star4"/></svg>
     </p>
 
-    <h1 class="wordmark anim">808</h1>
+    <div class="wordmark-row">
+      <svg class="wordmark-star" viewBox="0 0 24 24" aria-hidden="true"><use href="#star4"/></svg>
+      <h1 class="wordmark anim">808</h1>
+      <svg class="wordmark-star" viewBox="0 0 24 24" aria-hidden="true"><use href="#star4"/></svg>
+    </div>
     <p class="word2 anim" style="--d:.1s">
       Summer<br>Takeover
       <span class="visually-hidden"> — nome serata segnaposto, da sostituire</span>
@@ -349,7 +355,7 @@
   <!-- ============ NIGHT CARD: data, location, lineup ============ -->
   <div class="night anim" style="--d:.06s">
     <div class="night-group">
-      <p class="date">Sabato 19 Set 2026</p>
+      <p class="date">Sabato 3 Ott 2026</p>
       <p class="time">Dalle <b style="color:var(--red)">23:00</b></p>
     </div>
 
@@ -365,7 +371,8 @@
         <div class="act anim" style="--d:.07s"><span class="name">DJ Set #2</span><span class="role">Special guest</span></div>
         <div class="act anim" style="--d:.14s"><span class="name">DJ Set #3</span><span class="role">Resident</span></div>
       </div>
-      <p class="note">⚠ Nome serata, data, location e lineup sono segnaposto — sostituire con i dati reali (dettagli in README.md)</p>
+      <!-- ⚠ Nome serata, data, location e lineup sono segnaposto — sostituire con i dati reali (dettagli in README.md) -->
+
     </div>
   </div>
 
@@ -377,17 +384,17 @@
     <form id="form" class="anim" style="--d:.12s" novalidate>
       <div class="field">
         <label class="lbl" for="nome">Nome e cognome</label>
-        <input type="text" id="nome" autocomplete="name" placeholder="Il tuo nome e cognome">
+        <input type="text" id="nome" autocomplete="name">
       </div>
 
       <div class="field">
         <label class="lbl" for="email">Email</label>
-        <input type="email" id="email" autocomplete="email" inputmode="email" placeholder="nome@email.com">
+        <input type="email" id="email" autocomplete="email" inputmode="email">
       </div>
 
       <div class="field">
         <label class="lbl" for="email2">Ripeti email</label>
-        <input type="email" id="email2" autocomplete="off" inputmode="email" placeholder="ripeti la tua email">
+        <input type="email" id="email2" autocomplete="off" inputmode="email">
       </div>
 
       <div class="field">
@@ -400,7 +407,7 @@
 
       <label class="consent">
         <input type="checkbox" id="ok">
-        <span>Ho letto la <button type="button" class="link-privacy" id="open-privacy">privacy policy</button> e acconsento all'uso di nome ed email per la gestione della lista.</span>
+        <span>Ho letto la <button type="button" class="link-privacy" id="open-privacy">privacy policy</button> e acconsento al trattamento dei miei dati.</span>
       </label>
 
       <p class="err" id="err" role="alert"></p>
@@ -489,7 +496,7 @@
   }
   /* ---------- countdown ---------- */
   /* ⚠ Data/ora segnaposto — sostituire con la data reale dell'evento */
-  var EVENT_DATE = new Date('2026-09-19T23:00:00+02:00').getTime();
+  var EVENT_DATE = new Date('2026-10-03T23:00:00+02:00').getTime();
   var elD = document.getElementById('cd-d'), elH = document.getElementById('cd-h'),
       elM = document.getElementById('cd-m'), elS = document.getElementById('cd-s');
   function pad(n){ return String(n).padStart(2,'0'); }
