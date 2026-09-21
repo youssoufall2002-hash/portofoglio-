@@ -122,9 +122,13 @@
       .01em .01em 0 #cf2e28, .019em .019em 0 #b92822, .028em .028em 0 #a3221c,
       .037em .037em 0 #8d1c17, .046em .046em 0 #771611, .055em .055em 0 #61110c,
       .064em .064em 0 #4b0b08, .075em .095em .11em rgba(0,0,0,.55);
-    transform:translateY(20px) scale(.96);
+    /* L'ombreggiatura 3D si estende solo in basso a destra, quindi il
+       peso ottico del blocco pende a destra anche se il box di testo è
+       centrato al pixel: -0.045em lo ricentra visivamente. Va tenuto
+       anche a riposo/reduced-motion, quindi non lo si tocca in .in. */
+    transform:translateY(20px) scale(.96) translateX(-0.045em);
   }
-  .wordmark.in{ transform:none; }
+  .wordmark.in{ transform:translateX(-0.045em); }
 
   .word2{
     margin:6px 0 0; font-family:var(--display); font-weight:400;
@@ -306,7 +310,8 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *, *::before, *::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-    .anim, .wordmark{ opacity:1; transform:none; }
+    .anim{ opacity:1; transform:none; }
+    .wordmark{ opacity:1; transform:translateX(-0.045em); }
   }
 </style>
 </head>
