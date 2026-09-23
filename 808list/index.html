@@ -179,35 +179,61 @@
   .cd div b{ display:block; font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:clamp(20px,6vw,28px); color:var(--bone); }
   .cd div span{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-top:2px; }
 
-  /* ==================== NIGHT CARD ==================== */
-  /* Data, location e lineup vivono in un'unica card, separate solo da
-     hairline interne — leggibile a colpo d'occhio invece di sezioni
-     scollegate. */
-  .night{
-    margin-top:clamp(48px,13vw,76px); padding:clamp(28px,7.5vw,38px) clamp(22px,6vw,30px);
-    background:var(--field); border:1px solid var(--field-br); border-radius:0;
-  }
-  /* Inclinata fissa in stile adesivo — resta ruotata anche a riposo
-     e con prefers-reduced-motion, non solo durante l'ingresso. */
-  .night.anim{ transform:translateY(18px) rotate(-0.7deg); }
-  .night.anim.in{ transform:rotate(-0.7deg); }
-  .night-group + .night-group{ margin-top:clamp(24px,6.5vw,32px); padding-top:clamp(24px,6.5vw,32px); border-top:1px solid var(--hairline); }
-  .night-group > *:first-child{ margin-top:0; }
+  /* ==================== SERATA: biglietto strappato ====================
+     Niente card con bordo — quella è la stessa soluzione che usa
+     qualunque altro sito-lista. Qui l'informazione è impaginata come
+     un vero biglietto: data enorme (stessa estrusione 3D dell'808),
+     linee perforate al posto delle hairline, lineup come una vera
+     scaletta invece di righe dentro un box. */
+  .serata{ margin-top:clamp(56px,15vw,88px); }
 
-  .date{ margin:0; font-family:var(--display); font-weight:400; font-size:clamp(24px,7vw,32px); line-height:1; letter-spacing:.01em; text-transform:uppercase; color:var(--red); }
-  .time{ margin:8px 0 0; font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); }
+  .serata-date{
+    display:inline-flex; align-items:baseline; gap:10px; justify-content:center;
+  }
+  .serata-date .dd{
+    font-family:var(--display); font-weight:400; color:#f2453e;
+    font-size:clamp(70px,20vw,108px); line-height:.8;
+    text-shadow:
+      .01em .01em 0 #cf2e28, .019em .019em 0 #b92822, .028em .028em 0 #a3221c,
+      .037em .037em 0 #8d1c17, .046em .046em 0 #771611, .06em .075em .09em rgba(0,0,0,.5);
+  }
+  .serata-date .mmyy{
+    font-family:var(--display); font-weight:400; color:var(--bone);
+    font-size:clamp(18px,5vw,24px); line-height:1.05; text-transform:uppercase;
+    text-align:left; letter-spacing:.02em;
+  }
+  .serata-time{ margin:10px 0 0; font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); }
+
+  /* linea perforata: tratteggio + due "fori" che mostrano il fondo pagina */
+  .perf{
+    position:relative;
+    height:0; margin:clamp(32px,8vw,44px) 0;
+    border-top:2px dashed var(--field-br);
+  }
+  .perf::before, .perf::after{
+    content:""; position:absolute; top:-9px; width:18px; height:18px;
+    border-radius:50%; background:var(--ink); border:2px solid var(--field-br);
+  }
+  .perf::before{ left:0; transform:translateX(-50%); }
+  .perf::after{ right:0; transform:translateX(50%); }
 
   .venue{ display:block; font-family:var(--display); font-weight:400; font-size:clamp(22px,6.5vw,28px); line-height:1; letter-spacing:.02em; text-transform:uppercase; color:var(--red); }
   .addr{ display:block; margin-top:8px; font-family:var(--mono); font-size:12px; line-height:1.5; color:var(--dim); }
 
-  .bill{ margin-top:26px; display:grid; gap:20px; }
-  .act{ display:flex; flex-direction:column; align-items:center; gap:4px; }
-  .act .name{
+  /* scaletta: ogni set introdotto da una hairline sopra, come un vero
+     programma di sala, non "card con gap". */
+  .setlist{ margin-top:26px; }
+  .set-row{
+    padding-top:16px; margin-top:16px; border-top:1px solid var(--hairline);
+    display:flex; flex-direction:column; align-items:center; gap:4px;
+  }
+  .set-row:first-child{ padding-top:0; margin-top:0; border-top:0; }
+  .set-row .n{
     font-family:var(--display); font-weight:400; font-size:clamp(24px,7vw,30px); line-height:.95;
     letter-spacing:.01em; text-transform:uppercase; color:var(--bone);
   }
-  .act .role{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim-2); }
-  .act.head .name{ color:var(--red); font-size:clamp(28px,8vw,36px); }
+  .set-row .r{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim-2); }
+  .set-row.head .n{ color:var(--red); font-size:clamp(28px,8vw,36px); }
 
 
   /* ==================== FORM ==================== */
@@ -407,31 +433,32 @@
     </symbol>
   </svg>
 
-  <!-- ============ NIGHT CARD: data, location, lineup ============ -->
-  <div class="night anim" style="--d:.06s">
-    <div class="night-group">
-      <p class="date">Sabato 3 Ott 2026</p>
-      <p class="time">Dalle <b style="color:var(--red)">23:00</b></p>
+  <!-- ============ SERATA: biglietto strappato — data, location, lineup ============ -->
+  <!-- ⚠ Nome serata, data, location e lineup sono segnaposto — sostituire con i dati reali (dettagli in README.md) -->
+  <div class="serata anim" style="--d:.06s">
+    <div class="serata-date">
+      <span class="dd">03</span>
+      <span class="mmyy">Ott<br>2026</span>
     </div>
+    <p class="serata-time">Sabato · dalle <b style="color:var(--red)">23:00</b></p>
 
-    <div class="night-group">
-      <span class="venue">Location da confermare</span>
-      <span class="addr">Milano <span class="visually-hidden"> — indirizzo da inserire quando confermato</span></span>
-    </div>
+    <div class="perf" aria-hidden="true"></div>
 
-    <div class="night-group">
-      <p class="eyebrow">
-        <svg class="star" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true" style="margin-right:6px;vertical-align:-1px;"><use href="#star4"/></svg>
-        Lineup
-        <svg class="star" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true" style="margin-left:6px;vertical-align:-1px;"><use href="#star4"/></svg>
-      </p>
-      <div class="bill">
-        <div class="act head anim"><span class="name">DJ Set #1</span><span class="role">Headliner</span></div>
-        <div class="act anim" style="--d:.07s"><span class="name">DJ Set #2</span><span class="role">Special guest</span></div>
-        <div class="act anim" style="--d:.14s"><span class="name">DJ Set #3</span><span class="role">Resident</span></div>
-      </div>
-      <!-- ⚠ Nome serata, data, location e lineup sono segnaposto — sostituire con i dati reali (dettagli in README.md) -->
+    <p class="eyebrow">Location</p>
+    <span class="venue">Location da confermare</span>
+    <span class="addr">Milano <span class="visually-hidden"> — indirizzo da inserire quando confermato</span></span>
 
+    <div class="perf" aria-hidden="true"></div>
+
+    <p class="eyebrow">
+      <svg class="star" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true" style="margin-right:6px;vertical-align:-1px;"><use href="#star4"/></svg>
+      Lineup
+      <svg class="star" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true" style="margin-left:6px;vertical-align:-1px;"><use href="#star4"/></svg>
+    </p>
+    <div class="setlist">
+      <div class="set-row head"><span class="n">DJ Set #1</span><span class="r">Headliner</span></div>
+      <div class="set-row"><span class="n">DJ Set #2</span><span class="r">Special guest</span></div>
+      <div class="set-row"><span class="n">DJ Set #3</span><span class="r">Resident</span></div>
     </div>
   </div>
 
